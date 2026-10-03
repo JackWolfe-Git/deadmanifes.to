@@ -1,0 +1,369 @@
+/* deadmanifesto wireframe — shared stylesheet
+   Ultra-minimalist brutalist wireframe. No frameworks. No fonts imported. */
+
+* {
+    box-sizing: border-box;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.theme-toggle-label {
+    position: fixed;
+    top: 0.75rem;
+    right: 0.75rem;
+    z-index: 9999;
+    cursor: pointer;
+    border: 1px solid currentColor;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+html:has(#theme-toggle:checked) .theme-toggle-label {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+html:has(#theme-toggle:checked) body {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+html:has(#theme-toggle:checked) a {
+    color: #000000;
+}
+
+html:has(#theme-toggle:checked) .todo {
+    border: 2px dashed #000000;
+    background: #FFFFFF;
+}
+
+html:has(#theme-toggle:checked) input,
+html:has(#theme-toggle:checked) select,
+html:has(#theme-toggle:checked) textarea,
+html:has(#theme-toggle:checked) button {
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+html:has(#theme-toggle:checked) th,
+html:has(#theme-toggle:checked) td {
+    border-bottom: 1px solid #000000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background: #000000;
+    color: #FFFFFF;
+    font-family: 'Fragment Mono', 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+header,
+main,
+footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+header {
+    border-bottom: none;
+}
+
+footer {
+    border-top: none;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: #808080;
+    font-style: italic;
+}
+
+h1 { margin: 0 0 0.5rem 0; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; }
+h2 { text-transform: uppercase; letter-spacing: 0.05em; border-bottom: none; padding-bottom: 0; margin-top: 2rem; }
+h3 { text-transform: uppercase; margin-bottom: 0.25rem; }
+
+a {
+    color: #FFFFFF;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    justify-content: center;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+section,
+article,
+.card {
+    border: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+ul, ol {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+/* --- Media placeholders --- */
+
+.media-placeholder {
+    background: #FFA500; color: #000000;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+.ph-square {
+    aspect-ratio: 1 / 1;
+    max-width: 280px;
+    width: 100%;
+}
+
+.ph-landscape {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+}
+
+.ph-portrait {
+    aspect-ratio: 3 / 4;
+    max-width: 280px;
+    width: 100%;
+}
+
+.ph-video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.ph-audio {
+    height: 72px;
+    width: 100%;
+}
+
+.ph-banner {
+    aspect-ratio: 8 / 3;
+    width: 100%;
+}
+
+.ph-thumb {
+    aspect-ratio: 1 / 1;
+    max-width: 160px;
+    width: 100%;
+}
+
+/* --- Content audit TODO blocks --- */
+
+.todo {
+    display: block;
+    border: 2px dashed #FFFFFF;
+    background: #000000;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.flag {
+    display: inline-block;
+    border: none;
+    padding: 0.15rem 0.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    background: #FFA500;
+    color: #000000;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.card-grid > .card {
+    flex: 1 1 260px;
+    max-width: 340px;
+}
+
+.album-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.album-card {
+    flex: 1 1 45%;
+    max-width: 48%;
+}
+
+figure {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+@media (max-width: 700px) {
+    header, main, footer { padding: 0.75rem 1rem; }
+    nav ul { gap: 0.5rem 0.9rem; font-size: 0.8rem; }
+    .social-card { flex-direction: column; gap: 0.4rem; }
+    .album-card { flex: 1 1 45%; max-width: 48%; }
+    .card-grid > .card { flex: 1 1 45%; max-width: 48%; }
+    .media-placeholder { padding: 1rem; }
+}
+
+@media (max-width: 420px) {
+    .album-card, .card-grid > .card { flex: 1 1 100%; max-width: 100%; }
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0.25rem 0;
+}
+
+.social-logo svg {
+    width: 32px;
+    height: 32px;
+    fill: currentColor;
+    display: block;
+}
+
+.social-logo-placeholder {
+    width: 32px;
+    height: 32px;
+    background: #FFA500;
+    color: #000000;
+    font-size: 0.55rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.si {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+
+.si-light {
+    display: none;
+}
+
+html:has(#theme-toggle:checked) .si-dark {
+    display: none;
+}
+
+html:has(#theme-toggle:checked) .si-light {
+    display: block;
+}
+
+.social-note {
+    margin: 0 0 1.25rem 0;
+}
+
+details {
+    margin: 1.25rem 0;
+}
+
+details > summary {
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+details > summary::after {
+    content: " ▾";
+}
+
+details[open] > summary {
+    margin-bottom: 0.75rem;
+}
+
+iframe {
+    border: none;
+    width: 100%;
+    display: block;
+}
+
+.ph-video-frame {
+    aspect-ratio: 16 / 9;
+    background: #FFA500;
+}
+
+.ph-audio-frame {
+    height: 166px;
+    background: #FFA500;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+input, select, textarea {
+    font-family: 'Fragment Mono', 'Courier New', monospace;
+    border: 1px solid #FFFFFF;
+    background: #000000;
+    padding: 0.4rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+button {
+    font-family: 'Fragment Mono', 'Courier New', monospace;
+    border: 1px solid #FFFFFF;
+    background: #000000;
+    padding: 0.4rem 1rem;
+    text-transform: uppercase;
+}
