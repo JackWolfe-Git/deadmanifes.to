@@ -114,11 +114,10 @@ Collaborative Projects:
 - Credits (QA/Production Titles):
   - Helldivers 2 (HD2) — [TODO: Insert Credit Role & Details Here]
   - Lego Horizon Adventures — [TODO: Insert Credit Role & Details Here]
-  - NBA 2K23 (NBA2k23) — [TODO: Insert Credit Role & Details Here]
-  - NBA 2K24 (NBA2k24) — [TODO: Insert Credit Role & Details Here]
   - Ravenbound — [TODO: Insert Credit Role & Details Here]
   - Call of the Wild: The Angler (theAngler) — [TODO: Insert Credit Role & Details Here]
 - Games industry CV available upon request — [TODO: Insert CV Request Contact Instructions Here]
+- Career list (page bottom): Sony Interactive Entertainment Senior Functionality Tester, Universally Speaking QA Lead, Avalanche Studios QA Analyst, Founder &amp; Creative Producer, Bold Night Porter, Metal Bartender, Sandwich Artist, Day Spa Bar Manager, Missguided Warehouse Picker, Steak House Expeditor, Student Pub Bartender, Bicycle Delivery, Takeaway Receptionist, Freelance Session Musician, Part-Time Carer, Assistant Music Teacher, Community Centre Volunteer Computer Expert
 
 ## Gallery
 

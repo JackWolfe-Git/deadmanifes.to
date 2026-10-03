@@ -4,31 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shop — deadmanifesto wireframe</title>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-<input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-<label for="theme-toggle" class="theme-toggle-label">TOO DARK!</label>
-<input type="checkbox" id="orange-toggle" class="orange-toggle" aria-label="Orange mode">
-<label for="orange-toggle" class="orange-toggle-label" aria-label="Toggle orange mode"></label>
-<header>
-    <h1>Shop</h1>
-    <nav aria-label="Primary">
-        <ul>
+<header class="site-bar">
+  <a class="bar-btn" href="../index.html">Home</a>
+  <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../music/listen.html">Listen</a></li>
+            <li><a href="../music/index.html">Music</a></li>
             <li><a href="../ginger-deadman/index.html">Ginger Deadman</a></li>
-            <li><a href="../music/lyrics-archive.html">Lyrics Archive</a></li>
             <li><a href="../deadmanifesto/index.html">deadmanifesto</a></li>
             <li><a href="../deadmanifesto/games/index.html">Games</a></li>
+            <li><a href="../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../shop/index.html">Shop</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a href="../disclaimer/index.html">Disclaimer</a></li>
-        </ul>
-    </nav>
+            <li><a href="../changelog/index.html">Changelog</a></li>
+            <li><a href="../robots/index.html">Robots</a></li>
+        </ul></details>
+  <a class="bar-btn" href="../">Up a page</a>
+  <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
+</header>
+
+<header>
+    <h1>Shop</h1>
+    
 </header>
 <main>
     <section>
@@ -44,6 +47,6 @@
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
 </footer>
-<script src="../assets/theme.js" defer></script>
+<script src="../assets/theme.js?v=2" defer></script>
 </body>
 </html>

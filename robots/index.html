@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>robots — deadmanifesto</title>
+<link rel="stylesheet" href="../style.css?v=2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-bar">
+  <a class="bar-btn" href="../index.html">Home</a>
+  <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../music/index.html">Music</a></li>
+            <li><a href="../ginger-deadman/index.html">Ginger Deadman</a></li>
+            <li><a href="../deadmanifesto/index.html">deadmanifesto</a></li>
+            <li><a href="../deadmanifesto/games/index.html">Games</a></li>
+            <li><a href="../deadmanifesto/career/index.html">Career</a></li>
+            <li><a href="../shop/index.html">Shop</a></li>
+            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../disclaimer/index.html">Disclaimer</a></li>
+            <li><a href="../changelog/index.html">Changelog</a></li>
+            <li><a href="../robots/index.html">Robots</a></li>
+        </ul></details>
+  <a class="bar-btn" href="../">Up a page</a>
+  <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
+</header>
+
+<header>
+    <h1>robots</h1>
+    
+</header>
+<main>
+    <section>
+        <h2>Purpose</h2>
+        <p>deadmanifesto is the living electronic press kit and portfolio of Ginger Deadman. It presents the discography, photo/press material, career/games work, lifestyle writing, contact routes, shop and copyright/disclaimer info in one ultra-minimalist brutalist placeholder site. Real authored content is still pending and is shown as <code>[TODO: ...]</code> blocks; media is shown as orange placeholders or live embedded widgets where noted.</p>
+    </section>
+
+    <section>
+        <h2>Structure (top level)</h2>
+        <ul>
+            <li><code>index.html</code> — Splash</li>
+            <li><code>music/index.html</code> — Aggregators, embeds, Lyrics Archive, Flips series, collabs</li>
+            <li><code>music/albums/...</code> — Song pages</li>
+            <li><code>ginger-deadman/index.html</code> — Artist profile</li>
+            <li><code>ginger-deadman/about/...</code> — About, EPK bio, gallery hub + subgalleries</li>
+            <li><code>deadmanifesto/index.html</code> — Brand hub</li>
+            <li><code>deadmanifesto/manifesto/...</code></li>
+            <li><code>deadmanifesto/services/...</code></li>
+            <li><code>deadmanifesto/games/...</code> — Games home + Steam widget</li>
+            <li><code>deadmanifesto/career/...</code> — CV / career credits</li>
+            <li><code>deadmanifesto/adhd-guide/...</code>, <code>recipes/...</code>, <code>music-reviews/...</code>, <code>home-studio-101/...</code>, <code>games-blog/...</code>, <code>ai/...</code> — editorial slots</li>
+            <li><code>shop/index.html</code></li>
+            <li><code>contact/index.html</code> — Contact + socials + gaming profiles</li>
+            <li><code>disclaimer/index.html</code></li>
+            <li><code>changelog/index.html</code></li>
+            <li><code>robots/index.html</code> — this page</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Assets &amp; data</h2>
+        <ul>
+            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints</li>
+            <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
+            <li><code>assets/images/</code> — generic SVG icons (placeholder, generic-gaming, generic-music), empty aliases ready for album covers</li>
+            <li><code>content.md</code> — source of truth for authored text</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Maintenance rule</h2>
+        <p>Any major structural change (new page, removed page, moved section, new global asset, new persistent setting) must be reflected in this page immediately, and a matching <code>0.0.x</code> entry must be added to <code>/changelog/</code>. If you add, rename or delete a directory, update both lists here.</p>
+    </section>
+</main>
+<footer>
+    <p>All Rights Reserved. © deadmanifesto. MMXXVI</p>
+</footer>
+<script src="../assets/theme.js?v=2" defer></script>
+</body>
+</html>

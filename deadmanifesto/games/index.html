@@ -4,55 +4,86 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Games — deadmanifesto wireframe</title>
-<link rel="stylesheet" href="../../style.css">
+<link rel="stylesheet" href="../../style.css?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-<input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-<label for="theme-toggle" class="theme-toggle-label">TOO DARK!</label>
-<input type="checkbox" id="orange-toggle" class="orange-toggle" aria-label="Orange mode">
-<label for="orange-toggle" class="orange-toggle-label" aria-label="Toggle orange mode"></label>
-<header>
-    <h1>Games</h1>
-    <nav aria-label="Primary">
-        <ul>
+<header class="site-bar">
+  <a class="bar-btn" href="../../index.html">Home</a>
+  <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
             <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../music/listen.html">Listen</a></li>
+            <li><a href="../../music/index.html">Music</a></li>
             <li><a href="../../ginger-deadman/index.html">Ginger Deadman</a></li>
-            <li><a href="../../music/lyrics-archive.html">Lyrics Archive</a></li>
             <li><a href="../../deadmanifesto/index.html">deadmanifesto</a></li>
             <li><a href="../../deadmanifesto/games/index.html">Games</a></li>
+            <li><a href="../../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../../shop/index.html">Shop</a></li>
             <li><a href="../../contact/index.html">Contact</a></li>
             <li><a href="../../disclaimer/index.html">Disclaimer</a></li>
-        </ul>
-    </nav>
+            <li><a href="../../changelog/index.html">Changelog</a></li>
+            <li><a href="../../robots/index.html">Robots</a></li>
+        </ul></details>
+  <a class="bar-btn" href="../">Up a page</a>
+  <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
+</header>
+
+<header>
+    <h1>Games</h1>
+    
 </header>
 <main>
-    <p><a href="../index.html">← Back to deadmanifesto</a></p><section>
-        <h2>Game Credits (QA/Production Titles)</h2>
-        <ul>
-            <li>Helldivers 2 (HD2) — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-            <li>Lego Horizon Adventures — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-            <li>NBA 2K23 (NBA2k23) — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-            <li>NBA 2K24 (NBA2k24) — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-            <li>Ravenbound — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-            <li>Call of the Wild: The Angler (theAngler) — <span class="todo">[TODO: Insert Credit Role &amp; Details Here]</span></li>
-        </ul>
-    </section>
-
+    <p><a href="../index.html">← Back to deadmanifesto</a></p>
     <section>
-        <h2>Professional Outlets</h2>
-        <p>LinkedIn: <a href="#"><span class="todo">[TODO: Insert LinkedIn Profile URL Here]</span></a></p>
-        <p><strong>Games industry CV available upon request.</strong></p>
-        <div class="todo">[TODO: Insert CV Request Contact Instructions Here]</div>
+        <h2>Games</h2>
+        <article class="social-card">
+            <img class="si si-dark" src="https://cdn.simpleicons.org/steam/ffffff" alt="Steam logo">
+            <a href="#" target="_blank" rel="noopener"><img class="si si-light" src="https://cdn.simpleicons.org/steam" alt="Steam logo"></a>
+        </article>
+        <a href="https://steamcommunity.com/id/deadmanifesto/" target="_blank" rel="noopener"><img src="https://steam-widget.com/widget/img?id=deadmanifesto&purpose=site&width=1600" alt="Steam profile widget" style="width: 100%; height: auto; display: block;"></a>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert Steam Profile iframe Here]</div>
+        <article class="social-card">
+            <img class="si si-dark" src="https://cdn.simpleicons.org/playstation/ffffff" alt="PS5 logo">
+            <a href="#" target="_blank" rel="noopener"><img class="si si-light" src="https://cdn.simpleicons.org/playstation" alt="PS5 logo"></a>
+        </article>
+        <p class="social-note">[TODO: Insert PS5 Profile URL Here]</p>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert PS5 Profile iframe Here]</div>
+        <article class="social-card">
+            <img class="si si-dark" src="https://cdn.simpleicons.org/epicgames/ffffff" alt="Epic Games Store logo">
+            <a href="#" target="_blank" rel="noopener"><img class="si si-light" src="https://cdn.simpleicons.org/epicgames" alt="Epic Games Store logo"></a>
+        </article>
+        <p class="social-note">[TODO: Insert Epic Games Store Profile URL Here]</p>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert Epic Games Store Profile iframe Here]</div>
+        <article class="social-card">
+            <img class="si si-dark" src="https://cdn.simpleicons.org/ea/ffffff" alt="EA App logo">
+            <a href="#" target="_blank" rel="noopener"><img class="si si-light" src="https://cdn.simpleicons.org/ea" alt="EA App logo"></a>
+        </article>
+        <p class="social-note">[TODO: Insert EA App Profile URL Here]</p>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert EA App Profile iframe Here]</div>
+        <article class="social-card">
+            <img class="si si-dark" src="https://cdn.simpleicons.org/ubisoft/ffffff" alt="Ubisoft Connect logo">
+            <a href="#" target="_blank" rel="noopener"><img class="si si-light" src="https://cdn.simpleicons.org/ubisoft" alt="Ubisoft Connect logo"></a>
+        </article>
+        <p class="social-note">[TODO: Insert Ubisoft Connect Profile URL Here]</p>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert Ubisoft Connect Profile iframe Here]</div>
+        <article class="social-card">
+            <svg class="si si-dark" role="img" viewBox="0 0 372.36823 372.57281" xmlns="http://www.w3.org/2000/svg"><title>Xbox Logo</title><g transform="translate(-1.5706619,12.357467)"><path fill="#FFFFFF" d="M 169.18811,359.44924 C 140.50497,356.70211 111.4651,346.40125 86.518706,330.1252 65.614374,316.48637 60.893704,310.87967 60.893704,299.69061 c 0,-22.47524 24.711915,-61.84014 66.992496,-106.71584 24.01246,-25.48631 57.46022,-55.36001 61.0775,-54.55105 7.0309,1.57238 63.25048,56.41053 84.29655,82.2252 33.28077,40.82148 48.58095,74.24535 40.808,89.14682 -5.9087,11.32753 -42.57224,33.4669 -69.50775,41.97242 -22.19984,7.01011 -51.35538,9.9813 -75.37239,7.68108 z M 32.660004,276.3228 C 15.288964,249.67326 6.5125436,223.43712 2.2752336,185.49086 c -1.39917002,-12.53 -0.89778,-19.69701 3.17715,-45.41515 5.0788204,-32.05404 23.3330104,-69.136381 45.2671304,-91.957616 9.34191,-9.719732 10.17624,-9.956543 21.56341,-6.120482 13.828357,4.658436 28.595936,14.857457 51.498366,35.56661 l 13.36254,12.082873 -7.2969,8.96431 C 95.97448,140.22403 60.217254,199.2085 46.741444,235.70071 c -7.32599,19.83862 -10.28084,39.75281 -7.12868,48.04363 2.12818,5.59752 0.17339,3.51093 -6.95276,-7.42154 z"/></g></svg>
+            <svg class="si si-light" role="img" viewBox="0 0 372.36823 372.57281" xmlns="http://www.w3.org/2000/svg"><title>Xbox Logo</title><g transform="translate(-1.5706619,12.357467)"><path fill="#107C10" d="M 169.18811,359.44924 C 140.50497,356.70211 111.4651,346.40125 86.518706,330.1252 65.614374,316.48637 60.893704,310.87967 60.893704,299.69061 c 0,-22.47524 24.711915,-61.84014 66.992496,-106.71584 24.01246,-25.48631 57.46022,-55.36001 61.0775,-54.55105 7.0309,1.57238 63.25048,56.41053 84.29655,82.2252 33.28077,40.82148 48.58095,74.24535 40.808,89.14682 -5.9087,11.32753 -42.57224,33.4669 -69.50775,41.97242 -22.19984,7.01011 -51.35538,9.9813 -75.37239,7.68108 z M 32.660004,276.3228 C 15.288964,249.67326 6.5125436,223.43712 2.2752336,185.49086 c -1.39917002,-12.53 -0.89778,-19.69701 3.17715,-45.41515 5.0788204,-32.05404 23.3330104,-69.136381 45.2671304,-91.957616 9.34191,-9.719732 10.17624,-9.956543 21.56341,-6.120482 13.828357,4.658436 28.595936,14.857457 51.498366,35.56661 l 13.36254,12.082873 -7.2969,8.96431 C 95.97448,140.22403 60.217254,199.2085 46.741444,235.70071 c -7.32599,19.83862 -10.28084,39.75281 -7.12868,48.04363 2.12818,5.59752 0.17339,3.51093 -6.95276,-7.42154 z"/></g></svg>
+        </article>
+        <p class="social-note">[TODO: Insert Xbox Network Profile URL Here]</p>
+        <p class="social-note">[TODO: Insert Account Description Here]</p>
+        <div class="iframe-placeholder">[TODO: Insert Xbox Network Profile iframe Here]</div>
     </section>
 </main>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
 </footer>
-<script src="../../assets/theme.js" defer></script>
+<script src="../../assets/theme.js?v=2" defer></script>
 </body>
 </html>

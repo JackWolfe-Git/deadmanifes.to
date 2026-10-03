@@ -4,45 +4,270 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Music — deadmanifesto wireframe</title>
-<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../style.css?v=2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
 </head>
 <body>
-<input type="checkbox" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-<label for="theme-toggle" class="theme-toggle-label">TOO DARK!</label>
-<input type="checkbox" id="orange-toggle" class="orange-toggle" aria-label="Orange mode">
-<label for="orange-toggle" class="orange-toggle-label" aria-label="Toggle orange mode"></label>
-<header>
-    <h1>Music — Hub</h1>
-    <nav aria-label="Primary">
-        <ul>
+<header class="site-bar">
+  <a class="bar-btn" href="../index.html">Home</a>
+  <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../music/listen.html">Listen</a></li>
+            <li><a href="../music/index.html">Music</a></li>
             <li><a href="../ginger-deadman/index.html">Ginger Deadman</a></li>
-            <li><a href="../music/lyrics-archive.html">Lyrics Archive</a></li>
             <li><a href="../deadmanifesto/index.html">deadmanifesto</a></li>
             <li><a href="../deadmanifesto/games/index.html">Games</a></li>
+            <li><a href="../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../shop/index.html">Shop</a></li>
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a href="../disclaimer/index.html">Disclaimer</a></li>
-        </ul>
-    </nav>
+            <li><a href="../changelog/index.html">Changelog</a></li>
+            <li><a href="../robots/index.html">Robots</a></li>
+        </ul></details>
+  <a class="bar-btn" href="../">Up a page</a>
+  <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
+</header>
+
+<header>
+    <h1>Music — Hub</h1>
+    
 </header>
 <main>
+
     <section>
-        <h2>Audio &amp; Artist Engine</h2>
+        <h2>Global Streaming Service Profile Aggregators</h2>
         <ul>
-            <li><a href="listen.html">Listen</a> — streaming aggregators + Lyrics Archive redirect</li>
-            <li><a href="../ginger-deadman/index.html">Ginger Deadman</a> — artist profile</li>
-            <li><a href="lyrics-archive.html">Lyrics Archive</a> — album list &amp; track pages</li>
+            <li><a href="#">Spotify</a> — <span class="todo">[TODO: Insert Spotify Profile URL Here]</span></li>
+            <li><a href="#">Apple Music</a> — <span class="todo">[TODO: Insert Apple Music Profile URL Here]</span></li>
+            <li><a href="#">Bandcamp</a> — <span class="todo">[TODO: Insert Bandcamp Profile URL Here]</span></li>
+            <li><a href="#">Other</a> — <span class="todo">[TODO: Insert Additional Streaming URLs Here]</span></li>
         </ul>
+    </section>
+
+    <section>
+        <h2>Embedded Players (click to expand)</h2>
+
+        <details>
+            <summary>Spotify — Album Player</summary>
+            <iframe src="about:blank" title="Spotify player placeholder" class="ph-audio-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Album not available — Insert Working Spotify Album Embed URL Here]</div>
+        </details>
+
+        <details>
+            <summary>Spotify — Artist Profile</summary>
+            <iframe src="https://open.spotify.com/embed/artist/1gspcsYsk3WMgABxKVudcF" height="352" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </details>
+
+        <details>
+            <summary>YouTube — Placeholder Player</summary>
+            <iframe src="about:blank" title="YouTube player placeholder" class="ph-video-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Insert YouTube Embed Here]</div>
+        </details>
+
+        <details>
+            <summary>YouTube Music — Placeholder Player</summary>
+            <iframe src="about:blank" title="YouTube Music player placeholder" class="ph-video-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Insert YouTube Music Embed Here]</div>
+        </details>
+
+        <details>
+            <summary>SoundCloud — Placeholder Player</summary>
+            <iframe src="about:blank" title="SoundCloud player placeholder" class="ph-audio-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Insert SoundCloud Embed Here]</div>
+        </details>
+
+        <details>
+            <summary>Bandcamp — Placeholder Player</summary>
+            <iframe src="about:blank" title="Bandcamp player placeholder" class="ph-audio-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Insert Bandcamp Embed Here]</div>
+        </details>
+
+        <details>
+            <summary>Apple Music — Placeholder Player</summary>
+            <iframe src="about:blank" title="Apple Music player placeholder" class="ph-audio-frame" loading="lazy"></iframe>
+            <div class="todo">[TODO: Insert Apple Music Embed Here]</div>
+        </details>
+    </section>
+
+    <section>
+
+    </section>
+
+    <section>
+        <h2>Album List</h2>
+
+
+        <h3>Discography</h3>
+        <div class="album-grid">
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ ORANGE</div>
+                <h4>Orange</h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-orange">Song Selector Dropdown:</label>
+                    <select id="sel-orange"><option>[TODO: Insert Track List Here]</option></select>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ OBSTINANCY</div>
+                <h4>Obstinancy</h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-obstinancy">Song Selector Dropdown:</label>
+                    <select id="sel-obstinancy"><option>[TODO: Insert Track List Here]</option></select>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ OBLIQUITY</div>
+                <h4>Obliquity</h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-obliquity">Song Selector Dropdown:</label>
+                    <select id="sel-obliquity"><option>[TODO: Insert Track List Here]</option></select>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ OBSOLESCENCE</div>
+                <h4>Obsolescence <span class="flag">The Obsolescence Tapes</span></h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-obsolescence">Song Selector Dropdown:</label>
+                    <select id="sel-obsolescence"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/obsolescence/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <img src="https://i.ibb.co/Y74kS405/obliviability.jpg" alt="Obliviability album cover" style="width: 100%; height: auto;">
+                <h4>Obliviability</h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-obliviability">Song Selector Dropdown:</label>
+                    <select id="sel-obliviability"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/obliviability/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ UNREAL</div>
+                <h4>Unreal <span class="flag">The Unreal Tapes</span></h4>
+                <p>Artist: Ginger Deadman<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-unreal">Song Selector Dropdown:</label>
+                    <select id="sel-unreal"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/unreal/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+        </div>
+
+        <h3>Flips Series</h3>
+        <div class="album-grid">
+
+            <article class="album-card">
+                <img src="https://i.ibb.co/93nkL87q/ab6761610000e5eb6f37113a1c2f5f11434c6ed9.jpg" alt="Flips album cover" style="width: 100%; height: auto;">
+                <h4>Flips</h4>
+                <p>Artist: deadmanifesto.<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-flips">Song Selector Dropdown:</label>
+                    <select id="sel-flips"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/flips/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ FLIPS 2</div>
+                <h4>Flips 2</h4>
+                <p>Artist: deadmanifesto.<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-flips2">Song Selector Dropdown:</label>
+                    <select id="sel-flips2"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/flips-2/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+            <article class="album-card">
+                <div class="media-placeholder ph-square">ALBUM ARTWORK Ã¯Â¿Â½ FLIPS 3</div>
+                <h4>Flips 3</h4>
+                <p>Artist: deadmanifesto.<br>
+                Track Count: [TODO: Track Count]<br>
+                Release Year: [TODO: Release Year]</p>
+                <details>
+                    <summary>Tracks &amp; Streams</summary>
+                    <p>Full Album Streaming Links: <span class="todo">[TODO: Insert Full Album Streaming Service Links Here]</span></p>
+                    <label for="sel-flips3">Song Selector Dropdown:</label>
+                    <select id="sel-flips3"><option>[TODO: Insert Track List Here]</option></select>
+                    <ul><li><a href="albums/flips-3/track-01.html">Track 01 Ã¯Â¿Â½ Song Page</a></li></ul>
+                </details>
+            </article>
+
+        </div>
+
+        <details>
+            <summary>Collaborations with other artists throughout the years.</summary>
+            <div class="album-grid">
+                <article class="album-card">
+                    <h4>Metro House</h4>
+                    <div class="media-placeholder ph-square">ALBUM ARTWORK — METRO HOUSE</div>
+                    <p>Artist: Ginger Deadman, SY, Karmz<br>Release Date: [TODO: Release Date]</p>
+                    <p><em>Unlinked release concept — no linked track pages in schema.</em></p>
+                </article>
+                <article class="album-card">
+                    <h4>Cultus Ex Cultura</h4>
+                    <div class="media-placeholder ph-square">ALBUM ARTWORK — CULTUS EX CULTURA</div>
+                    <p>Artist: Ginger Deadman, Deadlox<br>Release Date: [TODO: Release Date]</p>
+                    <p><em>Unlinked release concept — no linked track pages in schema.</em></p>
+                </article>
+                <article class="album-card">
+                    <h4>Unapology</h4>
+                    <div class="media-placeholder ph-square">ALBUM ARTWORK — UNAPOLOGY</div>
+                    <p>Artist: Ginger Deadman, Vaunce, Sami K<br>Release Date: [TODO: Release Date]</p>
+                    <p><em>Unlinked release concept — no linked track pages in schema.</em></p>
+                </article>
+            </div>
+        </details>
     </section>
 </main>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
 </footer>
-<script src="../assets/theme.js" defer></script>
+<script src="../assets/theme.js?v=2" defer></script>
 </body>
 </html>

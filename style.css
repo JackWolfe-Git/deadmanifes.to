@@ -26,37 +26,49 @@
     cursor: pointer;
 }
 
-html:has(#orange-toggle:checked) body {
+body[data-mode="orange"] {
     background: #FFA500;
     color: #000000;
 }
 
-html:has(#orange-toggle:checked) a {
+body[data-mode="orange"] a {
     color: #000000;
 }
 
-html:has(#orange-toggle:checked) .todo {
+body[data-mode="orange"] .todo {
     border: 2px dashed #000000;
     background: #FFA500;
 }
 
-html:has(#orange-toggle:checked) input,
-html:has(#orange-toggle:checked) select,
-html:has(#orange-toggle:checked) textarea,
-html:has(#orange-toggle:checked) button {
+body[data-mode="orange"] input,
+body[data-mode="orange"] select,
+body[data-mode="orange"] textarea,
+body[data-mode="orange"] button {
     background: #FFFFFF;
     color: #000000;
     border: 1px solid #000000;
 }
 
-html:has(#orange-toggle:checked) .si,
-html:has(#orange-toggle:checked) .si-dark,
-html:has(#orange-toggle:checked) .si-light {
+body[data-mode="orange"] img.si,
+body[data-mode="orange"] img.si-dark,
+body[data-mode="orange"] img.si-light {
     filter: brightness(0) !important;
 }
 
-html:has(#orange-toggle:checked) th,
-html:has(#orange-toggle:checked) td {
+body[data-mode="orange"] svg.si-dark path {
+    fill: #000000;
+}
+
+body[data-mode="orange"] svg.si-linkedin path:first-child {
+    fill: #000000;
+}
+
+body[data-mode="orange"] svg.si-linkedin path:last-child {
+    fill: #FFA500;
+}
+
+body[data-mode="orange"] th,
+body[data-mode="orange"] td {
     border-bottom: 1px solid #000000;
 }
 
@@ -83,38 +95,155 @@ html:has(#orange-toggle:checked) td {
     color: #FFFFFF;
 }
 
-html:has(#theme-toggle:checked) .theme-toggle-label {
+body[data-mode="light"] .theme-toggle-label {
     background: #FFFFFF;
     color: #000000;
 }
 
-html:has(#theme-toggle:checked) body {
+body[data-mode="light"] {
     background: #FFFFFF;
     color: #000000;
 }
 
-html:has(#theme-toggle:checked) a {
+body[data-mode="light"] a {
     color: #000000;
 }
 
-html:has(#theme-toggle:checked) .todo {
+body[data-mode="light"] .todo {
     border: 2px dashed #000000;
     background: #FFFFFF;
 }
 
-html:has(#theme-toggle:checked) input,
-html:has(#theme-toggle:checked) select,
-html:has(#theme-toggle:checked) textarea,
-html:has(#theme-toggle:checked) button {
+body[data-mode="light"] input,
+body[data-mode="light"] select,
+body[data-mode="light"] textarea,
+body[data-mode="light"] button {
     background: #FFFFFF;
     color: #000000;
     border: 1px solid #000000;
 }
 
-html:has(#theme-toggle:checked) th,
-html:has(#theme-toggle:checked) td {
+body[data-mode="light"] th,
+body[data-mode="light"] td {
     border-bottom: 1px solid #000000;
 }
+
+.site-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0.75rem;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+body[data-mode="light"] .site-bar { background: #FFFFFF; color: #000000; }
+body[data-mode="orange"] .site-bar { background: #FFA500; color: #000000; }
+
+.bar-btn {
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid currentColor;
+    padding: 0.2rem 0.6rem;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    background: transparent;
+    cursor: pointer;
+}
+
+.bar-menu { position: relative; }
+.bar-menu summary { list-style: none; display: inline-block; }
+.bar-menu summary::-webkit-details-marker { display: none; }
+.bar-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #000000;
+    color: #FFFFFF;
+    padding: 0.5rem 0.75rem;
+    list-style: none;
+    margin: 0.25rem 0 0 0;
+    min-width: 200px;
+    border: 1px solid currentColor;
+}
+body[data-mode="light"] .bar-menu ul { background: #FFFFFF; color: #000000; }
+body[data-mode="orange"] .bar-menu ul { background: #FFA500; color: #000000; }
+.bar-menu a { color: inherit; text-decoration: none; }
+
+.bar-right {
+    margin-left: auto;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.bar-right button {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 1px solid currentColor;
+    cursor: pointer;
+    display: block;
+}
+.bar-right button[data-mode="dark"] { background: #000000; }
+.bar-right button[data-mode="light"] { background: #FFFFFF; }
+.bar-right button[data-mode="orange"] { background: #FFA500; }
+
+.mode-switch {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 9999;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.mode-switch button {
+    border: 1px solid currentColor;
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+}
+
+.mode-switch button[data-mode="dark"] { background: #000000; }
+.mode-switch button[data-mode="light"] { background: #FFFFFF; }
+.mode-switch button[data-mode="orange"] { background: #FFA500; }
+
+.mode-switch button.active {
+    outline: 2px solid #FFA500;
+    outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+    .mode-switch button { width: 34px; height: 34px; }
+    #mode-notice { top: 4.75rem; }
+    body { padding-top: 4rem; }
+}
+
+#mode-notice {
+    position: fixed;
+    top: 3.25rem;
+    right: 0.5rem;
+    z-index: 10000;
+    padding: 0.4rem 1rem;
+    border: 1px solid currentColor;
+    background: #FFFFFF;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#mode-notice.visible { opacity: 1; }
 
 img {
     max-width: 100%;
@@ -126,10 +255,10 @@ body {
     background: #000000;
     color: #FFFFFF;
     font-family: 'Fragment Mono', 'Courier New', monospace;
-    margin: 0;
     padding: 0;
     line-height: 1.5;
     text-align: center;
+    padding-top: 4rem;
 }
 
 header,
@@ -337,6 +466,20 @@ figcaption {
     text-align: center;
 }
 
+.iframe-placeholder {
+    aspect-ratio: 16 / 9;
+    max-width: 640px;
+    width: 100%;
+    background: #FFA500;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 1rem auto;
+}
+
 .si {
     width: 32px;
     height: 32px;
@@ -347,11 +490,11 @@ figcaption {
     display: none;
 }
 
-html:has(#theme-toggle:checked) .si-dark {
+body[data-mode="light"] .si-dark {
     display: none;
 }
 
-html:has(#theme-toggle:checked) .si-light {
+body[data-mode="light"] .si-light {
     display: block;
 }
 
@@ -410,6 +553,7 @@ input, select, textarea {
     font-family: 'Fragment Mono', 'Courier New', monospace;
     border: 1px solid #FFFFFF;
     background: #000000;
+    color: #FFFFFF;
     padding: 0.4rem;
     width: 100%;
     max-width: 420px;
@@ -419,6 +563,7 @@ button {
     font-family: 'Fragment Mono', 'Courier New', monospace;
     border: 1px solid #FFFFFF;
     background: #000000;
+    color: #FFFFFF;
     padding: 0.4rem 1rem;
     text-transform: uppercase;
 }
