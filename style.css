@@ -5,6 +5,61 @@
     box-sizing: border-box;
 }
 
+.orange-toggle {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.orange-toggle-label {
+    position: fixed;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    z-index: 9999;
+    width: 22px;
+    height: 22px;
+    background: #FFA500;
+    border: 1px solid #808080;
+    cursor: pointer;
+}
+
+html:has(#orange-toggle:checked) body {
+    background: #FFA500;
+    color: #000000;
+}
+
+html:has(#orange-toggle:checked) a {
+    color: #000000;
+}
+
+html:has(#orange-toggle:checked) .todo {
+    border: 2px dashed #000000;
+    background: #FFA500;
+}
+
+html:has(#orange-toggle:checked) input,
+html:has(#orange-toggle:checked) select,
+html:has(#orange-toggle:checked) textarea,
+html:has(#orange-toggle:checked) button {
+    background: #FFFFFF;
+    color: #000000;
+    border: 1px solid #000000;
+}
+
+html:has(#orange-toggle:checked) .si,
+html:has(#orange-toggle:checked) .si-dark,
+html:has(#orange-toggle:checked) .si-light {
+    filter: brightness(0) !important;
+}
+
+html:has(#orange-toggle:checked) th,
+html:has(#orange-toggle:checked) td {
+    border-bottom: 1px solid #000000;
+}
+
 .theme-toggle {
     position: fixed;
     top: 0;
