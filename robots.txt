@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Internal working documents
+Disallow: /content.md
+Disallow: /PLAN.md
+
+Sitemap: https://jackwolfe-git.github.io/deadmanifes.to/sitemap.xml

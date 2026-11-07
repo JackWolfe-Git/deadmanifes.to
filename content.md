@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 7 November 2026 — launch-prep 0.1.2
+Last updated: 7 November 2026 — launch-prep 0.1.3
 
 ## How to use this file
 
@@ -22,7 +22,7 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 
 | Page | Path | State | Next action |
 |---|---|---|---|
-| Splash | `index.html` | NEEDS COPY | Replace wireframe headings and media banner with launch copy |
+| Splash | `index.html` | LIVE | Splash image (8:3) when assets arrive |
 | Listen | `music/index.html` | NEEDS COPY | Fill album metadata, real embeds, remove track links |
 | Ginger Deadman | `ginger-deadman/index.html` | NEEDS COPY | Bio copy, portrait slot |
 | About | `ginger-deadman/about/index.html` | NEEDS COPY | Bio copy |
@@ -31,10 +31,11 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 | Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Draft scaffolding removed in 0.1.0 |
 | Games | `deadmanifesto/games/index.html` | NEEDS COPY | Credits details, remove platform TODOs |
 | Career | `deadmanifesto/career/index.html` | NEEDS COPY | CV copy |
-| Contact | `contact/index.html` | NEEDS COPY | Email "coming soon"; remove social-note TODOs |
+| Contact | `contact/index.html` | LIVE | Email when the domain and mailbox exist |
 | Disclaimer | `disclaimer/index.html` | LIVE | — |
 | Changelog | `disclaimer/changelog/index.html` | LIVE | Update every shipped change |
 | Robots | `disclaimer/robots/index.html` | LIVE | Update every structural change |
+| 404 | `404.html` | LIVE | Branded not-found page; absolute links point at the current GitHub Pages base |
 | Services | `deadmanifesto/services/index.html` | HIDDEN | Restore when service copy exists |
 | ADHD Guide | `deadmanifesto/adhd-guide/index.html` | HIDDEN | Editorial backlog |
 | Recipes | `deadmanifesto/recipes/index.html` | HIDDEN | Editorial backlog |
@@ -63,7 +64,7 @@ Slots inferred from the current markup. Dimensions are targets, not requirements
 
 | Slot | Page | Ratio / size | Filename | Alt text | Priority |
 |---|---|---|---|---|---|
-| Favicon | all pages | 32×32 + 180×180 | `assets/images/favicon.svg` / `apple-touch-icon.png` | — | 1 |
+| Favicon | all pages | 32×32 + 180×180 | `assets/images/favicon.svg` (created 0.1.3) / `apple-touch-icon.png` (pending) | — | 1 |
 | Social share card | all pages | 1200×630 | `assets/images/og-deadmanifesto.jpg` | deadmanifesto — Ginger Deadman | 1 |
 | Splash banner | `index.html` | 8:3, 1600×600 | `assets/images/splash-banner.jpg` | deadmanifesto press image | 1 |
 | Artist portrait | `ginger-deadman/index.html`, `about/`, `epk-bio/` | 3:4, 1200×1600 | `assets/images/ginger-deadman-portrait.jpg` | Ginger Deadman | 1 |
@@ -108,5 +109,6 @@ Current remote images: `wip.jpg` and the Obliviability / Flips covers are hosted
 - Restore track pages when lyrics exist.
 - Merch under a new name.
 - Editorial slots: services, ADHD guide, recipes, reviews, home studio, games blog, AI.
-- OG/meta pass, favicon, 404, sitemap.
+- Apple touch icon and OG share image.
+- Update the 404 page's absolute links if the site moves to a custom domain.
 - Accessibility and performance pass.

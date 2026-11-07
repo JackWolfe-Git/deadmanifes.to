@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>robots — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=4">
+<meta name="description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<link rel="canonical" href="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
+<meta property="og:site_name" content="deadmanifesto">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robots — deadmanifesto">
+<meta property="og:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<meta property="og:url" content="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robots — deadmanifesto">
+<meta name="twitter:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<meta name="theme-color" content="#000000">
+<title>Robots — deadmanifesto</title>
+<link rel="stylesheet" href="../../style.css?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -21,12 +34,12 @@
             <li><a href="../../contact/index.html">Contact</a></li>
             <li><a href="../index.html">Disclaimer</a></li>
             <li><a href="../changelog/index.html">Changelog</a></li>
-            <li><a href="../robots/index.html">Robots</a></li>
+            <li><a aria-current="page" href="../robots/index.html">Robots</a></li>
         </ul></details>
   <a class="bar-btn" href="../../index.html">Home</a>
   <a class="bar-btn" href="../index.html">Up</a>
   <a class="bar-btn" href="#top">Top</a>
-  <span class="bar-title">robots</span>
+  <span class="bar-title">Robots</span>
 <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
 </header>
 
@@ -34,6 +47,7 @@
     
 </header>
 <main>
+    <h1>Robots</h1>
     <section>
         <h2>Purpose</h2>
         <p>deadmanifesto is the living electronic press kit and portfolio of Ginger Deadman. It presents the discography, photo/press material, career/games work, lifestyle writing, contact routes and copyright/disclaimer info in one ultra-minimalist brutalist site. Finished pages are public; unfinished sections are unlinked and marked <code>noindex</code> until they are ready.</p>
@@ -60,11 +74,20 @@
     </section>
 
     <section>
+        <h2>Site files</h2>
+        <ul>
+            <li><code>404.html</code> — Not-found page</li>
+            <li><code>robots.txt</code> — Crawl policy and sitemap pointer</li>
+            <li><code>sitemap.xml</code> — Public URL index</li>
+        </ul>
+    </section>
+
+    <section>
         <h2>Assets &amp; data</h2>
         <ul>
             <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints</li>
             <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
-            <li><code>assets/images/</code> — icons and placeholders; album covers and press images to follow</li>
+            <li><code>assets/images/</code> — SVG icons, placeholders and the live favicon; album covers and press images to follow</li>
             <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
             <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
         </ul>
@@ -72,7 +95,7 @@
 
     <section>
         <h2>Maintenance rule</h2>
-        <p>Any structural change — a new page, removed page, moved section, new global asset or persistent setting — is reflected here immediately, with a matching entry in <code>/disclaimer/changelog/</code>. Public structure and the held-back list are updated together. The changelog uses <code>0.1.x</code> during launch prep; the image layer is <code>0.2.0</code>; public launch is <code>1.0.0</code>.</p>
+        <p>Any structural change — a new page, removed page, moved section, new global asset or persistent setting — is reflected here immediately, with a matching entry in <code>/disclaimer/changelog/</code>. Public structure and the held-back list are updated together. Public pages carry a canonical URL, description, Open Graph/Twitter tags and a page-level H1. The changelog uses <code>0.1.x</code> during launch prep; the image layer is <code>0.2.0</code>; public launch is <code>1.0.0</code>.</p>
     </section>
 </main>
 <footer>

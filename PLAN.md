@@ -21,7 +21,7 @@ Started: 7 November 2026
 - [x] 0.1.0 Stabilise, keep manifesto, adopt versioned editorial map
 - [x] 0.1.1 Retire the shop everywhere
 - [x] 0.1.2 Hide the WIP surface and clean links
-- [ ] 0.1.3 Splash rewrite and global polish (meta, OG, favicon, 404, sitemap)
+- [x] 0.1.3 Splash rewrite and global polish (meta, OG, favicon, 404, sitemap)
 - [ ] 0.1.4 Content finish (contact, music metadata, career, games, Ginger Deadman)
 - [ ] 0.1.5 Image slots and ledger verification
 - [ ] 0.1.6 QA, deploy, verify GitHub Pages
