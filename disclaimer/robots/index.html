@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>robots — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=3">
+<link rel="stylesheet" href="../../style.css?v=4">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -40,24 +40,23 @@
     </section>
 
     <section>
-        <h2>Structure (top level)</h2>
+        <h2>Public structure</h2>
         <ul>
             <li><code>index.html</code> — Splash</li>
-            <li><code>music/index.html</code> — Aggregators, embeds, Lyrics Archive, Flips series, collabs</li>
-            <li><code>music/albums/...</code> — Song pages</li>
+            <li><code>music/index.html</code> — Discography, embeds and album metadata</li>
             <li><code>ginger-deadman/index.html</code> — Artist profile</li>
-            <li><code>ginger-deadman/about/...</code> — About, EPK bio, gallery hub + subgalleries</li>
+            <li><code>ginger-deadman/about/index.html</code> — About</li>
+            <li><code>ginger-deadman/about/epk-bio/index.html</code> — EPK bio</li>
             <li><code>deadmanifesto/index.html</code> — Brand hub</li>
-            <li><code>deadmanifesto/manifesto/...</code></li>
-            <li><code>deadmanifesto/services/...</code></li>
-            <li><code>deadmanifesto/games/...</code> — Games home + Steam widget</li>
-            <li><code>deadmanifesto/career/...</code> — CV / career credits</li>
-            <li><code>deadmanifesto/adhd-guide/...</code>, <code>recipes/...</code>, <code>music-reviews/...</code>, <code>home-studio-101/...</code>, <code>games-blog/...</code>, <code>ai/...</code> — editorial slots</li>
-            <li><code>contact/index.html</code> — Contact + socials + gaming profiles</li>
-            <li><code>disclaimer/index.html</code></li>
-            <li><code>changelog/index.html</code></li>
-            <li><code>robots/index.html</code> — this page</li>
+            <li><code>deadmanifesto/manifesto/index.html</code> — Manifesto</li>
+            <li><code>deadmanifesto/games/index.html</code> — Games and credits</li>
+            <li><code>deadmanifesto/career/index.html</code> — Career and CV</li>
+            <li><code>contact/index.html</code> — Contact and socials</li>
+            <li><code>disclaimer/index.html</code> — Disclaimer</li>
+            <li><code>disclaimer/changelog/index.html</code> — Changelog</li>
+            <li><code>disclaimer/robots/index.html</code> — This page</li>
         </ul>
+        <p>Held back and unlinked: services, editorial slots, gallery and lyric pages. They are marked <code>noindex</code> until they are ready.</p>
     </section>
 
     <section>
@@ -65,7 +64,7 @@
         <ul>
             <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints</li>
             <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
-            <li><code>assets/images/</code> — generic SVG icons (placeholder, generic-gaming, generic-music), empty aliases ready for album covers</li>
+            <li><code>assets/images/</code> — icons and placeholders; album covers and press images to follow</li>
             <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
             <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
         </ul>
@@ -73,7 +72,7 @@
 
     <section>
         <h2>Maintenance rule</h2>
-        <p>Any major structural change (new page, removed page, moved section, new global asset, new persistent setting) must be reflected in this page immediately, and a matching <code>0.0.x</code> entry must be added to <code>/changelog/</code>. If you add, rename or delete a directory, update both lists here.</p>
+        <p>Any structural change — a new page, removed page, moved section, new global asset or persistent setting — is reflected here immediately, with a matching entry in <code>/disclaimer/changelog/</code>. Public structure and the held-back list are updated together. The changelog uses <code>0.1.x</code> during launch prep; the image layer is <code>0.2.0</code>; public launch is <code>1.0.0</code>.</p>
     </section>
 </main>
 <footer>

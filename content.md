@@ -35,23 +35,23 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 | Disclaimer | `disclaimer/index.html` | LIVE | — |
 | Changelog | `disclaimer/changelog/index.html` | LIVE | Update every shipped change |
 | Robots | `disclaimer/robots/index.html` | LIVE | Update every structural change |
-| Services | `deadmanifesto/services/index.html` | HIDDEN (0.1.2) | Restore when service copy exists |
-| ADHD Guide | `deadmanifesto/adhd-guide/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Recipes | `deadmanifesto/recipes/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Music Reviews | `deadmanifesto/music-reviews/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Home Studio 101 | `deadmanifesto/home-studio-101/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Freeware & Tech | `deadmanifesto/home-studio-101/freeware-tech/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Games Blog | `deadmanifesto/games-blog/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| AI | `deadmanifesto/ai/index.html` | HIDDEN (0.1.2) | Editorial backlog |
-| Gallery hub | `ginger-deadman/about/gallery/index.html` | HIDDEN (0.1.2) | Restore with image layer |
-| Gallery: Outfits | `ginger-deadman/about/gallery/outfits/index.html` | HIDDEN (0.1.2) | Image layer |
-| Gallery: Gigs | `ginger-deadman/about/gallery/gigs/index.html` | HIDDEN (0.1.2) | Image layer |
-| Gallery: Food | `ginger-deadman/about/gallery/food/index.html` | HIDDEN (0.1.2) | Image layer |
-| Gallery: Wildlife | `ginger-deadman/about/gallery/wildlife/index.html` | HIDDEN (0.1.2) | Image layer |
-| Gallery: Urban | `ginger-deadman/about/gallery/urban/index.html` | HIDDEN (0.1.2) | Image layer |
-| Gallery: Nature | `ginger-deadman/about/gallery/nature/index.html` | HIDDEN (0.1.2) | Image layer |
-| Track pages (×6) | `music/albums/*/track-01.html` | HIDDEN (0.1.2) | Restore when lyrics exist |
-| Shop | `shop/index.html` | GONE (0.1.1) | Future merch gets a new name and a new page |
+| Services | `deadmanifesto/services/index.html` | HIDDEN | Restore when service copy exists |
+| ADHD Guide | `deadmanifesto/adhd-guide/index.html` | HIDDEN | Editorial backlog |
+| Recipes | `deadmanifesto/recipes/index.html` | HIDDEN | Editorial backlog |
+| Music Reviews | `deadmanifesto/music-reviews/index.html` | HIDDEN | Editorial backlog |
+| Home Studio 101 | `deadmanifesto/home-studio-101/index.html` | HIDDEN | Editorial backlog |
+| Freeware & Tech | `deadmanifesto/home-studio-101/freeware-tech/index.html` | HIDDEN | Editorial backlog |
+| Games Blog | `deadmanifesto/games-blog/index.html` | HIDDEN | Editorial backlog |
+| AI | `deadmanifesto/ai/index.html` | HIDDEN | Editorial backlog |
+| Gallery hub | `ginger-deadman/about/gallery/index.html` | HIDDEN | Restore with image layer |
+| Gallery: Outfits | `ginger-deadman/about/gallery/outfits/index.html` | HIDDEN | Image layer |
+| Gallery: Gigs | `ginger-deadman/about/gallery/gigs/index.html` | HIDDEN | Image layer |
+| Gallery: Food | `ginger-deadman/about/gallery/food/index.html` | HIDDEN | Image layer |
+| Gallery: Wildlife | `ginger-deadman/about/gallery/wildlife/index.html` | HIDDEN | Image layer |
+| Gallery: Urban | `ginger-deadman/about/gallery/urban/index.html` | HIDDEN | Image layer |
+| Gallery: Nature | `ginger-deadman/about/gallery/nature/index.html` | HIDDEN | Image layer |
+| Track pages (×6) | `music/albums/*/track-01.html` | HIDDEN | Restore when lyrics exist |
+| Shop | `shop/index.html` | GONE | Future merch gets a new name and a new page |
 
 ## Held back
 
