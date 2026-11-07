@@ -37,7 +37,16 @@
 <main>
     <section>
         <h2>Full changelist</h2>
-        <p>We maintain this page as the source of truth for everything changed. Each entry is numbered as <code>0.0.x - short description</code>, kept chronological, in causal/professional phrasing. When we ship a change, we add a new entry here immediately. Rule for growth: a new top-level <code>&lt;details&gt;</code> for each month; a nested <code>&lt;details&gt;</code> for each day. All boxes start closed by default.</p>
+        <p>We maintain this page as the public record of everything changed. Entries use <code>major.minor.patch</code>: patches for copy and fixes, minor versions for a new phase, page or structural change, majors for launch milestones. One entry per shipped change, written in causal/professional phrasing. New months and days are added newest-first; entries within a day follow the order they shipped. All boxes start closed by default.</p>
+        <details>
+            <summary>November 2026</summary>
+            <details>
+                <summary>7</summary>
+                <ul>
+                    <li>0.1.0 - begin the launch-prep pass: adopt major.minor.patch logging, keep the trimmed manifesto, remove its draft marker and author-only question blocks, and retire content.md as a copy source in favour of an editorial map and asset ledger</li>
+                </ul>
+            </details>
+        </details>
         <details>
             <summary>October 2026</summary>
             <details>
