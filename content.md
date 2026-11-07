@@ -12,7 +12,7 @@ Last updated: 7 November 2026 — launch-prep 0.1.2
 
 ## Public surface
 
-Target nav (nine items, shop retired):
+Target nav (ten items, shop retired):
 
 Home · Listen · Ginger Deadman · deadmanifesto · Games · Career · Contact · Disclaimer · Changelog · Robots
 
