@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 7 November 2026 — launch-prep 0.1.4
+Last updated: 7 November 2026 — launch-prep 0.1.5
 
 ## How to use this file
 
@@ -29,8 +29,8 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 | EPK Bio | `ginger-deadman/about/epk-bio/index.html` | LIVE | Press photo, credit and quote |
 | deadmanifesto hub | `deadmanifesto/index.html` | LIVE | Keep three live links; WIP banner removed in 0.1.4 |
 | Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Draft scaffolding removed in 0.1.0 |
-| Games | `deadmanifesto/games/index.html` | LIVE | Other platform profiles when URLs exist |
-| Career | `deadmanifesto/career/index.html` | LIVE | Author-supplied exact credit roles |
+| Games | `deadmanifesto/games/index.html` | LIVE | Steam + Game Credits live; other platform profiles when URLs exist |
+| Career | `deadmanifesto/career/index.html` | LIVE | Game Credits + full history live; exact roles author-supplied |
 | Contact | `contact/index.html` | LIVE | Email when the domain and mailbox exist |
 | Disclaimer | `disclaimer/index.html` | LIVE | — |
 | Changelog | `disclaimer/changelog/index.html` | LIVE | Update every shipped change |
@@ -54,7 +54,7 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 | Track pages (×6) | `music/albums/*/track-01.html` | HIDDEN | Restore when lyrics exist |
 | Shop | `shop/index.html` | GONE | Future merch gets a new name and a new page |
 
-As of 0.1.4, the public pages carry no TODO or placeholder blocks. The remaining gaps are image slots or author-input fields below.
+As of 0.1.5, the public pages carry no TODO or placeholder blocks. Game credits are visible on Games and Career; exact roles and dates remain author-input fields below. The remaining gaps are image slots or author-input fields.
 
 ## Author input
 
@@ -90,10 +90,17 @@ The Listen page shows verified titles, artists and groups only. Release metadata
 
 | Title | Role | Employer | Dates |
 |---|---|---|---|
-| Helldivers 2 (HD2) | | | |
-| Lego Horizon Adventures | | | |
+| Helldivers 2 | | | |
+| LEGO Horizon Adventures | | | |
 | Ravenbound | | | |
-| Call of the Wild: The Angler (theAngler) | | | |
+| Call of the Wild: The Angler | | | |
+
+Official full titles are used in public copy. "HD2" and "theAngler" are shorthands, not part of the titles. Reference pages:
+
+- Helldivers 2 — <https://www.playstation.com/en-us/games/helldivers-2/>
+- LEGO Horizon Adventures — <https://www.lego.com/en-us/aboutus/news/2024/june/lego-horizon-adventures>
+- Ravenbound — <https://avalanchestudios.com/games/ravenbound>
+- Call of the Wild: The Angler — <https://cotwtheangler.com/news/call-of-the-wild-the-angler-tm-is-now-available-on-pc/>
 
 ## Held back
 
@@ -134,11 +141,13 @@ All release covers are clean 1:1 slots. The previous Obliviability and Flips img
 
 - **Voice:** first person for editorial pages; third person for press/EPK copy. Direct, dry wit. No corporate register.
 - **Contact email:** "Coming soon" until the domain and mailbox exist.
-- **Shop:** retired. Any future merch gets a different name and a different page. Historical changelog entries stay.
+- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. The extra Instagram accounts (`ginger.deadman`, `imsgagzam`, `pribability`) were removed in 0.1.5.
+- **Shop:** retired. The local public build was audited in 0.1.5 and contains no shop links; the live GitHub Pages build still carries the old Shop nav until launch-prep is deployed. Any future merch gets a different name and a different page. Historical changelog entries stay.
 - **Gallery:** dark until images exist. No empty frames on the public site.
 - **Lyrics:** track pages dark until lyrics are supplied. Album cards remain.
 - **Music metadata:** the public Listen page shows verified titles, artists and groups only. Release metadata lives under Author input until supplied.
-- **Games:** Steam is public; other platform profiles stay hidden until URLs exist.
+- **Games:** Steam and the four verified game credits are public; other platform profiles stay hidden until URLs exist.
+- **Game titles:** use the official full titles in public copy: Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: The Angler. "HD2" and "theAngler" are shorthands, not part of the titles.
 - **Press:** the working bio is built only from existing site facts; author review is pending.
 - **Images:** slots are labelled by ratio, not by missing-content warnings.
 - **Manifesto:** the trimmed version is canonical. Draft marker and author-only questions are not published.

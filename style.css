@@ -157,8 +157,9 @@ body[data-mode="orange"] .site-bar { background: #FFA500; color: #000000; }
     cursor: pointer;
 }
 
-.bar-menu { position: relative; }
-.bar-menu summary { list-style: none; display: inline-block; }
+.bar-menu { position: relative; margin: 0; }
+.bar-menu summary { list-style: none; display: inline-block; margin: 0; }
+.bar-menu[open] > summary { margin-bottom: 0; }
 .bar-menu summary::-webkit-details-marker { display: none; }
 .bar-menu ul {
     position: absolute;
@@ -574,11 +575,24 @@ details > summary {
 }
 
 details > summary::after {
-    content: " ▾";
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.45em;
+    vertical-align: 0.15em;
+    border-left: 0.28em solid transparent;
+    border-right: 0.28em solid transparent;
+    border-top: 0.32em solid currentColor;
+    transform-origin: 50% 50%;
 }
 
 details[open] > summary {
     margin-bottom: 0.75rem;
+}
+
+details[open] > summary::after {
+    transform: rotate(180deg);
 }
 
 iframe {
