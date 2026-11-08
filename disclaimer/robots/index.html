@@ -3,8 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>robots — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=3">
+<meta name="description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<link rel="canonical" href="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
+<meta property="og:site_name" content="deadmanifesto">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Robots — deadmanifesto">
+<meta property="og:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<meta property="og:url" content="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Robots — deadmanifesto">
+<meta name="twitter:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
+<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
+<meta name="theme-color" content="#000000">
+<title>Robots — deadmanifesto</title>
+<link rel="stylesheet" href="../../style.css?v=8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
@@ -18,63 +31,69 @@
             <li><a href="../../deadmanifesto/index.html">deadmanifesto</a></li>
             <li><a href="../../deadmanifesto/games/index.html">Games</a></li>
             <li><a href="../../deadmanifesto/career/index.html">Career</a></li>
-            <li><a href="../../shop/index.html">Shop</a></li>
             <li><a href="../../contact/index.html">Contact</a></li>
             <li><a href="../index.html">Disclaimer</a></li>
             <li><a href="../changelog/index.html">Changelog</a></li>
-            <li><a href="../robots/index.html">Robots</a></li>
+            <li><a aria-current="page" href="../robots/index.html">Robots</a></li>
         </ul></details>
   <a class="bar-btn" href="../../index.html">Home</a>
   <a class="bar-btn" href="../index.html">Up</a>
   <a class="bar-btn" href="#top">Top</a>
-  <span class="bar-title">robots</span>
+  <span class="bar-title">Robots</span>
 <div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
 </header>
 
-<header>
-    
-</header>
 <main>
+    <h1>Robots</h1>
     <section>
         <h2>Purpose</h2>
-        <p>deadmanifesto is the living electronic press kit and portfolio of Ginger Deadman. It presents the discography, photo/press material, career/games work, lifestyle writing, contact routes, shop and copyright/disclaimer info in one ultra-minimalist brutalist placeholder site. Real authored content is still pending and is shown as <code>[TODO: ...]</code> blocks; media is shown as orange placeholders or live embedded widgets where noted.</p>
+        <p>deadmanifesto is the living electronic press kit and portfolio of Ginger Deadman. It presents the discography, photo/press material, career/games work, lifestyle writing, contact routes and copyright/disclaimer info in one ultra-minimalist brutalist site. Finished pages are public; unfinished sections are unlinked and marked <code>noindex</code> until they are ready.</p>
     </section>
 
     <section>
-        <h2>Structure (top level)</h2>
+        <h2>Public structure</h2>
         <ul>
             <li><code>index.html</code> — Splash</li>
-            <li><code>music/index.html</code> — Aggregators, embeds, Lyrics Archive, Flips series, collabs</li>
-            <li><code>music/albums/...</code> — Song pages</li>
+            <li><code>music/index.html</code> — Discography, live Spotify profile and cover slots</li>
             <li><code>ginger-deadman/index.html</code> — Artist profile</li>
-            <li><code>ginger-deadman/about/...</code> — About, EPK bio, gallery hub + subgalleries</li>
+            <li><code>ginger-deadman/about/index.html</code> — About</li>
+            <li><code>ginger-deadman/about/epk-bio/index.html</code> — EPK bio</li>
             <li><code>deadmanifesto/index.html</code> — Brand hub</li>
-            <li><code>deadmanifesto/manifesto/...</code></li>
-            <li><code>deadmanifesto/services/...</code></li>
-            <li><code>deadmanifesto/games/...</code> — Games home + Steam widget</li>
-            <li><code>deadmanifesto/career/...</code> — CV / career credits</li>
-            <li><code>deadmanifesto/adhd-guide/...</code>, <code>recipes/...</code>, <code>music-reviews/...</code>, <code>home-studio-101/...</code>, <code>games-blog/...</code>, <code>ai/...</code> — editorial slots</li>
-            <li><code>shop/index.html</code></li>
-            <li><code>contact/index.html</code> — Contact + socials + gaming profiles</li>
-            <li><code>disclaimer/index.html</code></li>
-            <li><code>changelog/index.html</code></li>
-            <li><code>robots/index.html</code> — this page</li>
+            <li><code>deadmanifesto/manifesto/index.html</code> — Manifesto</li>
+            <li><code>deadmanifesto/games/index.html</code> — Steam profile and selected game credits</li>
+            <li><code>deadmanifesto/career/index.html</code> — Game credits and professional history</li>
+            <li><code>contact/index.html</code> — Contact, direct-email note and curated socials</li>
+            <li><code>disclaimer/index.html</code> — Disclaimer</li>
+            <li><code>disclaimer/changelog/index.html</code> — Changelog</li>
+            <li><code>disclaimer/robots/index.html</code> — This page</li>
+        </ul>
+        <p>Held back and unlinked: services, editorial slots, gallery and lyric pages. They are marked <code>noindex</code> until they are ready.</p>
+        <p>Games carries the live Steam profile and the four verified game credits; other platform cards stay off the public surface until URLs exist. Music carries verified release titles and the live Spotify profile; release metadata and additional streaming links are author-supplied.</p>
+    </section>
+
+    <section>
+        <h2>Site files</h2>
+        <ul>
+            <li><code>404.html</code> — Not-found page</li>
+            <li><code>robots.txt</code> — Crawl policy and sitemap pointer</li>
+            <li><code>sitemap.xml</code> — Public URL index</li>
         </ul>
     </section>
 
     <section>
         <h2>Assets &amp; data</h2>
         <ul>
-            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints</li>
+            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints, image slots and release grid</li>
             <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
-            <li><code>assets/images/</code> — generic SVG icons (placeholder, generic-gaming, generic-music), empty aliases ready for album covers</li>
-            <li><code>content.md</code> — source of truth for authored text</li>
+            <li><code>assets/images/</code> — SVG icons, image slots and the live favicon; local album covers and press images to follow</li>
+            <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
+            <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
         </ul>
     </section>
 
     <section>
         <h2>Maintenance rule</h2>
-        <p>Any major structural change (new page, removed page, moved section, new global asset, new persistent setting) must be reflected in this page immediately, and a matching <code>0.0.x</code> entry must be added to <code>/changelog/</code>. If you add, rename or delete a directory, update both lists here.</p>
+        <p>Any structural change — a new page, removed page, moved section, new global asset or persistent setting — is reflected here immediately, with a matching entry in <code>/disclaimer/changelog/</code>. Public structure and the held-back list are updated together. Public pages carry a canonical URL, description, Open Graph/Twitter tags and a page-level H1. The changelog uses <code>0.1.x</code> during launch prep; the image layer is <code>0.2.0</code>; public launch is <code>1.0.0</code>.</p>
     </section>
 </main>
 <footer>

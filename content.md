@@ -1,132 +1,168 @@
-# deadmanifesto — Site Content Source of Truth
+# deadmanifesto — Editorial Map & Asset Ledger
 
-Edit the text blocks below. When you're done, tell me and I'll sync every page.
-Blank or `[TODO: ...]` entries stay as placeholders on the site.
+The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
----
+Last updated: 7 November 2026 — launch-prep 0.1.5
 
-## Global
+## How to use this file
 
-- Footer: All Rights Reserved. © deadmanifesto. MMXXVI
-- Site title/brand: deadmanifesto.
+- Change copy in the HTML page that renders it.
+- Use this file to decide what to change and to track images and held-back work.
+- Every structural change updates this map, `/disclaimer/changelog/` and `/disclaimer/robots/`.
 
-## Splash (index.html)
+## Public surface
 
-- Intro paragraph:
-  The consolidated output of deadmanifesto. Functioning as a living electronic press kit and portfolio, this site houses the complete experimental hip-hop and electronic discography of Ginger Deadman, alongside visual experiments, game projects, and direct contact nodes.
+Target nav (ten items, shop retired):
 
-## Disclaimer
+Home · Listen · Ginger Deadman · deadmanifesto · Games · Career · Contact · Disclaimer · Changelog · Robots
 
-- Heading: ALL OF THIS IS MINE
-- Body:
-  The work, audio, visuals and words published across this website and my connected projects, along with every view and opinion expressed here, are solely my own and do not represent my employer.
-  Any memes or external media I share are probably there because I found them funny, interesting, or because there was some ironic intent behind them. Where appropriate, I’ll credit the original work.
-  My lyricism and poetry are open to interpretation. Most of it is abstract, or inspired by a billion who picked up a pen before me. Not everything is written from my own perspective, and some of it will touch on dark themes.
-  Any use of AI in my original content will be clearly labelled. That said, third-party media and memes may not be disclosed properly by whoever originally uploaded them. Don't believe everything you see on the internet.
-  Any sponsored endorsement will be disclosed, although I don't intend on taking any sponsorships any time soon.
-  Please challenge me on my beliefs. I'm just out here moving through life and trying to live with some degree of empathy. If you disagree with something I say, make or share, feel free to reach out. I'm always happy to have a discussion, and maybe you'll change my mind.
-  I thought I'd take this opportunity to say something else, too.
-  I don't want fame, money or notoriety.
-  I just want to be heard.
-  To me, this space and my online presence are creative outlets. Somewhere for me to express myself artistically, politically, and generally just make sense of whatever is going on inside my head.
-  I've been putting things on the internet for as long as I can remember, and it's important to me that I can continue to express myself freely.
-  I'm a zillennial multimodal artist working in the Games industry as a Senior QA. I've been a songwriter, producer, session musician, bartender, hotel night porter, Sandwich Artist, graphic designer, expeditor, actor, bicycle courier, developer, teacher, critic, video editor, photographer, roadie, warehouse worker, poet and skater.
-  The list of things I've done, made, been interested in and occasionally convinced myself I could make a living from is extensive.
-  I'm an eclectic observer. I enjoy pretty much every form of media in pretty much every genre, and my criticism is usually more interested in artistic intention than whether the final product is technically 'good'.
-  You can call me Jack, or Ginger.
-  My artist name is Ginger Deadman, and my chosen name is Jack Aodh Ginger Kilbride Wolfe.
+## Page inventory
 
-## Contact
+States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, placeholder or wireframe copy) · **HIDDEN** (noindex, unlinked, coming-soon) · **GONE**.
 
-- Contact email field: [TODO: Insert Contact Email Address Here]
-- Description notes under each social card: [TODO: Insert Account Description Here]
+| Page | Path | State | Next action |
+|---|---|---|---|
+| Splash | `index.html` | LIVE | Splash image (8:3) when assets arrive |
+| Listen | `music/index.html` | LIVE | Author-supplied release metadata and remaining streaming links |
+| Ginger Deadman | `ginger-deadman/index.html` | LIVE | Press photo |
+| About | `ginger-deadman/about/index.html` | LIVE | — |
+| EPK Bio | `ginger-deadman/about/epk-bio/index.html` | LIVE | Press photo, credit and quote |
+| deadmanifesto hub | `deadmanifesto/index.html` | LIVE | Keep three live links; WIP banner removed in 0.1.4 |
+| Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Draft scaffolding removed in 0.1.0 |
+| Games | `deadmanifesto/games/index.html` | LIVE | Steam + Game Credits live; other platform profiles when URLs exist |
+| Career | `deadmanifesto/career/index.html` | LIVE | Game Credits + full history live; exact roles author-supplied |
+| Contact | `contact/index.html` | LIVE | Email when the domain and mailbox exist |
+| Disclaimer | `disclaimer/index.html` | LIVE | — |
+| Changelog | `disclaimer/changelog/index.html` | LIVE | Update every shipped change |
+| Robots | `disclaimer/robots/index.html` | LIVE | Update every structural change |
+| 404 | `404.html` | LIVE | Branded not-found page; absolute links point at the current GitHub Pages base |
+| Services | `deadmanifesto/services/index.html` | HIDDEN | Restore when service copy exists |
+| ADHD Guide | `deadmanifesto/adhd-guide/index.html` | HIDDEN | Editorial backlog |
+| Recipes | `deadmanifesto/recipes/index.html` | HIDDEN | Editorial backlog |
+| Music Reviews | `deadmanifesto/music-reviews/index.html` | HIDDEN | Editorial backlog |
+| Home Studio 101 | `deadmanifesto/home-studio-101/index.html` | HIDDEN | Editorial backlog |
+| Freeware & Tech | `deadmanifesto/home-studio-101/freeware-tech/index.html` | HIDDEN | Editorial backlog |
+| Games Blog | `deadmanifesto/games-blog/index.html` | HIDDEN | Editorial backlog |
+| AI | `deadmanifesto/ai/index.html` | HIDDEN | Editorial backlog |
+| Gallery hub | `ginger-deadman/about/gallery/index.html` | HIDDEN | Restore with image layer |
+| Gallery: Outfits | `ginger-deadman/about/gallery/outfits/index.html` | HIDDEN | Image layer |
+| Gallery: Gigs | `ginger-deadman/about/gallery/gigs/index.html` | HIDDEN | Image layer |
+| Gallery: Food | `ginger-deadman/about/gallery/food/index.html` | HIDDEN | Image layer |
+| Gallery: Wildlife | `ginger-deadman/about/gallery/wildlife/index.html` | HIDDEN | Image layer |
+| Gallery: Urban | `ginger-deadman/about/gallery/urban/index.html` | HIDDEN | Image layer |
+| Gallery: Nature | `ginger-deadman/about/gallery/nature/index.html` | HIDDEN | Image layer |
+| Track pages (×6) | `music/albums/*/track-01.html` | HIDDEN | Restore when lyrics exist |
+| Shop | `shop/index.html` | GONE | Future merch gets a new name and a new page |
 
-## Socials (contact)
+As of 0.1.5, the public pages carry no TODO or placeholder blocks. Game credits are visible on Games and Career; exact roles and dates remain author-input fields below. The remaining gaps are image slots or author-input fields.
 
-- Instagram — @ofwolfe: https://www.instagram.com/ofwolfe/
-- Instagram — Ginger Deadman: https://www.instagram.com/ginger.deadman/
-- Instagram — @imsgagzam: https://www.instagram.com/imsgagzam/
-- Instagram — @pribability: https://www.instagram.com/pribability/
-- MobyGames (Jack Wolfe): https://www.mobygames.com/person/1314711/jack-wolfe/
-- LinkedIn: https://www.linkedin.com/in/jackwolfeQA
-- Rate Your Music: https://rateyourmusic.com/~Jackwolfe1
-- YouTube: https://www.youtube.com/@jajararakoi8000
-- TikTok: https://www.tiktok.com/@ginger.deadman
+## Author input
 
-## Gaming platform profiles (contact)
+These fields stay off the public pages until they are supplied. If a field is blank, do not publish it.
 
-- Steam: [TODO: Insert Steam Profile URL Here]
-- PS5: [TODO: Insert PS5 Profile URL Here]
-- Xbox Network: [TODO: Insert Xbox Network Profile URL Here]
-- Epic Games Store: [TODO: Insert Epic Games Store Profile URL Here]
-- EA App: [TODO: Insert EA App Profile URL Here]
-- Ubisoft Connect: [TODO: Insert Ubisoft Connect Profile URL Here]
+### Music metadata
 
-## Music Reviews
+The Listen page shows verified titles, artists and groups only. Release metadata and additional streaming links wait here.
 
-- Intro: Find my reviews on Rate Your Music:
-- Link: https://rateyourmusic.com/~Jackwolfe1
-- TODO: [TODO: Embed RYM Reviews / Add Review Links Here]
+| Release | Type | Year | Tracks | Credits | Streaming URL |
+|---|---|---|---|---|---|
+| Orange | Album | | | | |
+| Obstinancy | Album | | | | |
+| Obliquity | Album | | | | |
+| Obsolescence | Tape | | | | |
+| Obliviability | Album | | | | |
+| Unreal | Tape | | | | |
+| Flips | Flips series | | | | |
+| Flips 2 | Flips series | | | | |
+| Flips 3 | Flips series | | | | |
+| Metro House | Collaboration | | | | |
+| Cultus Ex Cultura | Collaboration | | | | |
+| Unapology | Collaboration | | | | |
 
-## Discography (lyrics archive)
+### Press copy
 
-Main catalog (artist is Ginger Deadman unless stated):
+- Working bio: live on About and EPK Bio; approve or replace with the author's own version.
+- Press quote: not published.
+- Press photo: clean slot live on Ginger Deadman and EPK Bio.
+- Press photo credit: not published.
 
-1. Orange — [TODO: Track Count] / [TODO: Release Year]
-2. Obstinancy — [TODO: Track Count] / [TODO: Release Year]
-3. Obliquity — [TODO: Track Count] / [TODO: Release Year]
-4. Obsolescence (The Obsolescence Tapes) — [TODO: Track Count] / [TODO: Release Year]
-5. Obliviability — [TODO: Track Count] / [TODO: Release Year]
-6. Unreal (The Unreal Tapes) — [TODO: Track Count] / [TODO: Release Year]
+### Game credit details
 
-Flips series (artist: deadmanifesto.):
+| Title | Role | Employer | Dates |
+|---|---|---|---|
+| Helldivers 2 | | | |
+| LEGO Horizon Adventures | | | |
+| Ravenbound | | | |
+| Call of the Wild: The Angler | | | |
 
-1. Flips — [TODO: Track Count] / [TODO: Release Year]
-2. Flips 2 — [TODO: Track Count] / [TODO: Release Year]
-3. Flips 3 — [TODO: Track Count] / [TODO: Release Year]
+Official full titles are used in public copy. "HD2" and "theAngler" are shorthands, not part of the titles. Reference pages:
 
-Collaborative Projects:
+- Helldivers 2 — <https://www.playstation.com/en-us/games/helldivers-2/>
+- LEGO Horizon Adventures — <https://www.lego.com/en-us/aboutus/news/2024/june/lego-horizon-adventures>
+- Ravenbound — <https://avalanchestudios.com/games/ravenbound>
+- Call of the Wild: The Angler — <https://cotwtheangler.com/news/call-of-the-wild-the-angler-tm-is-now-available-on-pc/>
 
-- Metro House — Artist: Ginger Deadman, SY, Karmz — [TODO: Release Date]
-- Cultus Ex Cultura — Artist: Ginger Deadman, Deadlox — [TODO: Release Date]
-- Unapology — Artist: Ginger Deadman, Vaunce, Sami K — [TODO: Release Date]
+## Held back
 
-## deadmanifesto hub
+Unfinished sections are unlinked, marked `noindex`, and show a coming-soon panel. Files are kept so nothing is lost. The public surface never links to them.
 
-- Heading: Some more stuff
+## Asset ledger
 
-- The Deadmanifesto: [TODO: Insert The Deadmanifesto Statement Here]
-- Services:
-  - Songwriting & Music Production Consultation: [TODO: Insert Service Description Here]
-  - Digital Production & Design Services: [TODO: Insert Service Description Here]
-  - Vocal Performance Services: [TODO: Insert Service Description Here]
-- Lifestyle/editorial slots:
-  - ADHD Guide: [TODO: Insert ADHD Guide Content Here]
-  - Recipes: [TODO: Insert Recipe Content Here]
-  - Music Reviews: see Music Reviews above
-  - Home Studio 101: [TODO: Insert Home Studio 101 Content Here]
-    - Freeware & Tech Recommendations: [TODO: Insert Freeware & Tech Recommendations Here]
-  - Games Blog: [TODO: Insert Games Blog Content Here]
-  - AI: [TODO: Insert AI Thoughts / Posts Here], [TODO: Insert Prompting Guides Here], [TODO: Insert AI Recommendations Here]
+Slots inferred from the current markup. Dimensions are targets, not requirements.
 
-## Games
+| Slot | Page | Ratio / size | Filename | Alt text | Priority |
+|---|---|---|---|---|---|
+| Favicon | all pages | 32×32 + 180×180 | `assets/images/favicon.svg` (created 0.1.3) / `apple-touch-icon.png` (pending) | — | 1 |
+| Social share card | all pages | 1200×630 | `assets/images/og-deadmanifesto.jpg` | deadmanifesto — Ginger Deadman | 1 |
+| Splash banner | `index.html` | 8:3, 1600×600 | `assets/images/splash-banner.jpg` | deadmanifesto press image | 1 |
+| Artist portrait | `ginger-deadman/index.html`, `epk-bio/` | 3:4, 1200×1600 | `assets/images/ginger-deadman-portrait.jpg` | Ginger Deadman | 1 |
+| Album: Orange | `music/index.html` | 1:1, 1000×1000 | `assets/images/album-orange.jpg` | Orange album cover | 1 |
+| Album: Obstinancy | `music/index.html` | 1:1 | `assets/images/album-obstinancy.jpg` | Obstinancy album cover | 1 |
+| Album: Obliquity | `music/index.html` | 1:1 | `assets/images/album-obliguity.jpg` | Obliquity album cover | 1 |
+| Album: Obsolescence | `music/index.html` | 1:1 | `assets/images/album-obsolescence.jpg` | The Obsolescence Tapes cover | 1 |
+| Album: Obliviability | `music/index.html` | 1:1 | `assets/images/album-obliviability.jpg` | Obliviability album cover | 1 |
+| Album: Unreal | `music/index.html` | 1:1 | `assets/images/album-unreal.jpg` | The Unreal Tapes cover | 1 |
+| Album: Flips | `music/index.html` | 1:1 | `assets/images/album-flips.jpg` | Flips album cover | 1 |
+| Album: Flips 2 | `music/index.html` | 1:1 | `assets/images/album-flips-2.jpg` | Flips 2 album cover | 1 |
+| Album: Flips 3 | `music/index.html` | 1:1 | `assets/images/album-flips-3.jpg` | Flips 3 album cover | 1 |
+| Collab: Metro House | `music/index.html` | 1:1 | `assets/images/collab-metro-house.jpg` | Metro House cover | 2 |
+| Collab: Cultus Ex Cultura | `music/index.html` | 1:1 | `assets/images/collab-cultus-ex-cultura.jpg` | Cultus Ex Cultura cover | 2 |
+| Collab: Unapology | `music/index.html` | 1:1 | `assets/images/collab-unapology.jpg` | Unapology cover | 2 |
+| Gallery: Outfits | gallery page | mixed | `assets/images/gallery/outfits-01.jpg` … | descriptive alt per image | 3 |
+| Gallery: Gigs | gallery page | mixed | `assets/images/gallery/gigs-01.jpg` … | descriptive alt per image | 3 |
+| Gallery: Food | gallery page | mixed | `assets/images/gallery/food-01.jpg` … | descriptive alt per image | 3 |
+| Gallery: Wildlife | gallery page | mixed | `assets/images/gallery/wildlife-01.jpg` … | descriptive alt per image | 3 |
+| Gallery: Urban | gallery page | mixed | `assets/images/gallery/urban-01.jpg` … | descriptive alt per image | 3 |
+| Gallery: Nature | gallery page | mixed | `assets/images/gallery/nature-01.jpg` … | descriptive alt per image | 3 |
 
-- Credits (QA/Production Titles):
-  - Helldivers 2 (HD2) — [TODO: Insert Credit Role & Details Here]
-  - Lego Horizon Adventures — [TODO: Insert Credit Role & Details Here]
-  - Ravenbound — [TODO: Insert Credit Role & Details Here]
-  - Call of the Wild: The Angler (theAngler) — [TODO: Insert Credit Role & Details Here]
-- Games industry CV available upon request — [TODO: Insert CV Request Contact Instructions Here]
-- Career list (page bottom): Sony Interactive Entertainment Senior Functionality Tester, Universally Speaking QA Lead, Avalanche Studios QA Analyst, Founder &amp; Creative Producer, Bold Night Porter, Metal Bartender, Sandwich Artist, Day Spa Bar Manager, Missguided Warehouse Picker, Steak House Expeditor, Student Pub Bartender, Bicycle Delivery, Takeaway Receptionist, Freelance Session Musician, Part-Time Carer, Assistant Music Teacher, Community Centre Volunteer Computer Expert
+All release covers are clean 1:1 slots. The previous Obliviability and Flips imgbb covers did not load reliably and were removed in 0.1.4. The old `wip.jpg` banners and Ginger Deadman test images were also removed from the public pages.
 
-## Gallery
+## Copy decisions
 
-- Gallery is flagged UPCOMING.
-- Subpages: Outfits, Gigs, Food, Wildlife, Urban, Nature.
-- Note on every gallery page: images hosted on imgbb.
-- Each subpage: [TODO: Add Gallery Iframes Here]
+- **Voice:** first person for editorial pages; third person for press/EPK copy. Direct, dry wit. No corporate register.
+- **Contact email:** "Coming soon" until the domain and mailbox exist.
+- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. The extra Instagram accounts (`ginger.deadman`, `imsgagzam`, `pribability`) were removed in 0.1.5.
+- **Shop:** retired. The local public build was audited in 0.1.5 and contains no shop links; the live GitHub Pages build still carries the old Shop nav until launch-prep is deployed. Any future merch gets a different name and a different page. Historical changelog entries stay.
+- **Gallery:** dark until images exist. No empty frames on the public site.
+- **Lyrics:** track pages dark until lyrics are supplied. Album cards remain.
+- **Music metadata:** the public Listen page shows verified titles, artists and groups only. Release metadata lives under Author input until supplied.
+- **Games:** Steam and the four verified game credits are public; other platform profiles stay hidden until URLs exist.
+- **Game titles:** use the official full titles in public copy: Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: The Angler. "HD2" and "theAngler" are shorthands, not part of the titles.
+- **Press:** the working bio is built only from existing site facts; author review is pending.
+- **Images:** slots are labelled by ratio, not by missing-content warnings.
+- **Manifesto:** the trimmed version is canonical. Draft marker and author-only questions are not published.
+- **Robots page:** describes the public structure, not the held-back one.
 
-## Shop
+## Backlog
 
-- Intro: [TODO: Insert Shop Introduction Copy Here]
-- Link: [TODO: Insert Shop Link Here]
+- Register a domain and configure DNS (custom domain deferred).
+- Gather and optimise images; populate the ledger.
+- Resolve author-input fields: release metadata, press bio approval, quote, photo credit and exact game credit roles.
+- Add remaining streaming links and platform profiles when URLs exist.
+- Restore gallery when the image layer ships.
+- Restore track pages when lyrics exist.
+- Merch under a new name.
+- Editorial slots: services, ADHD guide, recipes, reviews, home studio, games blog, AI.
+- Apple touch icon and OG share image.
+- Update the 404 page's absolute links if the site moves to a custom domain.
+- Final QA, accessibility and performance pass in 0.1.6.
