@@ -7,11 +7,15 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#000000">
 <title>Page not found — deadmanifesto</title>
-<link rel="icon" type="image/svg+xml" href="https://jackwolfe-git.github.io/deadmanifes.to/assets/images/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fragment+Mono:ital@0;1&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="https://jackwolfe-git.github.io/deadmanifes.to/assets/images/favicon.svg" data-local="/assets/images/favicon.svg">
 <style>
+    @font-face {
+        font-family: 'Fragment Mono';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://jackwolfe-git.github.io/deadmanifes.to/assets/fonts/fragment-mono-regular-latin.woff2') format('woff2');
+    }
     * { box-sizing: border-box; }
     body {
         margin: 0;
@@ -29,8 +33,10 @@
     header, main, footer { width: 100%; max-width: 760px; margin: 0 auto; }
     header {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        gap: 0.75rem;
         border-bottom: 1px solid #333333;
         padding-bottom: 0.75rem;
         margin-bottom: 3rem;
@@ -40,74 +46,133 @@
     }
     .brand { color: #FFFFFF; text-decoration: none; font-weight: bold; }
     .status { color: #FFA500; }
+    nav { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; }
+    nav a { color: #FFFFFF; text-decoration: none; border-bottom: 1px solid #333333; }
+    nav a:hover, nav a:focus-visible { color: #FFA500; border-color: #FFA500; }
     .eyebrow {
         margin: 0 0 0.75rem;
         color: #FFA500;
         font-size: 0.75rem;
         text-transform: uppercase;
-        letter-spacing: 0.14em;
+        letter-spacing: 0.12em;
     }
     h1 {
-        margin: 0 0 1rem;
-        font-size: clamp(2.6rem, 10vw, 6rem);
-        line-height: 0.95;
+        margin: 0 auto 1rem;
+        max-width: 16ch;
+        font-size: clamp(2rem, 7vw, 4rem);
+        line-height: 1;
         text-transform: uppercase;
-        letter-spacing: 0.04em;
+        letter-spacing: -0.04em;
     }
-    .lede { max-width: 52ch; margin: 0 auto 2rem; color: #CCCCCC; }
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
+    .lede { max-width: 52ch; margin: 0 auto 1.5rem; color: #CCCCCC; }
+    figure { margin: 0 auto 2rem; }
+    figure img {
+        display: block;
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        margin: 0 auto;
+        border: 1px solid #333333;
     }
-    nav a {
+    figcaption { margin-top: 0.5rem; color: #808080; font-size: 0.75rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin: 0 auto 2rem; }
+    .actions a {
         color: #FFFFFF;
         text-decoration: none;
-        border: 1px solid currentColor;
-        padding: 0.45rem 0.85rem;
+        border: 1px solid #333333;
+        padding: 0.45rem 0.75rem;
         font-size: 0.75rem;
         text-transform: uppercase;
+        letter-spacing: 0.08em;
     }
-    nav a:hover, nav a:focus-visible, .brand:hover, .brand:focus-visible {
-        color: #FFA500;
-        outline: 2px solid #FFA500;
-        outline-offset: 2px;
+    .actions a:hover, .actions a:focus-visible { color: #000000; background: #FFA500; border-color: #FFA500; }
+    .search {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        max-width: 420px;
+        margin: 0 auto 2rem;
     }
-    footer {
-        margin-top: 3rem;
-        color: #707070;
+    .search input {
+        flex: 1;
+        min-width: 0;
+        padding: 0.5rem 0.65rem;
+        border: 1px solid #333333;
+        background: #000000;
+        color: #FFFFFF;
+        font: inherit;
+        font-size: 0.85rem;
+    }
+    .search button {
+        padding: 0.5rem 0.75rem;
+        border: 1px solid #FFA500;
+        background: #FFA500;
+        color: #000000;
+        font: inherit;
         font-size: 0.75rem;
-        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        cursor: pointer;
+    }
+    footer { color: #808080; font-size: 0.75rem; }
+    footer a { color: #CCCCCC; }
+    .footer-privacy { margin: 0.35rem 0 0; font-style: normal; }
+    @media (max-width: 600px) {
+        header { flex-direction: column; }
+        body { padding: 1.5rem 1rem; }
+    }
+    @media print {
+        body { background: #FFFFFF; color: #000000; }
+        .search, .actions, nav, footer { display: none; }
     }
 </style>
 </head>
 <body>
 <header>
-    <a class="brand" href="https://jackwolfe-git.github.io/deadmanifes.to/" data-local="/">deadmanifesto</a>
-    <span class="status">404</span>
-</header>
-<main>
-    <p class="eyebrow">Page not found</p>
-    <h1>Wrong room.</h1>
-    <p class="lede">The page you followed does not exist, moved, or was never finished.</p>
-    <nav aria-label="Recovery links">
+    <a class="brand" href="https://jackwolfe-git.github.io/deadmanifes.to/" data-local="/">deadmanifesto.</a>
+    <span class="status">404 / still editing</span>
+    <nav aria-label="Utility">
         <a href="https://jackwolfe-git.github.io/deadmanifes.to/" data-local="/">Home</a>
         <a href="https://jackwolfe-git.github.io/deadmanifes.to/music/" data-local="/music/">Listen</a>
-        <a href="https://jackwolfe-git.github.io/deadmanifes.to/ginger-deadman/" data-local="/ginger-deadman/">Ginger Deadman</a>
+        <a href="https://jackwolfe-git.github.io/deadmanifes.to/search/" data-local="/search/">Search</a>
         <a href="https://jackwolfe-git.github.io/deadmanifes.to/contact/" data-local="/contact/">Contact</a>
     </nav>
+</header>
+<main>
+    <p class="eyebrow">404 / page not found</p>
+    <h1>The edit is still being edited.</h1>
+    <p class="lede">Sorry bro. This page is not here, moved, or still in the workshop. Keep scrolling, or start again.</p>
+    <figure>
+        <img src="https://jackwolfe-git.github.io/deadmanifes.to/assets/images/wip.jpg" data-local="/assets/images/wip.jpg" alt="Sorry bro. The edit is still being edited. Keep scrolling." width="481" height="467">
+        <figcaption>Work in progress. The public pages are still live.</figcaption>
+    </figure>
+    <div class="actions">
+        <a href="https://jackwolfe-git.github.io/deadmanifes.to/" data-local="/">Home</a>
+        <a href="https://jackwolfe-git.github.io/deadmanifes.to/music/" data-local="/music/">Listen</a>
+        <a href="https://jackwolfe-git.github.io/deadmanifes.to/search/" data-local="/search/">Search</a>
+        <a href="https://jackwolfe-git.github.io/deadmanifes.to/contact/" data-local="/contact/">Contact</a>
+    </div>
+    <form class="search" action="https://jackwolfe-git.github.io/deadmanifes.to/search/" data-local="/search/" method="get" role="search">
+        <label class="visually-hidden" for="404-search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);">Search deadmanifesto</label>
+        <input id="404-search" name="q" type="search" placeholder="Search the public pages" autocomplete="off">
+        <button type="submit">Search</button>
+    </form>
 </main>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
+<p class="footer-privacy">No cookies or tracking. <a href="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/privacy/" data-local="/disclaimer/privacy/">Privacy</a></p>
 </footer>
 <script>
-    if (!/github\.io$/.test(location.hostname)) {
-        document.querySelectorAll('a[data-local]').forEach(function (link) {
-            link.href = link.getAttribute('data-local');
-        });
-        document.querySelector('link[rel="icon"]').href = '/assets/images/favicon.svg';
-    }
+(function () {
+    var isLocal = location.protocol === 'file:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    if (!isLocal) { return; }
+    document.querySelectorAll('[data-local]').forEach(function (el) {
+        var path = el.getAttribute('data-local');
+        if (el.tagName === 'A' || el.tagName === 'LINK') { el.href = path; }
+        else if (el.tagName === 'IMG') { el.src = path; }
+        else if (el.tagName === 'FORM') { el.action = path; }
+    });
+})();
 </script>
 </body>
 </html>

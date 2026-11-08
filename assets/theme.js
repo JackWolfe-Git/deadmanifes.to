@@ -14,7 +14,7 @@
 
     function apply(mode, silent) {
         document.body.setAttribute('data-mode', mode);
-        var buttons = document.querySelectorAll('.bar-right button');
+        var buttons = document.querySelectorAll('.bar-right button[data-mode]');
         buttons.forEach(function (b) {
             b.classList.toggle('active', b.getAttribute('data-mode') === mode);
         });
@@ -27,7 +27,7 @@
 
     apply(saved, true);
 
-    var buttons = document.querySelectorAll('.bar-right button');
+    var buttons = document.querySelectorAll('.bar-right button[data-mode]');
     buttons.forEach(function (b) {
         b.addEventListener('click', function () { apply(b.getAttribute('data-mode')); });
     });

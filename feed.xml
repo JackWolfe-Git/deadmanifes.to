@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>deadmanifesto — changelog</title>
+    <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+    <description>Shipped changes to deadmanifesto, the electronic press kit and portfolio of Ginger Deadman.</description>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>0.1.6 — content, privacy, search and album templates</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <guid isPermaLink="false">deadmanifesto-0.1.6</guid>
+      <pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds the homepage short bio, identity and EPK details, Obsolescence consistency, six public noindex album template pages with six more release and collaboration templates held back, the 27-track Flips (Remix Collection) tracklist from 2021 and named track pages, the 14-track Obliviability and 10-track Obsolescence tracklists with initial lyric pages, game covers and platform cards, the privacy page and footer privacy line, local search, RSS, a print-friendly EPK, a new 404 image and self-hosted fonts and icons. Removes the Spotify iframe, Steam widget, Google Fonts, SimpleIcons CDN and remote imgbb images. Rewrites the manifesto and adds the writing ruleset note. Replaces the privacy banner with a footer privacy line.</description>
+    </item>
+    <item>
+      <title>0.1.5 — game credits, menu and social cleanup</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <guid isPermaLink="false">deadmanifesto-0.1.5</guid>
+      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Restores the four verified game credits, standardises the official titles, removes the extra Instagram cards, fixes the Menu caret and bumps the shared stylesheet to v=8.</description>
+    </item>
+  </channel>
+</rss>
