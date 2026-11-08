@@ -1,5 +1,21 @@
 /* deadmanifesto wireframe — shared stylesheet
-   Ultra-minimalist brutalist wireframe. No frameworks. No fonts imported. */
+   Ultra-minimalist brutalist wireframe. No frameworks. Fragmented Mono is self-hosted. */
+
+@font-face {
+    font-family: 'Fragment Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("assets/fonts/fragment-mono-regular-latin.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: 'Fragment Mono';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url("assets/fonts/fragment-mono-italic-latin.woff2") format("woff2");
+}
 
 * {
     box-sizing: border-box;
@@ -515,18 +531,6 @@ figcaption {
     display: block;
 }
 
-.social-logo-placeholder {
-    width: 32px;
-    height: 32px;
-    background: #FFA500;
-    color: #000000;
-    font-size: 0.55rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .iframe-placeholder {
     aspect-ratio: 16 / 9;
     max-width: 640px;
@@ -551,11 +555,16 @@ figcaption {
     display: none;
 }
 
+.social-logo svg.si-light {
+    display: none;
+}
+
 body[data-mode="light"] .si-dark {
     display: none;
 }
 
-body[data-mode="light"] .si-light {
+body[data-mode="light"] .si-light,
+body[data-mode="light"] .social-logo svg.si-light {
     display: block;
 }
 
@@ -896,5 +905,490 @@ body[data-mode="orange"] .release-meta {
 @media (max-width: 700px) {
     body {
         padding-top: 0;
+    }
+}
+
+/* 0.1.6 — search, privacy, identity, album/game templates and print */
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.bar-search {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.bar-search-toggle {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bar-search-toggle:hover,
+.bar-search-toggle:focus-visible {
+    background: #FFA500;
+    color: #000000;
+}
+
+.bar-search-form {
+    display: none;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.site-bar.search-open .bar-search-form {
+    display: flex;
+}
+
+.bar-search-form input {
+    width: 220px;
+    max-width: 38vw;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 0.75rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.bar-search-form button {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.bar-search-form button:hover,
+.bar-search-form button:focus-visible {
+    background: #FFA500;
+    color: #000000;
+}
+
+.short-bio {
+    max-width: 52ch;
+    margin: 0.5rem auto 0.75rem;
+    color: #FFA500;
+    font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+body[data-mode="light"] .short-bio { color: #8A5200; }
+body[data-mode="orange"] .short-bio { color: #000000; }
+
+.muted {
+    color: #808080;
+}
+
+body[data-mode="light"] .muted { color: #666666; }
+body[data-mode="orange"] .muted { color: #000000; }
+
+.version {
+    margin: 0 0 1.25rem;
+    color: #FFA500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+body[data-mode="light"] .version { color: #8A5200; }
+body[data-mode="orange"] .version { color: #000000; }
+
+.identity,
+.press-list,
+.album-meta {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0.35rem 1rem;
+    max-width: 46rem;
+    margin: 1rem auto;
+    text-align: left;
+}
+
+.album-meta { max-width: 24rem; }
+
+.identity dt,
+.press-list dt,
+.album-meta dt {
+    color: #FFA500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+body[data-mode="light"] .identity dt,
+body[data-mode="light"] .press-list dt,
+body[data-mode="light"] .album-meta dt { color: #8A5200; }
+
+body[data-mode="orange"] .identity dt,
+body[data-mode="orange"] .press-list dt,
+body[data-mode="orange"] .album-meta dt { color: #000000; }
+
+.identity dd,
+.press-list dd,
+.album-meta dd {
+    margin: 0;
+}
+
+.release-cover-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.release-cover-link:hover .image-slot,
+.release-cover-link:focus-visible .image-slot {
+    border-color: #FFA500;
+}
+
+.release-card h3 a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.release-card h3 a:hover,
+.release-card h3 a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+main.album-page {
+    max-width: 900px;
+}
+
+.album-artist {
+    margin: 0 0 0.25rem;
+    color: #FFA500;
+    font-weight: 700;
+}
+
+body[data-mode="light"] .album-artist { color: #8A5200; }
+body[data-mode="orange"] .album-artist { color: #000000; }
+
+.album-cover-slot {
+    max-width: 360px;
+    margin: 1.5rem auto;
+}
+
+.tracklist {
+    counter-reset: track;
+    max-width: none;
+    margin: 1.25rem 0 2rem;
+    padding-left: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.tracklist li {
+    counter-increment: track;
+    display: grid;
+    grid-template-columns: 2rem minmax(0, 1fr) auto;
+    align-items: baseline;
+    gap: 0.75rem;
+    margin: 0.4rem 0;
+    padding: 0.2rem 0;
+    overflow-wrap: anywhere;
+}
+
+.tracklist li::before {
+    content: counter(track) ".";
+    color: #FFA500;
+    font-weight: 700;
+    text-align: right;
+}
+
+body[data-mode="light"] .tracklist li::before { color: #8A5200; }
+body[data-mode="orange"] .tracklist li::before { color: #000000; }
+
+.track-length {
+    color: #808080;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+body[data-mode="light"] .track-length { color: #666666; }
+body[data-mode="orange"] .track-length { color: #000000; }
+
+.track-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+main.album-page.track-page {
+    max-width: 760px;
+}
+
+.track-page section {
+    text-align: left;
+}
+
+.track-page .album-meta {
+    max-width: 34rem;
+    margin: 1rem 0;
+}
+
+.track-page .lyrics {
+    margin: 1rem 0 2rem;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.track-page .lyrics p {
+    margin: 0 0 1.25rem;
+}
+
+.track-page .lyrics p:last-child {
+    margin-bottom: 0;
+}
+
+.track-page .track-nav {
+    margin-top: 2.5rem;
+}
+
+.game-cover-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 1.5rem auto;
+}
+
+.game-cover-card {
+    margin: 0;
+}
+
+.game-cover-card h3 {
+    margin: 0.6rem 0 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+}
+
+.game-cover {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border: 1px solid #333333;
+}
+
+body[data-mode="light"] .game-cover { border-color: #CCCCCC; }
+body[data-mode="orange"] .game-cover { border-color: #000000; }
+
+.platform-label {
+    min-width: 90px;
+    color: #FFA500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+body[data-mode="light"] .platform-label { color: #8A5200; }
+body[data-mode="orange"] .platform-label { color: #000000; }
+
+.search-page-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    max-width: 620px;
+    margin: 1.5rem auto;
+}
+
+.search-page-form input {
+    flex: 1 1 300px;
+    min-width: 0;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+}
+
+.search-page-form button {
+    padding: 0.55rem 0.9rem;
+    border: 1px solid #FFA500;
+    background: #FFA500;
+    color: #000000;
+    font: inherit;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+}
+
+.search-status {
+    max-width: 760px;
+    margin: 1rem auto;
+    color: #CCCCCC;
+}
+
+body[data-mode="light"] .search-status { color: #333333; }
+body[data-mode="orange"] .search-status { color: #000000; }
+
+.search-results {
+    max-width: 760px;
+    margin: 2rem auto;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.search-result {
+    border-top: 1px solid #333333;
+    padding: 1rem 0;
+}
+
+body[data-mode="light"] .search-result { border-top-color: #CCCCCC; }
+body[data-mode="orange"] .search-result { border-top-color: #000000; }
+
+.search-result-title {
+    color: #FFA500;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+body[data-mode="light"] .search-result-title { color: #8A5200; }
+body[data-mode="orange"] .search-result-title { color: #000000; }
+
+.search-result-description {
+    margin: 0.3rem 0 0;
+    color: #CCCCCC;
+}
+
+body[data-mode="light"] .search-result-description { color: #333333; }
+body[data-mode="orange"] .search-result-description { color: #000000; }
+
+.footer-privacy {
+    margin: 0.35rem 0 0;
+    font-size: 0.75rem;
+    font-style: normal;
+}
+
+.footer-privacy a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+    .bar-search-form input {
+        width: 100%;
+        max-width: none;
+    }
+
+    .site-bar.search-open .bar-search {
+        flex: 1 1 100%;
+        order: 99;
+        justify-content: flex-end;
+        margin-top: 0.25rem;
+    }
+
+    .site-bar.search-open .bar-search-form {
+        flex: 1;
+    }
+
+    .game-cover-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .identity,
+    .press-list,
+    .album-meta {
+        grid-template-columns: 1fr;
+        gap: 0.1rem;
+    }
+
+    .identity dd,
+    .press-list dd,
+    .album-meta dd {
+        margin-bottom: 0.6rem;
+    }
+}
+
+@media print {
+    @page { margin: 15mm; }
+
+    body {
+        background: #FFFFFF !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        font-size: 11pt;
+    }
+
+    .site-bar,
+    .bar-search,
+    footer,
+    .hero-actions,
+    [data-print],
+    .no-print {
+        display: none !important;
+    }
+
+    main,
+    header {
+        max-width: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    a {
+        color: #000000 !important;
+        text-decoration: underline;
+    }
+
+    .image-slot {
+        border: 1px solid #000000;
+        color: #000000;
+    }
+
+    .identity dt,
+    .press-list dt,
+    .album-meta dt,
+    .version,
+    .short-bio,
+    .album-artist {
+        color: #000000 !important;
+    }
+
+    .muted {
+        color: #333333 !important;
+    }
+
+    h1, h2, h3 {
+        break-after: avoid;
+    }
+
+    section {
+        break-inside: avoid;
     }
 }

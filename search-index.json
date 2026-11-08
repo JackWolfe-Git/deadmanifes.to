@@ -1,0 +1,100 @@
+[
+  {
+    "title": "Home — Ginger Deadman",
+    "url": "../",
+    "description": "The electronic press kit and portfolio of Ginger Deadman.",
+    "headings": ["deadmanifesto", "Start here", "For press"],
+    "text": "I'm a poet; I just do my own thing. Experimental entertainment by Ginger Deadman. Listen, press kit and contact routes."
+  },
+  {
+    "title": "Listen — deadmanifesto",
+    "url": "../music/",
+    "description": "The deadmanifesto discography: albums, tapes, flips and a Spotify profile link.",
+    "headings": ["Spotify", "Albums & tapes", "Flips"],
+    "text": "Obsolescence, Obliviability, Unreal, The Unreal Tapes, Flips (2021, 27 tracks), Flips 2, Flips 3. Ginger Deadman and deadmanifesto."
+  },
+  {
+    "title": "Ginger Deadman — artist profile",
+    "url": "../ginger-deadman/",
+    "description": "Ginger Deadman: artist profile, press material, music and links from the deadmanifesto camp.",
+    "headings": ["Start here", "About", "Listen", "Career"],
+    "text": "Experimental hip-hop and electronic music, visual work and games from the artist behind deadmanifesto. EPK bio, discography and career links."
+  },
+  {
+    "title": "About Ginger Deadman",
+    "url": "../ginger-deadman/about/",
+    "description": "About Ginger Deadman: identity, artist background, press bio and links across deadmanifesto.",
+    "headings": ["Artist", "Identity", "More soon"],
+    "text": "Jack Aodh Ginger Kilbride Wolfe, they/them/theirs, Liverpool, UK, born 5 February 1998. Ginger Deadman is the artist behind deadmanifesto, working across experimental hip-hop, electronic music, visual work and games."
+  },
+  {
+    "title": "EPK Bio — Ginger Deadman",
+    "url": "../ginger-deadman/about/epk-bio/",
+    "description": "Press biography and electronic press kit for Ginger Deadman, the artist behind deadmanifesto.",
+    "headings": ["Artist Biography", "Press", "Print / Save as PDF"],
+    "text": "Ginger Deadman is the artist behind deadmanifesto, working across experimental hip-hop, electronic music, visual work and games. Press quote, press photo, photo credit and press contact are TBC. Print or save the EPK as a PDF."
+  },
+  {
+    "title": "deadmanifesto — brand, manifesto and work",
+    "url": "../deadmanifesto/",
+    "description": "The deadmanifesto brand: manifesto, games, career credits and the wider body of work.",
+    "headings": ["Explore", "The deadmanifesto", "Games", "Career"],
+    "text": "The manifesto, games and professional work behind the name. Philosophy, mission statement, game credits and professional history."
+  },
+  {
+    "title": "The deadmanifesto — philosophy",
+    "url": "../deadmanifesto/manifesto/",
+    "description": "The deadmanifesto: a working philosophy for building with AI rather than watching the AI era happen.",
+    "headings": ["Philosophy of the Deadman", "AI use in this site"],
+    "text": "Version 1.1, 8 November 2026. AI-assisted versus AI-generated work, responsibility and attribution, individual capability, infrastructure and environment. Models used: Big Pickle, Gemini 4 Argon, Deepseek 4.1 flash, Gemini 3.1 Pro, Gemini 3.5 Flash-Lite, Gemini 3.8 Flash, Gemma 4, Beam Free, GPT 4o mini, GPT 6 Luna. Writing note: drafts are edited against Anbeeld's WRITING.md; the aim is clear, specific prose, not detector evasion."
+  },
+  {
+    "title": "Games — deadmanifesto",
+    "url": "../deadmanifesto/games/",
+    "description": "The deadmanifesto Steam profile, game covers, platform links and selected game credits.",
+    "headings": ["Steam", "Game Credits", "Platforms"],
+    "text": "Helldivers 2, LEGO Horizon Adventures, Ravenbound, Call of the Wild: theAngler. Steam profile, Xbox profile and PlayStation username. Game cover art via Steam."
+  },
+  {
+    "title": "Career — deadmanifesto",
+    "url": "../deadmanifesto/career/",
+    "description": "Career credits and professional background for Ginger Deadman across game QA, production and creative work.",
+    "headings": ["Game Credits", "Experience & Links"],
+    "text": "Helldivers 2, LEGO Horizon Adventures, Ravenbound, Call of the Wild: theAngler. Sony Interactive Entertainment, Universally Speaking, Avalanche Studios, LinkedIn and MobyGames. Full professional history."
+  },
+  {
+    "title": "Contact — deadmanifesto",
+    "url": "../contact/",
+    "description": "Contact Ginger Deadman and deadmanifesto. Social links, RSS and email. Email is coming soon.",
+    "headings": ["Contact"],
+    "text": "Instagram, YouTube, TikTok, RateYourMusic, LinkedIn, RSS feed, second YouTube channel and SoundCloud placeholders, then email, which is coming soon."
+  },
+  {
+    "title": "Disclaimer — deadmanifesto",
+    "url": "../disclaimer/",
+    "description": "Copyright, licensing, AI disclosure, content note and site disclaimer for deadmanifesto.",
+    "headings": ["Index", "ALL OF THIS IS MINE", "Content note", "Takedown & corrections"],
+    "text": "Copyright and ownership, memes and external media, lyricism and poetry, AI disclosure, sponsorship, corrections, privacy and contact."
+  },
+  {
+    "title": "Privacy — deadmanifesto",
+    "url": "../disclaimer/privacy/",
+    "description": "How deadmanifesto handles browser storage, hosting logs, search, RSS, external links and contact.",
+    "headings": ["What this site stores", "Hosting", "Search", "External links", "Your choices"],
+    "text": "The site stores dm-mode in localStorage. No cookies, analytics, ads or third-party embeds. GitHub Pages hosting logs are disclosed. Search runs locally. External links open only when clicked. There is no consent banner because there are no non-essential cookies or trackers."
+  },
+  {
+    "title": "Changelog — deadmanifesto",
+    "url": "../disclaimer/changelog/",
+    "description": "A public record of every shipped change to deadmanifesto, versioned and dated.",
+    "headings": ["Full changelist", "November 2026"],
+    "text": "Version history for 0.0.x, 0.1.0 to 0.1.6, launch prep, content, privacy, search, RSS, album templates, games, contact and design changes."
+  },
+  {
+    "title": "Robots — deadmanifesto",
+    "url": "../disclaimer/robots/",
+    "description": "How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.",
+    "headings": ["Purpose", "Public structure", "Site files", "Assets & data", "Maintenance rule"],
+    "text": "Public pages, held-back sections, privacy, search, RSS, album templates, site files, local fonts and icons, and maintenance rules."
+  }
+]
