@@ -604,6 +604,29 @@ details[open] > summary::after {
     transform: rotate(180deg);
 }
 
+.changelog-model,
+.changelog-note {
+    margin: 0 0 0.75rem;
+    color: #555555;
+    font-size: 0.78rem;
+    line-height: 1.45;
+}
+
+.changelog-model {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+body[data-mode="dark"] .changelog-model,
+body[data-mode="dark"] .changelog-note {
+    color: #A3A3A3;
+}
+
+body[data-mode="orange"] .changelog-model,
+body[data-mode="orange"] .changelog-note {
+    color: #4A3100;
+}
+
 iframe {
     border: none;
     width: 100%;
