@@ -1399,6 +1399,21 @@ body[data-mode="orange"] .search-result-title { color: #000000; }
 body[data-mode="light"] .search-result-description { color: #333333; }
 body[data-mode="orange"] .search-result-description { color: #000000; }
 
+.footer-links {
+    margin: 0.45rem 0 0;
+    font-size: 0.8rem;
+    font-style: normal;
+}
+
+.footer-links a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.footer-links span {
+    margin: 0 0.35rem;
+}
+
 .footer-privacy {
     margin: 0.35rem 0 0;
     font-size: 0.75rem;

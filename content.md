@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 10 November 2026 — changelog 0.2.8
+Last updated: 10 November 2026 — changelog 0.2.9
 
 ## How to use this file
 
@@ -16,7 +16,7 @@ Target nav (seven items, shop retired):
 
 Home · Listen · Ginger Deadman · deadmanifesto · Career · Contact · About
 
-Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. Privacy is linked from About and from the footer.
+Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. The global footer links Contact, Disclaimer and Privacy, followed by the no-cookies line.
 
 ## Page inventory
 

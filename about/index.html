@@ -95,6 +95,7 @@
                 <summary>10</summary>
                 <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
                 <ul>
+                    <li>0.2.9 - add global footer links for Contact, Disclaimer and Privacy above the no-cookies line</li>
                     <li>0.2.8 - add a Tools page under About for LLMs, AI-assisted tools and traditional digital tools</li>
                     <li>0.2.7 - combine Disclaimer, Changelog and Robots into the About page and move Privacy under About</li>
                     <li>0.2.6 - calculate and show Flips, Obliviability and Obsolescence runtimes on the Listen page</li>
@@ -288,7 +289,7 @@
     <section>
         <h3>Assets &amp; data</h3>
         <ul>
-            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints, image slots, album/game cards, search, footer privacy link and print styles</li>
+            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints, image slots, album/game cards, search, footer links and print styles</li>
             <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
             <li><code>assets/site-ui.js</code> — header search control, dynamic age and print button</li>
             <li><code>assets/search.js</code> — local search results renderer</li>
@@ -309,7 +310,8 @@
 </main>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
-    <p class="footer-privacy">No cookies or tracking. <a href="../about/privacy/">Privacy</a></p>
+    <p class="footer-links"><a href="../contact/">Contact</a> <span aria-hidden="true">·</span> <a href="index.html#disclaimer">Disclaimer</a> <span aria-hidden="true">·</span> <a href="privacy/">Privacy</a></p>
+    <p class="footer-privacy">No cookies or tracking.</p>
 </footer>
 <script src="../assets/theme.js?v=4" defer></script>
 <script src="../assets/site-ui.js" defer></script>
