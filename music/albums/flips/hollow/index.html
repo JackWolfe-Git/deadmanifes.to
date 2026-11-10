@@ -18,17 +18,17 @@
 <link rel="icon" type="image/svg+xml" href="../../../../assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>Hollow — Flips — deadmanifesto</title>
-<link rel="stylesheet" href="../../../../style.css?v=9">
+<link rel="stylesheet" href="../../../../style.css?v=13">
+<link rel="stylesheet" href="../../../../assets/audio-player.css?v=5">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
-<body id="top">
+<body id="top" class="has-audio-player">
 <header class="site-bar">
   <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
             <li><a href="../../../../index.html">Home</a></li>
             <li><a aria-current="page" href="../../../index.html">Listen</a></li>
             <li><a href="../../../../ginger-deadman/index.html">Ginger Deadman</a></li>
             <li><a href="../../../../deadmanifesto/index.html">deadmanifesto</a></li>
-            <li><a href="../../../../deadmanifesto/games/index.html">Games</a></li>
             <li><a href="../../../../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../../../../contact/index.html">Contact</a></li>
             <li><a href="../../../../disclaimer/index.html">Disclaimer</a></li>
@@ -44,9 +44,16 @@
 
 <main class="album-page track-page">
     <p><a href="../">← Back to Flips</a></p>
-    <p class="album-artist">deadmanifesto</p>
-    <h1>Hollow</h1>
-    <p class="muted">Flips · Track 14 of 27</p>
+    <div class="track-header">
+        <figure class="track-cover-slot">
+            <img src="../../../../assets/images/album-covers/flips.jpg" alt="Flips album cover" width="640" height="640" loading="eager" decoding="async">
+        </figure>
+        <div class="track-header-copy">
+            <p class="album-artist">deadmanifesto</p>
+            <h1>Hollow</h1>
+            <p class="muted">Flips &middot; Track 14 of 27</p>
+        </div>
+    </div>
 
     <section>
         <h2>Lyrics</h2>
@@ -55,7 +62,7 @@
 
     <section>
         <h2>Streaming</h2>
-        <p>Track streaming link: TBC.</p>
+        <p>Streaming from <a href="https://files.catbox.moe/4o9yeh.wav">Catbox</a>.</p>
     </section>
 
     <nav class="track-nav" aria-label="Track navigation">
@@ -63,11 +70,49 @@
         <a class="bar-btn" href="../grind/" aria-label="Next track: Grind">Next →</a>
     </nav>
 </main>
+
+<!-- Catbox source: audio is streamed directly from Catbox. -->
+<section class="audio-player" data-audio-player data-ready="false" data-state="paused" aria-label="Hollow audio player" data-title="Hollow" data-src="https://files.catbox.moe/4o9yeh.wav" data-album="Flips" data-album-slug="flips" data-track="14" data-track-total="27" data-duration="3:38">
+    <audio class="audio-player-media" preload="metadata"></audio>
+    <div class="audio-player-inner">
+        <button class="audio-player-toggle" type="button" data-audio-toggle aria-label="Play Hollow">
+            <span class="audio-player-icon" aria-hidden="true"></span>
+        </button>
+        <div class="audio-player-time">
+            <span data-audio-current>0:00</span><span class="audio-player-sep"> / </span><span class="audio-player-duration" data-audio-duration>3:38</span><span class="audio-player-hint" data-audio-hint>source pending</span>
+        </div>
+        <div class="audio-player-seek-wrap">
+            <div class="audio-player-seek-track" aria-hidden="true">
+                <span class="audio-player-seek-buffer"></span>
+                <span class="audio-player-seek-fill"></span>
+            </div>
+            <input class="audio-player-range audio-player-seek" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Hollow" data-audio-seek disabled>
+        </div>
+        <div class="audio-player-volume">
+            <span class="audio-player-volume-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 9h3l4-3v12l-4-3H4z"></path>
+                    <path d="M15 8.5a5 5 0 0 1 0 7"></path>
+                    <path d="M17.5 6a8.5 8.5 0 0 1 0 12"></path>
+                </svg>
+            </span>
+            <div class="audio-player-volume-slider">
+                <div class="audio-player-volume-track" aria-hidden="true">
+                    <span class="audio-player-volume-fill"></span>
+                </div>
+                <input class="audio-player-range audio-player-volume-range" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume" data-audio-volume>
+            </div>
+        </div>
+    </div>
+    <p class="audio-player-status visually-hidden" role="status" aria-live="polite" data-audio-status></p>
+</section>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-privacy">No cookies or tracking. <a href="../../../../disclaimer/privacy/">Privacy</a></p>
 </footer>
 <script src="../../../../assets/theme.js?v=4" defer></script>
 <script src="../../../../assets/site-ui.js" defer></script>
+<script src="../../../../assets/audio-player.js?v=6" defer></script>
+<script src="../../../../assets/router.js?v=5" defer></script>
 </body>
 </html>

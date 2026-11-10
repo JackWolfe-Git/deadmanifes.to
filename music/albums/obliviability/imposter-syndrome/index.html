@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -18,17 +18,17 @@
 <link rel="icon" type="image/svg+xml" href="../../../../assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>Imposter Syndrome &mdash; Obliviability &mdash; deadmanifesto</title>
-<link rel="stylesheet" href="../../../../style.css?v=9">
+<link rel="stylesheet" href="../../../../style.css?v=13">
+<link rel="stylesheet" href="../../../../assets/audio-player.css?v=5">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
-<body id="top">
+<body id="top" class="has-audio-player">
 <header class="site-bar">
   <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
             <li><a href="../../../../index.html">Home</a></li>
             <li><a aria-current="page" href="../../../../music/index.html">Listen</a></li>
             <li><a href="../../../../ginger-deadman/index.html">Ginger Deadman</a></li>
             <li><a href="../../../../deadmanifesto/index.html">deadmanifesto</a></li>
-            <li><a href="../../../../deadmanifesto/games/index.html">Games</a></li>
             <li><a href="../../../../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../../../../contact/index.html">Contact</a></li>
             <li><a href="../../../../disclaimer/index.html">Disclaimer</a></li>
@@ -45,9 +45,14 @@
 <main class="album-page track-page">
     <p><a href="../">&larr; Back to Obliviability</a></p>
     <div class="track-header">
-        <p class="album-artist">Ginger Deadman</p>
-        <h1>Imposter Syndrome</h1>
-        <p class="muted">Obliviability &middot; Track 5 of 14</p>
+        <figure class="track-cover-slot">
+            <img src="../../../../assets/images/album-covers/obliviability.jpg" alt="Obliviability album cover" width="512" height="512" loading="eager" decoding="async">
+        </figure>
+        <div class="track-header-copy">
+            <p class="album-artist">Ginger Deadman</p>
+            <h1>Imposter Syndrome</h1>
+            <p class="muted">Obliviability &middot; Track 5 of 14</p>
+        </div>
     </div>
 
     <section class="track-details">
@@ -55,10 +60,10 @@
         <dl class="album-meta">
             <dt>Album</dt><dd><a href="../">Obliviability</a></dd>
             <dt>Artist</dt><dd>Ginger Deadman</dd>
-            <dt>Year</dt><dd>TBC</dd>
+            <dt>Year</dt><dd>2020</dd>
             <dt>Type</dt><dd>TBC</dd>
             <dt>Track</dt><dd>5 of 14</dd>
-            <dt>Length</dt><dd>TBC</dd>
+            <dt>Length</dt><dd>4:05</dd>
         </dl>
     </section>
 
@@ -175,7 +180,7 @@ Six feet deep (x2)</p>
 
     <section>
         <h2>Streaming</h2>
-        <p>Track streaming link: TBC.</p>
+        <p>Streaming from <a href="https://files.catbox.moe/aoqs6d.mp3">Catbox</a>.</p>
     </section>
 
     <nav class="track-nav" aria-label="Track navigation">
@@ -183,11 +188,49 @@ Six feet deep (x2)</p>
         <a class="bar-btn" href="../where-you-go/" aria-label="Next track: Where you go">Next &rarr;</a>
     </nav>
 </main>
+
+<!-- Catbox source: audio is streamed directly from Catbox. -->
+<section class="audio-player" data-audio-player data-ready="false" data-state="paused" aria-label="Imposter Syndrome audio player" data-title="Imposter Syndrome" data-src="https://files.catbox.moe/aoqs6d.mp3" data-album="Obliviability" data-album-slug="obliviability" data-track="5" data-track-total="14" data-duration="4:05">
+    <audio class="audio-player-media" preload="metadata"></audio>
+    <div class="audio-player-inner">
+        <button class="audio-player-toggle" type="button" data-audio-toggle aria-label="Play Imposter Syndrome">
+            <span class="audio-player-icon" aria-hidden="true"></span>
+        </button>
+        <div class="audio-player-time">
+            <span data-audio-current>0:00</span><span class="audio-player-sep"> / </span><span class="audio-player-duration" data-audio-duration>4:05</span><span class="audio-player-hint" data-audio-hint>source pending</span>
+        </div>
+        <div class="audio-player-seek-wrap">
+            <div class="audio-player-seek-track" aria-hidden="true">
+                <span class="audio-player-seek-buffer"></span>
+                <span class="audio-player-seek-fill"></span>
+            </div>
+            <input class="audio-player-range audio-player-seek" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek Imposter Syndrome" data-audio-seek disabled>
+        </div>
+        <div class="audio-player-volume">
+            <span class="audio-player-volume-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 9h3l4-3v12l-4-3H4z"></path>
+                    <path d="M15 8.5a5 5 0 0 1 0 7"></path>
+                    <path d="M17.5 6a8.5 8.5 0 0 1 0 12"></path>
+                </svg>
+            </span>
+            <div class="audio-player-volume-slider">
+                <div class="audio-player-volume-track" aria-hidden="true">
+                    <span class="audio-player-volume-fill"></span>
+                </div>
+                <input class="audio-player-range audio-player-volume-range" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume" data-audio-volume>
+            </div>
+        </div>
+    </div>
+    <p class="audio-player-status visually-hidden" role="status" aria-live="polite" data-audio-status></p>
+</section>
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-privacy">No cookies or tracking. <a href="../../../../disclaimer/privacy/">Privacy</a></p>
 </footer>
 <script src="../../../../assets/theme.js?v=4" defer></script>
 <script src="../../../../assets/site-ui.js" defer></script>
+<script src="../../../../assets/audio-player.js?v=6" defer></script>
+<script src="../../../../assets/router.js?v=5" defer></script>
 </body>
 </html>

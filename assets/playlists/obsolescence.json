@@ -1,0 +1,90 @@
+{
+  "album": "Obsolescence",
+  "slug": "obsolescence",
+  "tracks": [
+    {
+      "track": 1,
+      "title": "Java",
+      "duration": "3:36",
+      "src": "https://files.catbox.moe/goa4hy.wav",
+      "page": "music/albums/obsolescence/java/"
+    },
+    {
+      "track": 2,
+      "title": "Mercedes Pink Slip",
+      "duration": "2:01",
+      "src": "https://files.catbox.moe/nw4ol6.wav",
+      "page": "music/albums/obsolescence/mercedes-pink-slip/"
+    },
+    {
+      "track": 3,
+      "title": "Vertical Hurdle Pt 2",
+      "duration": "2:24",
+      "src": "https://files.catbox.moe/l6yozp.wav",
+      "page": "music/albums/obsolescence/vertical-hurdle-pt-2/"
+    },
+    {
+      "track": 4,
+      "title": "Tourettic",
+      "duration": "4:00",
+      "src": "https://files.catbox.moe/kr1ng1.wav",
+      "page": "music/albums/obsolescence/tourettic/"
+    },
+    {
+      "track": 5,
+      "title": "Amnesiac",
+      "duration": "2:38",
+      "src": "https://files.catbox.moe/tpht1m.wav",
+      "page": "music/albums/obsolescence/amnesiac/"
+    },
+    {
+      "track": 6,
+      "title": "Heaven to the Hospital",
+      "duration": "4:30",
+      "src": "https://files.catbox.moe/4l3q2f.wav",
+      "page": "music/albums/obsolescence/heaven-to-the-hospital/"
+    },
+    {
+      "track": 7,
+      "title": "Telepathy",
+      "duration": "1:49",
+      "src": "https://files.catbox.moe/6yypo4.wav",
+      "page": "music/albums/obsolescence/telepathy/"
+    },
+    {
+      "track": 8,
+      "title": "Tank",
+      "duration": "3:42",
+      "src": "https://files.catbox.moe/fiblf1.wav",
+      "page": "music/albums/obsolescence/tank/"
+    },
+    {
+      "track": 9,
+      "title": "Merchant",
+      "duration": "3:01",
+      "src": "https://files.catbox.moe/uwt0uf.wav",
+      "page": "music/albums/obsolescence/merchant/"
+    },
+    {
+      "track": 10,
+      "title": "Plagiarist",
+      "duration": "5:38",
+      "src": "https://files.catbox.moe/stq2as.wav",
+      "page": "music/albums/obsolescence/plagiarist/"
+    },
+    {
+      "track": 11,
+      "title": "Slow Dancing in the Dark",
+      "duration": "4:28",
+      "src": "https://files.catbox.moe/8o8bng.wav",
+      "page": "music/albums/obsolescence/slow-dancing-in-the-dark/"
+    },
+    {
+      "track": 12,
+      "title": "Phobia",
+      "duration": "2:13",
+      "src": "https://files.catbox.moe/r8ak5m.wav",
+      "page": "music/albums/obsolescence/phobia/"
+    }
+  ]
+}

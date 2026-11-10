@@ -1146,6 +1146,68 @@ main.album-page.track-page {
     max-width: 760px;
 }
 
+.track-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.track-cover-slot {
+    flex: 0 0 168px;
+    margin: 0;
+}
+
+.track-cover-slot img,
+.track-cover-slot .image-slot {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.track-cover-slot img {
+    border: 1px solid #555555;
+}
+
+.track-header-copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.track-header-copy h1 {
+    margin-top: 0;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 560px) {
+    .track-header {
+        gap: 0.9rem;
+    }
+
+    .track-cover-slot {
+        flex-basis: 116px;
+    }
+
+    .track-header-copy h1 {
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+    }
+}
+
+@media (max-width: 420px) {
+    .track-header {
+        flex-direction: column;
+        gap: 0.85rem;
+    }
+
+    .track-cover-slot {
+        flex-basis: auto;
+        width: min(54%, 190px);
+    }
+}
+
+body[data-mode="light"] .track-cover-slot img { border-color: #CCCCCC; }
+body[data-mode="orange"] .track-cover-slot img { border-color: #000000; }
+
 .track-page section {
     text-align: left;
 }
@@ -1200,6 +1262,34 @@ main.album-page.track-page {
 
 body[data-mode="light"] .game-cover { border-color: #CCCCCC; }
 body[data-mode="orange"] .game-cover { border-color: #000000; }
+
+.game-cover-empty {
+    background: #111111;
+    border-style: dashed;
+}
+
+body[data-mode="light"] .game-cover-empty {
+    background: #F4F4F4;
+}
+
+body[data-mode="orange"] .game-cover-empty {
+    background: #FFE2B8;
+}
+
+.game-cover-card.is-redacted h3 {
+    color: #888888;
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    text-transform: none;
+}
+
+body[data-mode="light"] .game-cover-card.is-redacted h3 {
+    color: #666666;
+}
+
+body[data-mode="orange"] .game-cover-card.is-redacted h3 {
+    color: #000000;
+}
 
 .platform-label {
     min-width: 90px;
@@ -1392,3 +1482,26 @@ body[data-mode="orange"] .search-result-description { color: #000000; }
         break-inside: avoid;
     }
 }
+
+/* Album cover artwork */
+.image-slot.has-cover {
+    padding: 0;
+    overflow: hidden;
+}
+
+.image-slot.has-cover img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.album-cover-slot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #555555;
+}
+
+body[data-mode="light"] .album-cover-slot img { border-color: #CCCCCC; }
+body[data-mode="orange"] .album-cover-slot img { border-color: #000000; }

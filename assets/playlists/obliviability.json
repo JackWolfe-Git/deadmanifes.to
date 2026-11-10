@@ -1,0 +1,104 @@
+{
+  "album": "Obliviability",
+  "slug": "obliviability",
+  "tracks": [
+    {
+      "track": 1,
+      "title": "Bootleg",
+      "duration": "3:28",
+      "src": "https://files.catbox.moe/f7brvj.mp3",
+      "page": "music/albums/obliviability/bootleg/"
+    },
+    {
+      "track": 2,
+      "title": "Hollywood",
+      "duration": "4:33",
+      "src": "https://files.catbox.moe/30btny.mp3",
+      "page": "music/albums/obliviability/hollywood/"
+    },
+    {
+      "track": 3,
+      "title": "Spontenaity",
+      "duration": "4:17",
+      "src": "https://files.catbox.moe/iau332.mp3",
+      "page": "music/albums/obliviability/spontenaity/"
+    },
+    {
+      "track": 4,
+      "title": "Comic Sans Gold",
+      "duration": "1:18",
+      "src": "https://files.catbox.moe/xosplz.mp3",
+      "page": "music/albums/obliviability/comic-sans-gold/"
+    },
+    {
+      "track": 5,
+      "title": "Imposter Syndrome",
+      "duration": "4:05",
+      "src": "https://files.catbox.moe/aoqs6d.mp3",
+      "page": "music/albums/obliviability/imposter-syndrome/"
+    },
+    {
+      "track": 6,
+      "title": "Where you go",
+      "duration": "1:53",
+      "src": "https://files.catbox.moe/6iblkm.mp3",
+      "page": "music/albums/obliviability/where-you-go/"
+    },
+    {
+      "track": 7,
+      "title": "Minneapolis",
+      "duration": "6:47",
+      "src": "https://files.catbox.moe/60g2ka.mp3",
+      "page": "music/albums/obliviability/minneapolis/"
+    },
+    {
+      "track": 8,
+      "title": "Royal Flush",
+      "duration": "3:02",
+      "src": "https://files.catbox.moe/gp89zy.mp3",
+      "page": "music/albums/obliviability/royal-flush/"
+    },
+    {
+      "track": 9,
+      "title": "Before You Knew Me",
+      "duration": "3:42",
+      "src": "https://files.catbox.moe/smrj28.mp3",
+      "page": "music/albums/obliviability/before-you-knew-me/"
+    },
+    {
+      "track": 10,
+      "title": "Tattoo",
+      "duration": "3:21",
+      "src": "https://files.catbox.moe/zc3ffl.mp3",
+      "page": "music/albums/obliviability/tattoo/"
+    },
+    {
+      "track": 11,
+      "title": "We Fire Mortars",
+      "duration": "2:53",
+      "src": "https://files.catbox.moe/zxxzkf.mp3",
+      "page": "music/albums/obliviability/we-fire-mortars/"
+    },
+    {
+      "track": 12,
+      "title": "Fishing Rod Ft. AJ Hades",
+      "duration": "4:01",
+      "src": "https://files.catbox.moe/k81it6.mp3",
+      "page": "music/albums/obliviability/fishing-rod-ft-aj-hades/"
+    },
+    {
+      "track": 13,
+      "title": "Chemical Burns Ft. Karmz",
+      "duration": "4:09",
+      "src": "https://files.catbox.moe/mtj9lf.mp3",
+      "page": "music/albums/obliviability/chemical-burns-ft-karmz/"
+    },
+    {
+      "track": 14,
+      "title": "Closed Parenthesis (Bonus Track)",
+      "duration": "3:17",
+      "src": "https://files.catbox.moe/6u7s07.mp3",
+      "page": "music/albums/obliviability/closed-parenthesis/"
+    }
+  ]
+}

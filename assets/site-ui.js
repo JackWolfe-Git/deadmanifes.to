@@ -133,6 +133,8 @@
         wirePrintButtons();
     }
 
+    window.SiteUI = { refresh: init };
+
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

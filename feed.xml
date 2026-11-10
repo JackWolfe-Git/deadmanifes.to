@@ -5,20 +5,27 @@
     <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
     <description>Shipped changes to deadmanifesto, the electronic press kit and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
-    <lastBuildDate>Sun, 08 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
     <item>
-      <title>0.1.6 — content, privacy, search and album templates</title>
+      <title>0.1.43 — EPK biography</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
-      <guid isPermaLink="false">deadmanifesto-0.1.6</guid>
-      <pubDate>Sun, 08 Nov 2026 12:00:00 +0000</pubDate>
-      <description>Adds the homepage short bio, identity and EPK details, Obsolescence consistency, six public noindex album template pages with six more release and collaboration templates held back, the 27-track Flips (Remix Collection) tracklist from 2021 and named track pages, the 14-track Obliviability and 10-track Obsolescence tracklists with initial lyric pages, game covers and platform cards, the privacy page and footer privacy line, local search, RSS, a print-friendly EPK, a new 404 image and self-hosted fonts and icons. Removes the Spotify iframe, Steam widget, Google Fonts, SimpleIcons CDN and remote imgbb images. Rewrites the manifesto and adds the writing ruleset note. Replaces the privacy banner with a footer privacy line.</description>
+      <guid isPermaLink="false">deadmanifesto-0.1.43</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Replaces the EPK biography with the Jack Wolfe alias, multimodal practice, open-archive description and professional-inquiry statement.</description>
     </item>
     <item>
-      <title>0.1.5 — game credits, menu and social cleanup</title>
+      <title>0.1.42 — Unreal metadata</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
-      <guid isPermaLink="false">deadmanifesto-0.1.5</guid>
-      <pubDate>Sat, 07 Nov 2026 12:00:00 +0000</pubDate>
-      <description>Restores the four verified game credits, standardises the official titles, removes the extra Instagram cards, fixes the Menu caret and bumps the shared stylesheet to v=8.</description>
+      <guid isPermaLink="false">deadmanifesto-0.1.42</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Removes The Unreal Tapes subtitle and sets Unreal to 2018, Experimental and the literal "x Tracks" count across the album page, Listen card, EPK and search index.</description>
+    </item>
+    <item>
+      <title>0.1.40 — light-mode platform colours</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <guid isPermaLink="false">deadmanifesto-0.1.40</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Colours the Steam, Xbox, PlayStation and EA SVG icons for light mode and cache-busts the new artwork.</description>
     </item>
   </channel>
 </rss>

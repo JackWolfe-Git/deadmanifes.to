@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>Changelog — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=9">
+<link rel="stylesheet" href="../../style.css?v=13">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
 <body id="top">
@@ -27,7 +27,6 @@
             <li><a href="../../music/index.html">Listen</a></li>
             <li><a href="../../ginger-deadman/index.html">Ginger Deadman</a></li>
             <li><a href="../../deadmanifesto/index.html">deadmanifesto</a></li>
-            <li><a href="../../deadmanifesto/games/index.html">Games</a></li>
             <li><a href="../../deadmanifesto/career/index.html">Career</a></li>
             <li><a href="../../contact/index.html">Contact</a></li>
             <li><a href="../index.html">Disclaimer</a></li>
@@ -45,24 +44,61 @@
     <h1>Changelog</h1>
     <section>
         <h2>Full changelist</h2>
-        <p>We maintain this page as the public record of everything changed. Entries use <code>major.minor.patch</code>: patches for copy and fixes, minor versions for a new phase, page or structural change, majors for launch milestones. One entry per shipped change, written in causal/professional phrasing. New months and days are added newest-first; entries within a day follow the order they shipped. All boxes start closed by default.</p>
+        <p>We maintain this page as the public record of everything changed. Entries use <code>major.minor.patch</code>: the 0.0.x line records the first build day, and from 0.1.1 onward every shipped feature gets its own patch version. The old 0.1.1–0.1.6 batch labels have been split and renumbered so one version equals one understandable change. Majors are launch milestones; minor versions mark a new phase. New months, days and versions are listed newest-first. All boxes start closed by default.</p>
         <details>
             <summary>November 2026</summary>
             <details>
-                <summary>8</summary>
+                <summary>10</summary>
                 <ul>
-                    <li>0.1.6 - ship the content, privacy, search and album-template batch: add the homepage line "I'm a poet; I just do my own thing." above the existing lede; publish the confirmed identity, dynamic Europe/London age, TBC pronunciation and Greek transliteration, a factual bio ending "More soon." and a print-friendly EPK with TBC press fields; standardise Obsolescence, keep The Unreal Tapes and use Call of the Wild: theAngler everywhere; remove the deadmanifesto hub's "180 songs" line; add 12 noindex album templates with Year/Type/Tracks placeholders: link six from Listen and hold back Orange, Obstinancy, Obliquity, Metro House, Cultus Ex Cultura and Unapology; publish the 27-track Flips tracklist with linked noindex track pages, keep the supplied titles verbatim, publish the 2021 Flips (Remix Collection) metadata, add the 14-track Obliviability and 10-track Obsolescence tracklists, publish initial lyric pages for Java, Rigatoni Nosebleed, seven Obliviability tracks and four Obsolescence tracks, and tag the confirmed vault lyric files; replace the Spotify iframe and Steam widget with direct links; add game covers, Game cover art via Steam, Xbox and PSN username cards; add the privacy page; add local search, a search index, a search results page and the search control on every page; add the RSS feed and Contact feed link; add LinkedIn and icon-based second YouTube/SoundCloud placeholders; redesign Contact as an icon-and-link list with the email placeholder last; add the WIP 404 image and new 404 copy; self-host Fragment Mono and the Simple Icons, remove Google Fonts, the Simple Icons CDN and remote imgbb images; disclose the AI models in the manifesto; add the content note, takedown route and privacy links to Disclaimer; update robots, sitemap and project notes; rewrite the manifesto for clarity and voice, move Big Pickle to the top of the model list, add Gemini 3.1 Pro, Gemini 3.5 Flash-Lite, Gemini 3.8 Flash and Gemma 4, and add a writing note citing Anbeeld's WRITING.md; replace the privacy banner with a static footer privacy line and reduce stored preferences to dm-mode; and bump the shared stylesheet cache buster to v=9</li>
+                    <li>0.1.43 - replace the EPK biography with the Jack Wolfe alias, multimodal practice, open-archive description and professional-inquiry statement</li>
+                    <li>0.1.42 - remove The Unreal Tapes subtitle and set Unreal to 2018, Experimental and the literal "x Tracks" count across the album page, Listen card, EPK and search index</li>
+                    <li>0.1.41 - restructure the changelog into one feature per version, renumber the post-0.1.0 history and add the latest release entries</li>
+                    <li>0.1.40 - colour the platform SVGs for light mode and cache-bust the new artwork</li>
+                    <li>0.1.39 - integrate Steam, Xbox, PlayStation and EA into the main Contact link list with local SVG icons; remove the Platforms heading</li>
+                    <li>0.1.38 - replace the EPK game-credit paragraph with "Jack Wolfe works professionally as a QA Tester."</li>
+                    <li>0.1.37 - fold Games into Career: move the game covers and add four [redacted] placeholders, remove the Games page, and move Steam/platform links to Contact</li>
+                    <li>0.1.36 - add the Obsolescence cover and complete its 12-track release details across the Listen card, album page and track pages</li>
+                    <li>0.1.35 - add the seven missing Obliviability track pages with covers, noindex metadata and "Lyrics coming soon." placeholders</li>
+                    <li>0.1.34 - correct Flips to 2021 (2022 Remaster), deadmanifesto, Flips (Remix Collection) and 27 tracks; set Obliviability to 2020 and Obsolescence to 2022 Experimental</li>
+                    <li>0.1.33 - add Club Foot as the first Flips album and remove Flips 3 from the site, navigation, notes and search</li>
+                    <li>0.1.32 - apply album cover art to every Listen card, album page and lyric/track page</li>
+                    <li>0.1.31 - repair mojibake across 26 Flips pages and remove U+FFFD from the published HTML</li>
+                    <li>0.1.30 - add the album pop-up with full tracklist, now playing, up next, track jumps, autoplay, inline SVG controls and a backdrop; fix duplicate-player loading on navigation</li>
+                    <li>0.1.29 - add PJAX navigation so internal pages swap without interrupting playback, and fix asset URL resolution through browser history</li>
+                    <li>0.1.28 - add the persistent player, per-album playlists and 40 Catbox-hosted track sources; playback, volume, seek, error states and idle player bars on album pages</li>
                 </ul>
             </details>
             <details>
-                <summary>7</summary>
+                <summary>8</summary>
                 <ul>
+                    <li>0.1.27 - add the Disclaimer content note, takedown route and privacy links; update robots, sitemap and project notes</li>
+                    <li>0.1.26 - rewrite the manifesto, expand the AI model list and add the writing note citing Anbeeld's WRITING.md</li>
+                    <li>0.1.25 - self-host Fragment Mono and the Simple Icons; remove Google Fonts, the Simple Icons CDN and remote imgbb images</li>
+                    <li>0.1.24 - add the WIP 404 image and new 404 copy</li>
+                    <li>0.1.23 - redesign Contact as an icon-and-link list with LinkedIn, second YouTube and SoundCloud placeholders</li>
+                    <li>0.1.22 - add the RSS feed and Contact feed link</li>
+                    <li>0.1.21 - add local search, the search index, results page and header search control</li>
+                    <li>0.1.20 - add the privacy page and replace the privacy banner with a static footer line; store only dm-mode</li>
+                    <li>0.1.19 - add game covers, the Steam credit note and Xbox/PSN username cards</li>
+                    <li>0.1.18 - replace the Spotify iframe and Steam widget with direct links</li>
+                    <li>0.1.17 - publish the first lyric pages for Java, Rigatoni Nosebleed, seven Obliviability tracks and four Obsolescence tracks</li>
+                    <li>0.1.16 - add the 14-track Obliviability and 10-track Obsolescence tracklists</li>
+                    <li>0.1.15 - publish the 27-track Flips (Remix Collection) tracklist, linked noindex track pages and 2021 metadata</li>
+                    <li>0.1.14 - add 12 noindex album templates; link six from Listen and hold back six</li>
+                    <li>0.1.13 - standardise Obsolescence, keep The Unreal Tapes and use Call of the Wild: theAngler</li>
+                    <li>0.1.12 - publish the identity details, Europe/London age, TBC pronunciation and transliteration, factual bio and print-friendly EPK</li>
+                    <li>0.1.11 - add the "I'm a poet; I just do my own thing." line to the homepage and remove the hub's "180 songs" line</li>
+                    <li>0.1.10 - remove the extra Instagram cards, fix the Menu caret and stop the menu inheriting content spacing</li>
+                    <li>0.1.9 - restore the four verified game credits on Games and Career with official title styling</li>
+                    <li>0.1.8 - move release, press and credit fields into content.md; tighten the release grid, remove the legacy header block and restore mobile header clearance</li>
+                    <li>0.1.7 - write the factual bio, clean About and the hub, and remove WIP banners, test images and dead remote covers</li>
+                    <li>0.1.6 - rebuild Listen around the verified catalogue and Spotify profile; cut Games to the Steam link and remove unfilled career credits</li>
+                    <li>0.1.5 - add the branded 404 page, robots.txt and sitemap.xml</li>
+                    <li>0.1.4 - add canonical, Open Graph and Twitter metadata, favicon, theme colour, page H1s, active nav states and a mobile utility bar</li>
+                    <li>0.1.3 - rewrite the splash as an EPK landing page</li>
+                    <li>0.1.2 - hide unfinished services, editorial, gallery and lyric pages behind noindex coming-soon panels; clean dead links and repair the remaining mojibake</li>
+                    <li>0.1.1 - retire the shop page and remove every live reference to it</li>
                     <li>0.1.0 - begin the launch-prep pass: adopt major.minor.patch logging, keep the trimmed manifesto, remove its draft marker and author-only question blocks, and retire content.md as a copy source in favour of an editorial map and asset ledger</li>
-                    <li>0.1.1 - retire the shop page and remove every live reference to it; the shop is gone from the navigation, structure and purpose notes, while the historical entries above remain as the record of when it existed</li>
-                    <li>0.1.2 - hide the unfinished surface: unlink services, editorial slots, gallery and lyric pages, mark each one noindex with a coming-soon panel, clean the deadmanifesto hub, the Ginger Deadman about page and the music track links, replace the contact form with a coming-soon note, fix the remaining mojibake, bump the shared stylesheet cache buster to v=4, and rewrite the robots structure to describe only the public site</li>
-                    <li>0.1.3 - rewrite the splash page around the EPK, add canonical URLs, descriptions, Open Graph and Twitter tags, a favicon, theme colour, active navigation states, a mobile utility bar and page-level H1s, add a branded 404 page, robots.txt and sitemap.xml, and bump the shared stylesheet cache buster to v=5</li>
-                    <li>0.1.4 - clear the public content debt: rebuild Listen around the verified catalog and live Spotify profile, cut Games to the Steam profile, remove unfilled career credit roles, write a factual working bio for Ginger Deadman, clean the About and hub pages, remove the last WIP banner, test images and dead remote covers, move release, press and credit fields into content.md, tighten the release grid, remove the empty legacy header block from every page, reset the default body margin, restore header clearance on desktop and mobile, wrap long links, and bump the shared stylesheet cache buster to v=7</li>
-                    <li>0.1.5 - restore the game credits sections: show the four verified QA/production titles on Games and return the Game Credits (QA/Production Titles) heading to Career, standardise the titles to their official styling (Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: theAngler), and leave exact roles and dates as author input; remove the three extra Instagram cards (ginger.deadman, imsgagzam, pribability) so Contact keeps only the main Instagram, YouTube, TikTok and RateYourMusic links; replace the Menu button's broken Unicode disclosure glyph with a CSS caret, stop the navigation menu inheriting content-details spacing, and bump the shared stylesheet cache buster to v=8</li>
                 </ul>
             </details>
         </details>
@@ -71,75 +107,75 @@
             <details>
                 <summary>3</summary>
                 <ul>
-            <li>0.0.1 - scaffold the EPK/portfolio wireframe from the schema (28 pages, TODOs, media placeholders, nav, link-check)</li>
-            <li>0.0.2 - add instructions on how to test the site in a browser</li>
-            <li>0.0.3 - explain how to manage images + create the assets/images folder</li>
-            <li>0.0.4 - remove black borders (clean white) and add an interesting universal font</li>
-            <li>0.0.5 - add Spotify album player + YouTube/YouTube Music/SoundCloud/Bandcamp/Apple Music placeholders as collapsed dropdowns on the listen page</li>
-            <li>0.0.6 - mark Spotify embed as unavailable</li>
-            <li>0.0.7 - add the deadmanifesto poem in italics at the bottom of the deadmanifesto page</li>
-            <li>0.0.8 - add a disclaimer page with a centered placeholder text box</li>
-            <li>0.0.9 - fill in the disclaimer text</li>
-            <li>0.0.10 - remove the disclaimer placeholder-box CSS</li>
-            <li>0.0.11 - change splash title to "deadmanifesto." and lowercase the d site-wide</li>
-            <li>0.0.12 - fill splash intro copy</li>
-            <li>0.0.13 - integrate Fragment Mono via the Google Fonts embed code</li>
-            <li>0.0.14 - embed the deadmanifesto Spotify artist profile under the dropdown</li>
-            <li>0.0.15 - add the shop page with intro placeholder + shop link placeholder</li>
-            <li>0.0.16 - restructure the lyrics archive into a 3-wide grid with cover, title, artist, track count, release year</li>
-            <li>0.0.17 - fix global placeholder overlap (todo spans rendered inline → block)</li>
-            <li>0.0.18 - add the grey italic global footer "All Rights Reserved. © deadmanifesto. MMXXVI"</li>
-            <li>0.0.19 - delete the guestbook page and remove all references</li>
-            <li>0.0.20 - implement the Obliviability album cover</li>
-            <li>0.0.21 - implement the Flips album cover</li>
-            <li>0.0.22 - rearrange the album list (Orange, Obstinancy, Obliquity, Obsolescence, Obliviability, Unreal / Flips / collabs)</li>
-            <li>0.0.23 - clean up placeholders on the lyrics page (left-aligned under image, artist names filled, collabs labelled)</li>
-            <li>0.0.24 - make the collabs section a collapsible dropdown ("Collaborations with other artists throughout the years.")</li>
-            <li>0.0.25 - replace gallery images with links to subpages (outfits, gigs, food, wildlife, urban, nature), each blank with placeholder note + imgbb note</li>
-            <li>0.0.26 - implement global dark mode</li>
-            <li>0.0.27 - add the global dark/light toggle in the top corner with :) placeholder caption swap and "I should write something here."</li>
-            <li>0.0.28 - remove the UPCOMING flag text from the gallery page</li>
-            <li>0.0.29 - replace "Photo Gallery/Photography Gallery" with just "Gallery"</li>
-            <li>0.0.30 - delete political blog</li>
-            <li>0.0.31 - replace "Lost Highway Arcade" with "LEGO Horizon Adventures"</li>
-            <li>0.0.32 - merge aggregators + listen + lyrics archive into the music page; split career content to a separate page; introduce the dark/light/orange three-colour persistent toggle</li>
-            <li>0.0.33 - remove NBA 2K23/2K24 credits</li>
-            <li>0.0.34 - add a CV-style "Other Jobs" index to the career page</li>
-            <li>0.0.35 - populate the CV index from the pasted job list (no links, no borders)</li>
-            <li>0.0.36 - update the CV index list again</li>
-            <li>0.0.37 - rename "Professional Outlets" to "Career"; remove CV paragraph, CV TODO and Other Jobs section</li>
-            <li>0.0.38 - bring the job list back under the Career section</li>
-            <li>0.0.39 - move the LinkedIn + MobyGames links from contact into Career</li>
-            <li>0.0.40 - add working SVGs for LinkedIn + MobyGames that respond across all three colour modes</li>
-            <li>0.0.41 - refine LinkedIn SVG: white silhouette in dark mode, blue fill in light mode</li>
-            <li>0.0.42 - create content.md as the source of truth for text</li>
-            <li>0.0.43 - initialise the git repo and push to GitHub + Pages instructions</li>
-            <li>0.0.44 - mobile pass: max 2-column album grid, contact icons stacked above links, all icons clickable, site-wide mobile portrait support</li>
-            <li>0.0.45 - make the theme toggle persistent and rename it ("TOO DARK!"/"TOO BRIGHT!")</li>
-            <li>0.0.46 - add the orange mode secret toggle + make text and SVGs black in orange mode</li>
-            <li>0.0.47 - fix the invisible button text in dark mode (explicit colour)</li>
-            <li>0.0.48 - add the AI page under deadmanifesto</li>
-            <li>0.0.49 - replace the broken Xbox icon with a working inline SVG; fix MobyGames/LinkedIn/RYM with Wikimedia logos; fill YouTube + TikTok profile links</li>
-            <li>0.0.50 - swap the wiki-sourced MobyGames/RYM logos for generic local SVG icons</li>
-            <li>0.0.51 - make the LinkedIn SVG white in dark, blue in light (via .si-dark/.si-light + .si-linkedin overrides)</li>
-            <li>0.0.52 - create the changelog page under Disclaimer</li>
-            <li>0.0.53 - replace the tiny mode toggle text buttons with three coloured boxes; 1-second title notice after switching; persist all three modes in one system</li>
-            <li>0.0.54 - reposition the mode notice into the top corner</li>
-            <li>0.0.55 - add body padding so the mode boxes never overlap page text</li>
-            <li>0.0.56 - strip the button text from the theme swatches for a permanent colour-only indicator</li>
-            <li>0.0.57 - globally fix mojibake (—, ??????) to proper em dashes</li>
-            <li>0.0.58 - remove the lyrics-archive display spec + release-order TODO from the music page</li>
-            <li>0.0.59 - adopt this versioning convention and keep the changelog updated as we go</li>
-            <li>0.0.60 - add a robots-style page describing site purpose, structure and maintenance rules; link it from the primary nav under Changelog</li>
-            <li>0.0.61 - move the Gaming section from the contact page onto the games page; each platform card now lists an SVG, its profile-link TODO and a description note, followed by a 16:9 placeholder iframe slot</li>
-            <li>0.0.62 - restructure the changelog page with month/day dropdown groups, closed by default</li>
-            <li>0.0.63 - replace per-page nav headers with a single fixed top bar on every page: Home/Menu/Up on the left, the three colour swatches on the right; the Menu dropdown lists all pages; dark/light/orange aware and mobile-friendly</li>
-            <li>0.0.64 - embed the wip.jpg image on the shop page between the Shop heading and the Introduction</li>
-            <li>0.0.65 - shrink the image into a reusable .content-image class (max 240px) and place the same image at the top of Music, Ginger Deadman, deadmanifesto and Games</li>
-            <li>0.0.66 - top bar now centers the page title (replacing the old in-page h1), renames "Up a page" to "Up", adds a "Top" shortcut and moves the Menu button to the leftmost position</li>
-            <li>0.0.67 - make "Up" point to the parent page's own index.html on every page so it never opens the file-system directory listing; remove it from the home page</li>
-            <li>0.0.68 - place the pasted DEADMANIFESTO statement (Core Tenets + My Vision for AI Usage) onto the manifesto page, preserving the markdown formatting and wrapping it to the page width</li>
             <li>0.0.69 - restructure the manifesto copy into collapsed details/summary dropdowns; enlarge the numbered tenet titles; clear out the raw markdown markers</li>
+            <li>0.0.68 - place the pasted DEADMANIFESTO statement (Core Tenets + My Vision for AI Usage) onto the manifesto page, preserving the markdown formatting and wrapping it to the page width</li>
+            <li>0.0.67 - make "Up" point to the parent page's own index.html on every page so it never opens the file-system directory listing; remove it from the home page</li>
+            <li>0.0.66 - top bar now centers the page title (replacing the old in-page h1), renames "Up a page" to "Up", adds a "Top" shortcut and moves the Menu button to the leftmost position</li>
+            <li>0.0.65 - shrink the image into a reusable .content-image class (max 240px) and place the same image at the top of Music, Ginger Deadman, deadmanifesto and Games</li>
+            <li>0.0.64 - embed the wip.jpg image on the shop page between the Shop heading and the Introduction</li>
+            <li>0.0.63 - replace per-page nav headers with a single fixed top bar on every page: Home/Menu/Up on the left, the three colour swatches on the right; the Menu dropdown lists all pages; dark/light/orange aware and mobile-friendly</li>
+            <li>0.0.62 - restructure the changelog page with month/day dropdown groups, closed by default</li>
+            <li>0.0.61 - move the Gaming section from the contact page onto the games page; each platform card now lists an SVG, its profile-link TODO and a description note, followed by a 16:9 placeholder iframe slot</li>
+            <li>0.0.60 - add a robots-style page describing site purpose, structure and maintenance rules; link it from the primary nav under Changelog</li>
+            <li>0.0.59 - adopt this versioning convention and keep the changelog updated as we go</li>
+            <li>0.0.58 - remove the lyrics-archive display spec + release-order TODO from the music page</li>
+            <li>0.0.57 - globally fix mojibake (—, ??????) to proper em dashes</li>
+            <li>0.0.56 - strip the button text from the theme swatches for a permanent colour-only indicator</li>
+            <li>0.0.55 - add body padding so the mode boxes never overlap page text</li>
+            <li>0.0.54 - reposition the mode notice into the top corner</li>
+            <li>0.0.53 - replace the tiny mode toggle text buttons with three coloured boxes; 1-second title notice after switching; persist all three modes in one system</li>
+            <li>0.0.52 - create the changelog page under Disclaimer</li>
+            <li>0.0.51 - make the LinkedIn SVG white in dark, blue in light (via .si-dark/.si-light + .si-linkedin overrides)</li>
+            <li>0.0.50 - swap the wiki-sourced MobyGames/RYM logos for generic local SVG icons</li>
+            <li>0.0.49 - replace the broken Xbox icon with a working inline SVG; fix MobyGames/LinkedIn/RYM with Wikimedia logos; fill YouTube + TikTok profile links</li>
+            <li>0.0.48 - add the AI page under deadmanifesto</li>
+            <li>0.0.47 - fix the invisible button text in dark mode (explicit colour)</li>
+            <li>0.0.46 - add the orange mode secret toggle + make text and SVGs black in orange mode</li>
+            <li>0.0.45 - make the theme toggle persistent and rename it ("TOO DARK!"/"TOO BRIGHT!")</li>
+            <li>0.0.44 - mobile pass: max 2-column album grid, contact icons stacked above links, all icons clickable, site-wide mobile portrait support</li>
+            <li>0.0.43 - initialise the git repo and push to GitHub + Pages instructions</li>
+            <li>0.0.42 - create content.md as the source of truth for text</li>
+            <li>0.0.41 - refine LinkedIn SVG: white silhouette in dark mode, blue fill in light mode</li>
+            <li>0.0.40 - add working SVGs for LinkedIn + MobyGames that respond across all three colour modes</li>
+            <li>0.0.39 - move the LinkedIn + MobyGames links from contact into Career</li>
+            <li>0.0.38 - bring the job list back under the Career section</li>
+            <li>0.0.37 - rename "Professional Outlets" to "Career"; remove CV paragraph, CV TODO and Other Jobs section</li>
+            <li>0.0.36 - update the CV index list again</li>
+            <li>0.0.35 - populate the CV index from the pasted job list (no links, no borders)</li>
+            <li>0.0.34 - add a CV-style "Other Jobs" index to the career page</li>
+            <li>0.0.33 - remove NBA 2K23/2K24 credits</li>
+            <li>0.0.32 - merge aggregators + listen + lyrics archive into the music page; split career content to a separate page; introduce the dark/light/orange three-colour persistent toggle</li>
+            <li>0.0.31 - replace "Lost Highway Arcade" with "LEGO Horizon Adventures"</li>
+            <li>0.0.30 - delete political blog</li>
+            <li>0.0.29 - replace "Photo Gallery/Photography Gallery" with just "Gallery"</li>
+            <li>0.0.28 - remove the UPCOMING flag text from the gallery page</li>
+            <li>0.0.27 - add the global dark/light toggle in the top corner with :) placeholder caption swap and "I should write something here."</li>
+            <li>0.0.26 - implement global dark mode</li>
+            <li>0.0.25 - replace gallery images with links to subpages (outfits, gigs, food, wildlife, urban, nature), each blank with placeholder note + imgbb note</li>
+            <li>0.0.24 - make the collabs section a collapsible dropdown ("Collaborations with other artists throughout the years.")</li>
+            <li>0.0.23 - clean up placeholders on the lyrics page (left-aligned under image, artist names filled, collabs labelled)</li>
+            <li>0.0.22 - rearrange the album list (Orange, Obstinancy, Obliquity, Obsolescence, Obliviability, Unreal / Flips / collabs)</li>
+            <li>0.0.21 - implement the Flips album cover</li>
+            <li>0.0.20 - implement the Obliviability album cover</li>
+            <li>0.0.19 - delete the guestbook page and remove all references</li>
+            <li>0.0.18 - add the grey italic global footer "All Rights Reserved. © deadmanifesto. MMXXVI"</li>
+            <li>0.0.17 - fix global placeholder overlap (todo spans rendered inline → block)</li>
+            <li>0.0.16 - restructure the lyrics archive into a 3-wide grid with cover, title, artist, track count, release year</li>
+            <li>0.0.15 - add the shop page with intro placeholder + shop link placeholder</li>
+            <li>0.0.14 - embed the deadmanifesto Spotify artist profile under the dropdown</li>
+            <li>0.0.13 - integrate Fragment Mono via the Google Fonts embed code</li>
+            <li>0.0.12 - fill splash intro copy</li>
+            <li>0.0.11 - change splash title to "deadmanifesto." and lowercase the d site-wide</li>
+            <li>0.0.10 - remove the disclaimer placeholder-box CSS</li>
+            <li>0.0.9 - fill in the disclaimer text</li>
+            <li>0.0.8 - add a disclaimer page with a centered placeholder text box</li>
+            <li>0.0.7 - add the deadmanifesto poem in italics at the bottom of the deadmanifesto page</li>
+            <li>0.0.6 - mark Spotify embed as unavailable</li>
+            <li>0.0.5 - add Spotify album player + YouTube/YouTube Music/SoundCloud/Bandcamp/Apple Music placeholders as collapsed dropdowns on the listen page</li>
+            <li>0.0.4 - remove black borders (clean white) and add an interesting universal font</li>
+            <li>0.0.3 - explain how to manage images + create the assets/images folder</li>
+            <li>0.0.2 - add instructions on how to test the site in a browser</li>
+            <li>0.0.1 - scaffold the EPK/portfolio wireframe from the schema (28 pages, TODOs, media placeholders, nav, link-check)</li>
                 </ul>
             </details>
         </details>
