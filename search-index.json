@@ -98,7 +98,7 @@
   {
     "title": "About — deadmanifesto",
     "url": "../about/",
-    "description": "About deadmanifesto: disclaimer, changelog, site structure and privacy.",
+    "description": "About deadmanifesto: disclaimer, changelog, tools, site structure and privacy.",
     "headings": [
       "Useful links",
       "Disclaimer",
@@ -106,7 +106,7 @@
       "Planning phase",
       "Robots"
     ],
-    "text": "About deadmanifesto, the disclaimer, the full changelog, the planning phase, the site structure notes and the privacy route."
+    "text": "About deadmanifesto, the disclaimer, the full changelog, the planning phase, the tools page, the site structure notes and the privacy route."
   },
   {
     "title": "Privacy — deadmanifesto",
@@ -123,5 +123,16 @@
       "Changes"
     ],
     "text": "deadmanifesto stores only the dm-mode colour preference. It uses no analytics, cookies, tracking pixels or third-party embeds. GitHub Pages hosting logs, local search, the RSS feed and external links are explained."
+  },
+  {
+    "title": "Tools — deadmanifesto",
+    "url": "../about/tools/",
+    "description": "The language models, AI-assisted tools and traditional digital tools used to make deadmanifesto.",
+    "headings": [
+      "LLMs",
+      "AI-assisted",
+      "Traditional"
+    ],
+    "text": "The language models, AI-assisted tools and traditional digital tools used to make deadmanifesto. Entries are being added."
   }
 ]

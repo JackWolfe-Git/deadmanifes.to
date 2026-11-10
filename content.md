@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 10 November 2026 — changelog 0.2.7
+Last updated: 10 November 2026 — changelog 0.2.8
 
 ## How to use this file
 
@@ -35,7 +35,7 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 | Contact | `contact/index.html` | LIVE | Steam/Xbox/PSN/EA cards live; email, second YouTube and SoundCloud URLs when supplied |
 | About | `about/index.html` | LIVE | Disclaimer, changelog, planning placeholder and site-structure notes combined |
 | Privacy | `about/privacy/index.html` | LIVE | Update when storage or hosting changes |
-| Tools | `about/tools/index.html` | PLANNED | LLM, AI-assisted and traditional tool lists |
+| Tools | `about/tools/index.html` | LIVE | LLM, AI-assisted and traditional tool sections live; entries TBC |
 | Search | `search/index.html` | LIVE | Local index; update `search-index.json` with public pages |
 | Album templates (×6 public) | `music/albums/*/index.html` | NEEDS COPY | Public, linked from Listen, `noindex` until credits and remaining metadata exist; six further release and collaboration templates are held back |
 | Flips track pages (×27) | `music/albums/flips/*/index.html` | PARTIAL | Public, linked from Flips, `noindex`; Java and Rigatoni Nosebleed have lyrics, remaining lyrics pending |
