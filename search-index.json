@@ -2,13 +2,13 @@
   {
     "title": "Home — Ginger Deadman",
     "url": "../",
-    "description": "The electronic press kit and portfolio of Ginger Deadman.",
+    "description": "The portfolio of Ginger Deadman.",
     "headings": [
       "deadmanifesto",
       "Start here",
-      "For press"
+      "Biography"
     ],
-    "text": "I'm a poet; I just do my own thing. Experimental entertainment by Ginger Deadman. Listen, press kit and contact routes."
+    "text": "I'm a poet; I just do my own thing. Experimental entertainment by Ginger Deadman. Listen, bio and contact routes."
   },
   {
     "title": "Listen — deadmanifesto",
@@ -24,19 +24,19 @@
   {
     "title": "Ginger Deadman — artist profile",
     "url": "../ginger-deadman/",
-    "description": "Ginger Deadman: artist profile, press material, music and links from the deadmanifesto camp.",
+    "description": "Ginger Deadman: artist profile, biography, music and links from the deadmanifesto camp.",
     "headings": [
       "Start here",
       "About",
       "Listen",
       "Career"
     ],
-    "text": "Experimental hip-hop and electronic music, visual work and games from the artist behind deadmanifesto. EPK bio, discography and career links."
+    "text": "Experimental hip-hop and electronic music, visual work and games from the artist behind deadmanifesto. Bio, discography and career links."
   },
   {
     "title": "About Ginger Deadman",
     "url": "../ginger-deadman/about/",
-    "description": "About Ginger Deadman: identity, artist background, press bio and links across deadmanifesto.",
+    "description": "About Ginger Deadman: identity, artist background, biography and links across deadmanifesto.",
     "headings": [
       "Artist",
       "Identity",
@@ -45,15 +45,14 @@
     "text": "Jack Aodh Ginger Kilbride Wolfe, they/them/theirs, Liverpool, UK, born 5 February 1998. Ginger Deadman is the artist behind deadmanifesto, working across experimental hip-hop, electronic music, visual work and games."
   },
   {
-    "title": "EPK Bio — Ginger Deadman",
-    "url": "../ginger-deadman/about/epk-bio/",
-    "description": "Press biography and electronic press kit for Ginger Deadman, the artist behind deadmanifesto.",
+    "title": "Bio — Ginger Deadman",
+    "url": "../ginger-deadman/about/bio/",
+    "description": "Biography of Ginger Deadman, the artist behind deadmanifesto.",
     "headings": [
       "Artist Biography",
-      "Press",
-      "Print / Save as PDF"
+      "Details"
     ],
-    "text": "Ginger Deadman is an alias of Jack Wolfe, the artist behind deadmanifesto. They are a multimodal artist, working across experimental hip-hop, electronic music, visual work and games. The deadmanifesto catalog includes an archive of lyrics and mechanical productions from Ginger Deadman, functioning as an open distribution and streaming platform built on freeware with as much transparency as possible. Jack Wolfe works professionally as a QA Tester; all professional inquiries must relate to the Ginger Deadman / deadmanifesto projects. Press quote, press photo, photo credit and press contact are TBC. Print or save the EPK as a PDF."
+    "text": "Ginger Deadman is an alias of Jack Wolfe, the artist behind deadmanifesto. They are a multimodal artist, working across experimental hip-hop, electronic music, visual work and games. The deadmanifesto catalog includes an archive of lyrics and mechanical productions from Ginger Deadman, functioning as an open distribution and streaming platform built on freeware with as much transparency as possible. Jack Wolfe works professionally as a QA Tester; all professional inquiries must relate to the Ginger Deadman / deadmanifesto projects."
   },
   {
     "title": "deadmanifesto — brand, manifesto and work",
