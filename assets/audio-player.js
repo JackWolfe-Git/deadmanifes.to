@@ -44,6 +44,22 @@
         return;
     }
 
+    function makeTimeButton(element, attributeName) {
+        if (element.tagName === 'BUTTON') {
+            return element;
+        }
+        var button = document.createElement('button');
+        button.type = 'button';
+        button.className = (element.className ? element.className + ' ' : '') + 'audio-player-time-button';
+        button.setAttribute(attributeName, '');
+        button.textContent = element.textContent;
+        element.replaceWith(button);
+        return button;
+    }
+
+    currentEl = makeTimeButton(currentEl, 'data-audio-current');
+    durationEl = makeTimeButton(durationEl, 'data-audio-duration');
+
     var albumNames = {
         'club-foot': 'Club Foot',
         flips: 'Flips',
@@ -57,6 +73,7 @@
     var attemptedInitialAutoplay = false;
     var initialAutoplay = new URLSearchParams(window.location.search).get('autoplay') === '1';
     var popupOpen = false;
+    var durationWords = false;
     var state = readTrackFromElement(player, window.location.href);
 
     function pad2(value) {
@@ -75,6 +92,81 @@
             return hours + ':' + pad2(minutes) + ':' + pad2(seconds);
         }
         return minutes + ':' + pad2(seconds);
+    }
+
+    function parseTimeValue(value) {
+        if (typeof value === 'number') {
+            return isFinite(value) && value > 0 ? value : 0;
+        }
+        var text = String(value || '').trim();
+        if (!text) {
+            return 0;
+        }
+        if (/^\d+(?:\.\d+)?s?$/i.test(text)) {
+            return Math.max(0, parseFloat(text));
+        }
+        var parts = text.split(':');
+        if (parts.length < 2 || parts.length > 3) {
+            return 0;
+        }
+        var total = 0;
+        var index;
+        for (index = 0; index < parts.length; index += 1) {
+            var part = Number(parts[index]);
+            if (!isFinite(part) || part < 0) {
+                return 0;
+            }
+            total = (total * 60) + part;
+        }
+        return total;
+    }
+
+    function parseSeekInput(value) {
+        var text = String(value || '').trim().toLowerCase();
+        if (!text) {
+            return null;
+        }
+        if (/^\d+(?:\.\d+)?s?$/.test(text)) {
+            var seconds = parseFloat(text.replace(/s$/, ''));
+            return isFinite(seconds) && seconds >= 0 ? seconds : null;
+        }
+        if (!/^\d{1,3}(?::\d{1,2}){1,2}$/.test(text)) {
+            return null;
+        }
+        var parts = text.split(':').map(Number);
+        var total = 0;
+        var index;
+        for (index = 0; index < parts.length; index += 1) {
+            if (!isFinite(parts[index]) || parts[index] < 0) {
+                return null;
+            }
+            if (index > 0 && parts[index] > 59) {
+                return null;
+            }
+            total = (total * 60) + parts[index];
+        }
+        return total;
+    }
+
+    function formatDurationWords(value) {
+        if (!isFinite(value) || value < 0) {
+            return '0s';
+        }
+        return Math.floor(value) + 's';
+    }
+
+    function formatTimeDisplay(value) {
+        if (!isFinite(value) || value < 0) {
+            value = 0;
+        }
+        return durationWords ? formatDurationWords(value) : formatTime(value);
+    }
+
+    function formatDurationDisplay(value) {
+        if (!isFinite(value) || value <= 0) {
+            return durationWords ? '0s' : '0:00';
+        }
+        return formatTimeDisplay(value);
     }
 
     function normalizeSrc(value) {
@@ -180,7 +272,58 @@
         '<path d="M4 19.5v-4h4"></path>' +
         '<path d="m10.2 8.3 5.4 3.7-5.4 3.7z"></path>' +
         '</svg>';
-    toggle.insertAdjacentElement('afterend', autoplayToggle);
+
+    var previousButton = document.createElement('button');
+    previousButton.type = 'button';
+    previousButton.className = 'audio-player-control audio-player-previous';
+    previousButton.setAttribute('data-audio-previous', '');
+    previousButton.setAttribute('aria-label', 'Previous track');
+    previousButton.title = 'Previous track';
+    previousButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M6 5v14"></path>' +
+        '<path d="M18 6l-8 6 8 6z"></path>' +
+        '</svg>';
+
+    var nextButton = document.createElement('button');
+    nextButton.type = 'button';
+    nextButton.className = 'audio-player-control audio-player-next';
+    nextButton.setAttribute('data-audio-next', '');
+    nextButton.setAttribute('aria-label', 'Next track');
+    nextButton.title = 'Next track';
+    nextButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M18 5v14"></path>' +
+        '<path d="M6 6l8 6-8 6z"></path>' +
+        '</svg>';
+
+    var backButton = document.createElement('button');
+    backButton.type = 'button';
+    backButton.className = 'audio-player-control audio-player-skip';
+    backButton.setAttribute('data-audio-back', '');
+    backButton.setAttribute('aria-label', 'Back 10 seconds');
+    backButton.title = 'Back 10 seconds';
+    backButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M4.5 11a7.5 7.5 0 1 1 2.2 5.3"></path>' +
+        '<path d="M4.5 5.5v5.5H10"></path>' +
+        '<text x="12.4" y="15.5" text-anchor="middle" font-size="7.4" fill="currentColor" stroke="none" font-family="inherit">10</text>' +
+        '</svg>';
+
+    var forwardButton = document.createElement('button');
+    forwardButton.type = 'button';
+    forwardButton.className = 'audio-player-control audio-player-skip';
+    forwardButton.setAttribute('data-audio-forward', '');
+    forwardButton.setAttribute('aria-label', 'Forward 10 seconds');
+    forwardButton.title = 'Forward 10 seconds';
+    forwardButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
+        '<path d="M19.5 11a7.5 7.5 0 1 0-2.2 5.3"></path>' +
+        '<path d="M19.5 5.5v5.5H14"></path>' +
+        '<text x="11.6" y="15.5" text-anchor="middle" font-size="7.4" fill="currentColor" stroke="none" font-family="inherit">10</text>' +
+        '</svg>';
+
+    toggle.insertAdjacentElement('beforebegin', autoplayToggle);
+    toggle.insertAdjacentElement('beforebegin', previousButton);
+    toggle.insertAdjacentElement('afterend', nextButton);
+    nextButton.insertAdjacentElement('afterend', backButton);
+    backButton.insertAdjacentElement('afterend', forwardButton);
 
     var tracklistToggle = document.createElement('button');
     tracklistToggle.type = 'button';
@@ -196,6 +339,23 @@
         '<path d="m16 9 5 3-5 3z"></path>' +
         '</svg>';
     inner.appendChild(tracklistToggle);
+
+    var volumeIcon = player.querySelector('.audio-player-volume-icon');
+    var muteButton = document.createElement('button');
+    muteButton.type = 'button';
+    muteButton.className = 'audio-player-mute';
+    muteButton.setAttribute('data-audio-mute', '');
+    muteButton.setAttribute('aria-label', 'Mute');
+    muteButton.setAttribute('aria-pressed', 'false');
+    muteButton.title = 'Mute';
+    muteButton.innerHTML = '<span class="audio-player-mute-icon" aria-hidden="true">' +
+        (volumeIcon ? volumeIcon.innerHTML : '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9h3l4-3v12l-4-3H4z"></path><path d="M15 8.5a5 5 0 0 1 0 7"></path><path d="M17.5 6a8.5 8.5 0 0 1 0 12"></path></svg>') +
+        '</span>';
+    if (volumeIcon) {
+        volumeIcon.replaceWith(muteButton);
+    } else {
+        volumeWrap.insertBefore(muteButton, volumeWrap.firstChild);
+    }
 
     var popup = document.createElement('div');
     popup.className = 'audio-player-popup';
@@ -224,6 +384,12 @@
     popupBackdrop.hidden = true;
     document.body.appendChild(popupBackdrop);
 
+    var feedback = document.createElement('div');
+    feedback.className = 'audio-player-feedback';
+    feedback.setAttribute('aria-hidden', 'true');
+    player.appendChild(feedback);
+    var feedbackTimer = 0;
+
     var popupAlbum = popup.querySelector('[data-audio-popup-album]');
     var popupContext = popup.querySelector('[data-audio-popup-context]');
     var popupPosition = popup.querySelector('[data-audio-popup-position]');
@@ -239,8 +405,39 @@
         }, 30);
     }
 
+    function showFeedback(message) {
+        announce(message);
+        feedback.textContent = message;
+        feedback.classList.add('is-visible');
+        window.clearTimeout(feedbackTimer);
+        feedbackTimer = window.setTimeout(function () {
+            feedback.classList.remove('is-visible');
+        }, 1500);
+    }
+
+    function setMuteButtonState() {
+        muteButton.setAttribute('aria-pressed', audio.muted ? 'true' : 'false');
+        muteButton.title = audio.muted ? 'Unmute' : 'Mute';
+        muteButton.setAttribute('aria-label', audio.muted ? 'Unmute' : 'Mute');
+    }
+
+    function durationText() {
+        return formatDurationDisplay(currentDuration());
+    }
+
+    function updateTimeButtonLabels() {
+        var current = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
+        currentEl.title = 'Seek to a specific time';
+        currentEl.setAttribute('aria-label', 'Current time ' + formatTimeDisplay(current) + '. Seek to a specific time.');
+        durationEl.title = durationWords ? 'Show duration as 0:00' : 'Show duration in seconds';
+        durationEl.setAttribute('aria-label', 'Duration ' + durationText() + '. ' + durationEl.title + '.');
+    }
+
     function currentDuration() {
-        return (isFinite(audio.duration) && audio.duration > 0) ? audio.duration : 0;
+        if (isFinite(audio.duration) && audio.duration > 0) {
+            return audio.duration;
+        }
+        return parseTimeValue(state.duration);
     }
 
     function currentNextLink() {
@@ -262,6 +459,30 @@
         return null;
     }
 
+    function currentPreviousLink() {
+        return document.querySelector('.track-nav a[aria-label^="Previous track"]');
+    }
+
+    function getPrevious() {
+        if (state.playlist && state.currentIndex >= 0) {
+            var previous = state.playlist.tracks[state.currentIndex - 1];
+            if (previous) {
+                return { track: previous, url: trackPage(previous) };
+            }
+            return null;
+        }
+        var link = currentPreviousLink();
+        if (link) {
+            return { track: null, url: new URL(link.href, window.location.href).href };
+        }
+        return null;
+    }
+
+    function syncTrackButtons() {
+        previousButton.disabled = !getPrevious();
+        nextButton.disabled = !getNext();
+    }
+
     function setAutoplay(enabled, silent) {
         autoplay = Boolean(enabled);
         autoplayToggle.setAttribute('aria-pressed', autoplay ? 'true' : 'false');
@@ -275,6 +496,7 @@
     function syncAutoplayAvailability() {
         var next = getNext();
         var available = Boolean(next);
+        syncTrackButtons();
         autoplayToggle.disabled = !available;
         if (available) {
             autoplayToggle.title = autoplay ? 'Autoplay on' : 'Autoplay next track';
@@ -330,8 +552,10 @@
         player.setAttribute('data-duration', state.duration || '');
         player.setAttribute('aria-label', state.title + ' audio player');
         toggle.setAttribute('aria-label', (audio.paused ? 'Play ' : 'Pause ') + state.title);
+        toggle.title = audio.paused ? 'Play' : 'Pause';
         seek.setAttribute('aria-label', 'Seek ' + state.title);
-        durationEl.textContent = currentDuration() ? formatTime(currentDuration()) : (state.duration || '--:--');
+        durationEl.textContent = durationText();
+        updateTimeButtonLabels();
         renderPopupAlbum();
     }
 
@@ -360,16 +584,16 @@
         if (!popupPosition) {
             return;
         }
-        var duration = currentDuration();
         var position = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
-        popupPosition.textContent = formatTime(position) + ' / ' + (duration ? formatTime(duration) : (state.duration || '--:--'));
+        popupPosition.textContent = formatTimeDisplay(position) + ' / ' + durationText();
     }
 
     function updateTime() {
         var duration = currentDuration();
         var current = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
-        currentEl.textContent = formatTime(current);
-        durationEl.textContent = duration ? formatTime(duration) : (state.duration || '--:--');
+        currentEl.textContent = formatTimeDisplay(current);
+        durationEl.textContent = durationText();
+        updateTimeButtonLabels();
 
         if (!scrubbing && duration) {
             var ratio = Math.min(1, current / duration);
@@ -382,23 +606,24 @@
 
     function syncDuration() {
         var duration = currentDuration();
+        durationEl.textContent = durationText();
+        backButton.disabled = !duration;
+        forwardButton.disabled = !duration;
         if (duration) {
-            durationEl.textContent = formatTime(duration);
             seek.disabled = false;
             player.dataset.ready = 'true';
             player.dataset.loading = 'false';
             hint.textContent = '';
-            if (toggle.hasAttribute('title')) {
-                toggle.removeAttribute('title');
-            }
-        } else {
-            durationEl.textContent = state.duration || '--:--';
         }
     }
 
     function setVolume(value) {
         var next = Math.max(0, Math.min(1, Number(value) || 0));
         audio.volume = next;
+        if (next > 0 && audio.muted) {
+            audio.muted = false;
+        }
+        setMuteButtonState();
         volume.value = String(next);
         volumeWrap.style.setProperty('--ap-volume', (next * 100).toFixed(0) + '%');
         volume.setAttribute('aria-valuetext', Math.round(next * 100) + ' percent');
@@ -440,12 +665,14 @@
             player.dataset.ready = 'false';
             player.dataset.error = 'false';
             player.dataset.loading = 'true';
-            currentEl.textContent = '0:00';
-            durationEl.textContent = state.duration || '--:--';
+            currentEl.textContent = formatTimeDisplay(0);
+            durationEl.textContent = durationText();
             hint.textContent = 'loading';
             seek.disabled = true;
+            backButton.disabled = true;
+            forwardButton.disabled = true;
             seek.value = '0';
-            seek.setAttribute('aria-valuetext', '0:00 of ' + (state.duration || '--:--'));
+            seek.setAttribute('aria-valuetext', '0:00 of ' + durationText());
             setSeekVisual(0);
             seekWrap.style.setProperty('--ap-buffered', '0%');
         }
@@ -697,17 +924,40 @@
             var page = trackPage(next.track);
             updatePlayerForTrack(trackFromPlaylist(next.track, page), { play: true });
             if (window.SiteRouter && typeof window.SiteRouter.navigate === 'function') {
-                window.SiteRouter.navigate(page, { play: true, fromAutoplay: true });
+                window.SiteRouter.navigate(page, { play: true, track: true, fromAutoplay: true });
             } else {
                 window.location.assign(page);
             }
         } else if (next.url) {
             if (window.SiteRouter && typeof window.SiteRouter.navigate === 'function') {
-                window.SiteRouter.navigate(next.url, { play: true, fromAutoplay: true });
+                window.SiteRouter.navigate(next.url, { play: true, track: true, fromAutoplay: true });
             } else {
                 var target = new URL(next.url, window.location.href);
                 target.searchParams.set('autoplay', '1');
                 window.location.assign(target.href);
+            }
+        }
+        return true;
+    }
+
+    function goToPrevious() {
+        var previous = getPrevious();
+        if (!previous) {
+            return false;
+        }
+        if (previous.track) {
+            var page = trackPage(previous.track);
+            updatePlayerForTrack(trackFromPlaylist(previous.track, page), { play: true });
+            if (window.SiteRouter && typeof window.SiteRouter.navigate === 'function') {
+                window.SiteRouter.navigate(page, { play: true, track: true });
+            } else {
+                window.location.assign(page);
+            }
+        } else if (previous.url) {
+            if (window.SiteRouter && typeof window.SiteRouter.navigate === 'function') {
+                window.SiteRouter.navigate(previous.url, { play: true, track: true });
+            } else {
+                window.location.assign(previous.url);
             }
         }
         return true;
@@ -806,6 +1056,75 @@
         }
     });
 
+    previousButton.addEventListener('click', function () {
+        if (goToPrevious()) {
+            showFeedback('One track back.');
+        }
+    });
+
+    nextButton.addEventListener('click', function () {
+        if (advanceToNext()) {
+            showFeedback('Skipped!');
+        }
+    });
+
+    backButton.addEventListener('click', function () {
+        var duration = currentDuration();
+        if (!duration) {
+            announce('Audio not ready yet.');
+            return;
+        }
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+        updateTime();
+        showFeedback('Rewind!');
+    });
+
+    forwardButton.addEventListener('click', function () {
+        var duration = currentDuration();
+        if (!duration) {
+            announce('Audio not ready yet.');
+            return;
+        }
+        audio.currentTime = Math.min(duration, audio.currentTime + 10);
+        updateTime();
+    });
+
+    muteButton.addEventListener('click', function () {
+        audio.muted = !audio.muted;
+        setMuteButtonState();
+        if (audio.muted) {
+            showFeedback('Shut up!');
+        } else {
+            showFeedback('Unmuted...');
+        }
+    });
+
+    currentEl.addEventListener('click', function () {
+        var duration = currentDuration();
+        if (!duration) {
+            announce('Audio not ready yet.');
+            return;
+        }
+        var current = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
+        var answer = window.prompt('Seek to a specific time (for example 1:23 or 83):', formatTime(current));
+        if (answer === null) {
+            return;
+        }
+        var target = parseSeekInput(answer);
+        if (target === null) {
+            announce('Enter a time like 1:23 or 83.');
+            return;
+        }
+        audio.currentTime = Math.max(0, Math.min(duration, target));
+        updateTime();
+    });
+
+    durationEl.addEventListener('click', function () {
+        durationWords = !durationWords;
+        updateTime();
+        announce(durationWords ? 'Time shown in seconds.' : 'Time shown as minutes and seconds.');
+    });
+
     seek.addEventListener('input', function () {
         var duration = currentDuration();
         if (!duration) {
@@ -815,7 +1134,7 @@
         var ratio = Number(seek.value) / 1000;
         var target = ratio * duration;
         setSeekVisual(ratio);
-        currentEl.textContent = formatTime(target);
+        currentEl.textContent = formatTimeDisplay(target);
         seek.setAttribute('aria-valuetext', formatTime(target) + ' of ' + formatTime(duration));
         try {
             audio.currentTime = target;
@@ -857,6 +1176,7 @@
         player.dataset.state = 'playing';
         player.dataset.loading = 'false';
         toggle.setAttribute('aria-label', 'Pause ' + state.title);
+        toggle.title = 'Pause';
         announce('Playing ' + state.title + '.');
     });
 
@@ -877,6 +1197,7 @@
         player.dataset.state = 'paused';
         player.dataset.loading = 'false';
         toggle.setAttribute('aria-label', 'Play ' + state.title);
+        toggle.title = 'Play';
         if (!audio.ended) {
             announce('Paused ' + state.title + '.');
         }
@@ -886,6 +1207,7 @@
         player.dataset.state = 'paused';
         player.dataset.loading = 'false';
         toggle.setAttribute('aria-label', 'Play ' + state.title);
+        toggle.title = 'Play';
         updateTime();
         if (autoplay && advanceToNext()) {
             announce(state.title + ' ended. Playing the next track.');
@@ -900,10 +1222,12 @@
         player.dataset.ready = 'false';
         player.dataset.error = 'true';
         seek.disabled = true;
+        backButton.disabled = true;
+        forwardButton.disabled = true;
         hint.textContent = 'audio unavailable';
         toggle.title = 'Audio unavailable';
         toggle.setAttribute('aria-label', 'Play ' + state.title);
-        durationEl.textContent = '--:--';
+        durationEl.textContent = formatDurationDisplay(0);
         seek.setAttribute('aria-valuetext', 'Audio unavailable');
         announce('Audio unavailable.');
     });
@@ -911,7 +1235,9 @@
     player.dataset.state = 'paused';
     player.dataset.ready = state.src ? 'false' : 'false';
     seek.disabled = true;
-    seek.setAttribute('aria-valuetext', '0:00 of ' + (state.duration || '--:--'));
+    backButton.disabled = true;
+    forwardButton.disabled = true;
+    seek.setAttribute('aria-valuetext', '0:00 of ' + durationText());
     volume.setAttribute('aria-valuetext', '80 percent');
     setVolume(volume.value);
     updateLabels();
