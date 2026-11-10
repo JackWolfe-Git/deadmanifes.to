@@ -2,21 +2,21 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 10 November 2026 — changelog 0.1.43
+Last updated: 10 November 2026 — changelog 0.2.7
 
 ## How to use this file
 
 - Change copy in the HTML page that renders it.
 - Use this file to decide what to change and to track images and held-back work.
-- Every structural change updates this map, `/disclaimer/changelog/` and `/disclaimer/robots/`.
+- Every structural change updates this map and the changelog and site-structure sections on `/about/`.
 
 ## Public surface
 
-Target nav (nine items, shop retired):
+Target nav (seven items, shop retired):
 
-Home · Listen · Ginger Deadman · deadmanifesto · Career · Contact · Disclaimer · Changelog · Robots
+Home · Listen · Ginger Deadman · deadmanifesto · Career · Contact · About
 
-Search is a header icon and `/search/` results page, not an eleventh menu item. The privacy notice is a single footer line linked to `/disclaimer/privacy/`.
+Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. Privacy is linked from About and from the footer.
 
 ## Page inventory
 
@@ -26,17 +26,16 @@ States: **LIVE** (public, no visible WIP markers) · **NEEDS COPY** (public, pla
 |---|---|---|---|
 | Splash | `index.html` | LIVE | Short bio live above the lede; splash image (8:3) when assets arrive |
 | Listen | `music/index.html` | LIVE | Album templates live; release metadata, tracklists and streaming links author-supplied |
-| Ginger Deadman | `ginger-deadman/index.html` | LIVE | Press photo |
+| Ginger Deadman | `ginger-deadman/index.html` | LIVE | Artist portrait |
 | About | `ginger-deadman/about/index.html` | LIVE | Identity live; IPA and Greek transliteration when supplied |
-| EPK Bio | `ginger-deadman/about/epk-bio/index.html` | LIVE | Print-friendly; press photo, credit, quote and contact are TBC |
+| Bio | `ginger-deadman/about/bio/index.html` | LIVE | Artist portrait TBC; old EPK URL redirects here |
 | deadmanifesto hub | `deadmanifesto/index.html` | LIVE | "180 songs" line removed in 0.1.11 |
 | Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Version line and AI credits live |
 | Career | `deadmanifesto/career/index.html` | LIVE | Game covers + credits + full history live; exact roles author-supplied |
 | Contact | `contact/index.html` | LIVE | Steam/Xbox/PSN/EA cards live; email, second YouTube and SoundCloud URLs when supplied |
-| Disclaimer | `disclaimer/index.html` | LIVE | Content note, privacy and takedown routes live |
-| Privacy | `disclaimer/privacy/index.html` | LIVE | Update when storage or hosting changes |
-| Changelog | `disclaimer/changelog/index.html` | LIVE | Update every shipped change |
-| Robots | `disclaimer/robots/index.html` | LIVE | Update every structural change |
+| About | `about/index.html` | LIVE | Disclaimer, changelog, planning placeholder and site-structure notes combined |
+| Privacy | `about/privacy/index.html` | LIVE | Update when storage or hosting changes |
+| Tools | `about/tools/index.html` | PLANNED | LLM, AI-assisted and traditional tool lists |
 | Search | `search/index.html` | LIVE | Local index; update `search-index.json` with public pages |
 | Album templates (×6 public) | `music/albums/*/index.html` | NEEDS COPY | Public, linked from Listen, `noindex` until credits and remaining metadata exist; six further release and collaboration templates are held back |
 | Flips track pages (×27) | `music/albums/flips/*/index.html` | PARTIAL | Public, linked from Flips, `noindex`; Java and Rigatoni Nosebleed have lyrics, remaining lyrics pending |

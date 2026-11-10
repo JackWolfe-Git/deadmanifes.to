@@ -96,51 +96,32 @@
     "text": "Instagram, YouTube, TikTok, RateYourMusic, LinkedIn, Steam, Xbox, PlayStation, EA, RSS feed, second YouTube channel and SoundCloud placeholders, then email, which is coming soon."
   },
   {
-    "title": "Disclaimer — deadmanifesto",
-    "url": "../disclaimer/",
-    "description": "Copyright, licensing, AI disclosure, content note and site disclaimer for deadmanifesto.",
+    "title": "About — deadmanifesto",
+    "url": "../about/",
+    "description": "About deadmanifesto: disclaimer, changelog, site structure and privacy.",
     "headings": [
-      "Index",
-      "ALL OF THIS IS MINE",
-      "Content note",
-      "Takedown & corrections"
+      "Useful links",
+      "Disclaimer",
+      "Changelog",
+      "Planning phase",
+      "Robots"
     ],
-    "text": "Copyright and ownership, memes and external media, lyricism and poetry, AI disclosure, sponsorship, corrections, privacy and contact."
+    "text": "About deadmanifesto, the disclaimer, the full changelog, the planning phase, the site structure notes and the privacy route."
   },
   {
     "title": "Privacy — deadmanifesto",
-    "url": "../disclaimer/privacy/",
+    "url": "../about/privacy/",
     "description": "How deadmanifesto handles browser storage, hosting logs, search, RSS, external links and contact.",
     "headings": [
       "What this site stores",
       "Hosting",
       "Search",
+      "RSS",
       "External links",
-      "Your choices"
+      "Email",
+      "Your choices",
+      "Changes"
     ],
-    "text": "The site stores dm-mode in localStorage. No cookies, analytics, ads or third-party embeds. GitHub Pages hosting logs are disclosed. Search runs locally. External links open only when clicked. There is no consent banner because there are no non-essential cookies or trackers."
-  },
-  {
-    "title": "Changelog — deadmanifesto",
-    "url": "../disclaimer/changelog/",
-    "description": "A public record of every shipped change to deadmanifesto, versioned and dated.",
-    "headings": [
-      "Full changelist",
-      "November 2026"
-    ],
-    "text": "Version history for 0.0.x and the renumbered 0.1.x feature log, from launch prep and album templates to the persistent player, Club Foot, the Career merge, Contact platforms, Unreal metadata, the EPK biography and the changelog restructure."
-  },
-  {
-    "title": "Robots — deadmanifesto",
-    "url": "../disclaimer/robots/",
-    "description": "How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.",
-    "headings": [
-      "Purpose",
-      "Public structure",
-      "Site files",
-      "Assets & data",
-      "Maintenance rule"
-    ],
-    "text": "Public pages, held-back sections, privacy, search, RSS, album templates, site files, local fonts and icons, and maintenance rules."
+    "text": "deadmanifesto stores only the dm-mode colour preference. It uses no analytics, cookies, tracking pixels or third-party embeds. GitHub Pages hosting logs, local search, the RSS feed and external links are explained."
   }
 ]

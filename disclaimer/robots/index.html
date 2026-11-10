@@ -3,110 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
-<link rel="canonical" href="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
-<meta property="og:site_name" content="deadmanifesto">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Robots — deadmanifesto">
-<meta property="og:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
-<meta property="og:url" content="https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Robots — deadmanifesto">
-<meta name="twitter:description" content="How deadmanifesto is built: the public structure, held-back sections, assets and maintenance rules.">
-<link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
-<meta name="theme-color" content="#000000">
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="refresh" content="0; url=../../about/#robots">
+<link rel="canonical" href="https://jackwolfe-git.github.io/deadmanifes.to/about/#robots">
 <title>Robots — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=13">
-<link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
-<body id="top">
-<header class="site-bar">
-  <details class="bar-menu"><summary class="bar-btn">Menu</summary><ul>
-            <li><a href="../../index.html">Home</a></li>
-            <li><a href="../../music/index.html">Listen</a></li>
-            <li><a href="../../ginger-deadman/index.html">Ginger Deadman</a></li>
-            <li><a href="../../deadmanifesto/index.html">deadmanifesto</a></li>
-            <li><a href="../../deadmanifesto/career/index.html">Career</a></li>
-            <li><a href="../../contact/index.html">Contact</a></li>
-            <li><a href="../index.html">Disclaimer</a></li>
-            <li><a href="../changelog/index.html">Changelog</a></li>
-            <li><a aria-current="page" href="../robots/index.html">Robots</a></li>
-        </ul></details>
-  <a class="bar-btn" href="../../index.html">Home</a>
-  <a class="bar-btn" href="../index.html">Up</a>
-  <a class="bar-btn" href="#top">Top</a>
-  <span class="bar-title">Robots</span>
-<div class="bar-right"><button data-mode="dark" type="button" aria-label="Dark mode"></button><button data-mode="light" type="button" aria-label="Light mode"></button><button data-mode="orange" type="button" aria-label="Orange mode"></button></div>
-</header>
-
-<main>
-    <h1>Robots</h1>
-    <section>
-        <h2>Purpose</h2>
-        <p>deadmanifesto is the living artist archive and portfolio of Ginger Deadman. It presents the discography, biography and visual material, career and game credits, lifestyle writing, contact routes and copyright/disclaimer info in one ultra-minimalist brutalist site. Finished pages are public; unfinished sections are unlinked and marked <code>noindex</code> until they are ready.</p>
-    </section>
-
-    <section>
-        <h2>Public structure</h2>
-        <ul>
-            <li><code>index.html</code> — Splash</li>
-            <li><code>music/index.html</code> — Discography, Spotify profile link and cover slots</li>
-            <li><code>music/albums/*/index.html</code> — 6 public release templates, linked from Listen and <code>noindex</code> until credits and remaining metadata arrive</li>
-            <li><code>music/albums/flips/*/index.html</code> — 27 Flips track templates, linked from the Flips page and <code>noindex</code> until lyrics and credits arrive</li>
-            <li><code>ginger-deadman/index.html</code> — Artist profile</li>
-            <li><code>ginger-deadman/about/index.html</code> — About and identity</li>
-            <li><code>ginger-deadman/about/bio/index.html</code> — Artist biography</li>
-            <li><code>deadmanifesto/index.html</code> — Brand hub</li>
-            <li><code>deadmanifesto/manifesto/index.html</code> — Manifesto and AI credits</li>
-            <li><code>deadmanifesto/career/index.html</code> — Game credits, cover art and professional history</li>
-            <li><code>contact/index.html</code> — Contact links, LinkedIn, Steam, Xbox, PlayStation, EA, RSS, channel and email placeholders</li>
-            <li><code>disclaimer/index.html</code> — Disclaimer</li>
-            <li><code>disclaimer/privacy/index.html</code> — Privacy notice</li>
-            <li><code>disclaimer/changelog/index.html</code> — Changelog</li>
-            <li><code>disclaimer/robots/index.html</code> — This page</li>
-            <li><code>search/index.html</code> — Local search results page</li>
-        </ul>
-        <p>Held back and unlinked: services, editorial slots, gallery and lyric pages. They are marked <code>noindex</code> and show a coming-soon panel on direct visits; they are not linked from the public menu.</p>
-        <p>Six further release and collaboration templates are also held back and unlinked. They are marked <code>noindex</code> and kept for future plans.</p>
-        <p>Career carries the four verified game covers and credits plus the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the six public release titles, the 27-track Flips (Remix Collection) tracklist from 2021 with named <code>noindex</code> track pages, and a Spotify profile link; release metadata, tracklists and streaming links are author-supplied. The six public album templates are excluded from search, RSS and the sitemap until they are filled.</p>
-    </section>
-
-    <section>
-        <h2>Site files</h2>
-        <ul>
-            <li><code>404.html</code> — Not-found page</li>
-            <li><code>robots.txt</code> — Crawl policy and sitemap pointer</li>
-            <li><code>sitemap.xml</code> — Public URL index</li>
-            <li><code>feed.xml</code> — Changelog RSS feed</li>
-            <li><code>search-index.json</code> — Static local search index</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Assets &amp; data</h2>
-        <ul>
-            <li><code>style.css</code> — single shared stylesheet, dark/light/orange mode rules, mobile breakpoints, image slots, album/game cards, search, footer privacy link and print styles</li>
-            <li><code>assets/theme.js</code> — theme mode persistence + notice</li>
-            <li><code>assets/site-ui.js</code> — header search control, dynamic age and print button</li>
-            <li><code>assets/search.js</code> — local search results renderer</li>
-            <li><code>assets/fonts/</code> — self-hosted Fragment Mono and its OFL licence</li>
-            <li><code>assets/images/</code> — local SVG icons, image slots, game covers, the 404 WIP image and the favicon; local album covers and portraits to follow</li>
-            <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
-            <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
-        </ul>
-        <p>No analytics, cookies, tracking pixels or third-party embeds. Browser storage is limited to the theme preference. GitHub Pages hosting logs are disclosed on the <a href="../privacy/index.html">privacy page</a>.</p>
-    </section>
-
-    <section>
-        <h2>Maintenance rule</h2>
-        <p>Any structural change — a new page, removed page, moved section, new global asset or persistent setting — is reflected here immediately, with a matching entry in <code>/disclaimer/changelog/</code>. Public structure and the held-back list are updated together. Public pages carry a canonical URL, description, Open Graph/Twitter tags and a page-level H1. The changelog uses <code>0.1.x</code> during launch prep: <code>0.1.6</code> is this content/privacy/search/template batch, <code>0.1.7</code> is QA and deployment, the image layer is <code>0.2.0</code>, and public launch is <code>1.0.0</code>.</p>
-    </section>
-</main>
-<footer>
-    <p>All Rights Reserved. © deadmanifesto. MMXXVI</p>
-    <p class="footer-privacy">No cookies or tracking. <a href="../../disclaimer/privacy/">Privacy</a></p>
-</footer>
-<script src="../../assets/theme.js?v=4" defer></script>
+<body>
+<p><a href="../../about/#robots">Continue to the site structure notes.</a></p>
 </body>
 </html>

@@ -2,27 +2,76 @@
 <rss version="2.0">
   <channel>
     <title>deadmanifesto — changelog</title>
-    <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
-    <description>Shipped changes to deadmanifesto, the electronic press kit and portfolio of Ginger Deadman.</description>
+    <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+    <description>Shipped changes to deadmanifesto, the artist archive and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
     <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
     <item>
-      <title>0.1.43 — EPK biography</title>
-      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <title>0.2.7 — About consolidation</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.7</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Combines Disclaimer, Changelog and Robots into one About page and moves Privacy under About.</description>
+    </item>
+    <item>
+      <title>0.2.6 — album runtimes</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.6</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Calculates and shows Flips, Obliviability and Obsolescence runtimes on the Listen page.</description>
+    </item>
+    <item>
+      <title>0.2.5 — lyric metadata</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.5</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Links every lyric-page artist credit to Ginger Deadman and sets every track type to Experimental.</description>
+    </item>
+    <item>
+      <title>0.2.4 — changelog housekeeping</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.4</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Simplifies the changelog explainer, opens the latest day by default, adds model credits and a planning-phase placeholder.</description>
+    </item>
+    <item>
+      <title>0.2.3 — poem move</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.3</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Moves the deadmanifesto poem and its reference line to the bottom of the Ginger Deadman page.</description>
+    </item>
+    <item>
+      <title>0.2.2 — deadmanifesto hub link</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.2</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Removes the Career link from the deadmanifesto hub.</description>
+    </item>
+    <item>
+      <title>0.2.1 — Bio reframe</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.1</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Renames EPK to Bio across the site and removes the press quote, photo, credit, contact and print block.</description>
+    </item>
+    <item>
+      <title>0.1.43 — Bio biography</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
       <guid isPermaLink="false">deadmanifesto-0.1.43</guid>
       <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
-      <description>Replaces the EPK biography with the Jack Wolfe alias, multimodal practice, open-archive description and professional-inquiry statement.</description>
+      <description>Replaces the biography with the Jack Wolfe alias, multimodal practice, open-archive description and professional-inquiry statement.</description>
     </item>
     <item>
       <title>0.1.42 — Unreal metadata</title>
-      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
       <guid isPermaLink="false">deadmanifesto-0.1.42</guid>
       <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
       <description>Removes The Unreal Tapes subtitle and sets Unreal to 2018, Experimental and the literal "x Tracks" count across the album page, Listen card, EPK and search index.</description>
     </item>
     <item>
       <title>0.1.40 — light-mode platform colours</title>
-      <link>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</link>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
       <guid isPermaLink="false">deadmanifesto-0.1.40</guid>
       <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
       <description>Colours the Steam, Xbox, PlayStation and EA SVG icons for light mode and cache-busts the new artwork.</description>

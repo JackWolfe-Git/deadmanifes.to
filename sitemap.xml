@@ -55,28 +55,16 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/privacy/</loc>
-    <lastmod>2026-11-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
-  <url>
-    <loc>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/changelog/</loc>
+    <loc>https://jackwolfe-git.github.io/deadmanifes.to/about/</loc>
     <lastmod>2026-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://jackwolfe-git.github.io/deadmanifes.to/disclaimer/robots/</loc>
+    <loc>https://jackwolfe-git.github.io/deadmanifes.to/about/privacy/</loc>
     <lastmod>2026-11-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
   <url>
     <loc>https://jackwolfe-git.github.io/deadmanifes.to/search/</loc>
