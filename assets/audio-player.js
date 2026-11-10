@@ -656,6 +656,9 @@
 
     function syncFromDocument(doc, url, options) {
         options = options || {};
+        if (!options.track) {
+            return false;
+        }
         var nextPlayer = doc.querySelector('[data-audio-player]');
         if (!nextPlayer) {
             return false;

@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 10 November 2026 — changelog 0.2.9
+Last updated: 10 November 2026 — changelog 0.2.10
 
 ## How to use this file
 

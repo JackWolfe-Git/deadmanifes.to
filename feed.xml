@@ -7,6 +7,13 @@
     <language>en-gb</language>
     <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
     <item>
+      <title>0.2.10 — lyric page navigation</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.10</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds top and bottom previous/next navigation to every lyric page and keeps the current song playing across page changes.</description>
+    </item>
+    <item>
       <title>0.2.9 — footer links</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
       <guid isPermaLink="false">deadmanifesto-0.2.9</guid>

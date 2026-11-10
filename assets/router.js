@@ -280,6 +280,7 @@
         if (window.SiteAudio && typeof window.SiteAudio.syncFromDocument === 'function') {
             window.SiteAudio.syncFromDocument(nextDocument, targetUrl.href, {
                 play: options.play,
+                track: Boolean(options.track),
                 fromAutoplay: Boolean(options.fromAutoplay)
             });
         }
@@ -407,7 +408,6 @@
         }
 
         var isTrackLink = Boolean(link.closest('.tracklist') ||
-            link.closest('.track-nav') ||
             link.hasAttribute('data-audio-play'));
         var playing = window.SiteAudio && typeof window.SiteAudio.isPlaying === 'function'
             ? window.SiteAudio.isPlaying()
@@ -416,6 +416,7 @@
         event.preventDefault();
         navigate(targetUrl.href, {
             play: isTrackLink || playing,
+            track: isTrackLink,
             source: isTrackLink ? 'track-link' : 'link'
         });
     });

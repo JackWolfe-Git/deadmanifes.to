@@ -1165,6 +1165,11 @@ body[data-mode="orange"] .track-length { color: #000000; }
     margin-top: 2rem;
 }
 
+.track-nav-top {
+    margin-top: 0.75rem;
+    margin-bottom: 1.25rem;
+}
+
 main.album-page.track-page {
     max-width: 760px;
 }
