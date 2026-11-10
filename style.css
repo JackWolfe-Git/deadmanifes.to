@@ -572,6 +572,26 @@ body[data-mode="light"] .social-logo svg.si-light {
     margin: 0 0 1.25rem 0;
 }
 
+.streaming-links {
+    display: grid;
+    gap: 0.35rem;
+    margin-top: 0.75rem;
+}
+
+.streaming-section .social-card {
+    margin: 0;
+}
+
+.streaming-section .social-logo svg,
+.streaming-section .si {
+    width: 24px;
+    height: 24px;
+}
+
+.streaming-section .social-link {
+    font-size: 0.8rem;
+}
+
 details {
     margin: 1.25rem 0;
 }

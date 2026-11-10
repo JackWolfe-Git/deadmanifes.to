@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 10 November 2026 — changelog 0.2.11
+Last updated: 10 November 2026 — changelog 0.2.12
 
 ## How to use this file
 
@@ -166,11 +166,11 @@ Slots inferred from the current markup. Dimensions are targets, not requirements
 | Gallery: Urban | gallery page | mixed | `assets/images/gallery/urban-01.jpg` … | descriptive alt per image | 3 |
 | Gallery: Nature | gallery page | mixed | `assets/images/gallery/nature-01.jpg` … | descriptive alt per image | 3 |
 
-All release covers are clean 1:1 slots. The previous Obliviability and Flips imgbb covers were removed in 0.1.25 and replaced with local placeholder slots. The four game covers, the 404 WIP image, Fragment Mono and the local icons are now shipped. The old `wip.jpg` banners and Ginger Deadman test images were removed from the public pages in 0.1.7.
+All release covers are clean 1:1 slots. The previous Obliviability and Flips imgbb covers were removed in 0.1.25 and replaced with local placeholder slots. The four game covers, the 404 WIP image, Fragment Mono and the local icons are now shipped. The streaming placeholders use local dark/light SVGs for YouTube Music, Spotify, YouTube, Tidal, SoundCloud, Apple Music and Amazon. The old `wip.jpg` banners and Ginger Deadman test images were removed from the public pages in 0.1.7.
 
 ## Copy decisions
 
-- **Voice:** first person for editorial pages; third person for press/EPK copy. Direct, dry wit. No corporate register.
+- **Voice:** first person for editorial pages; third person for biography copy. Direct, dry wit. No corporate register.
 - **Contact email:** "Coming soon" until the domain and mailbox exist.
 - **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. LinkedIn is live. Steam, Xbox, PlayStation and EA sit in the same icon-and-link list, with no separate platform heading. RSS is linked. The second YouTube channel and SoundCloud are visible placeholders until URLs exist. The contact page is an icon-and-link list with email coming soon last. The extra Instagram accounts (`ginger.deadman`, `imsgagzam`, `pribability`) were removed in 0.1.10.
 - **Shop:** retired. The live GitHub Pages build carries the previous public build, which has no shop links. Any future merch gets a different name and a different page. Historical changelog entries stay.

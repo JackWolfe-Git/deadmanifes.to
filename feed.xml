@@ -7,6 +7,13 @@
     <language>en-gb</language>
     <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
     <item>
+      <title>0.2.12 — lyric streaming placeholders</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.12</guid>
+      <pubDate>Tue, 10 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds streaming placeholders for YouTube Music, Spotify, YouTube, Tidal, SoundCloud, Apple Music and Amazon to every lyric page with local icons.</description>
+    </item>
+    <item>
       <title>0.2.11 — popup tracklist</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
       <guid isPermaLink="false">deadmanifesto-0.2.11</guid>
