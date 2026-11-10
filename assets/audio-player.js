@@ -288,6 +288,39 @@
         }
     }
 
+    function albumPageHref() {
+        if (!state.albumSlug) {
+            return '';
+        }
+        try {
+            return new URL('music/albums/' + state.albumSlug + '/', siteRoot).href;
+        } catch (error) {
+            return '';
+        }
+    }
+
+    function renderPopupAlbum() {
+        if (!popupAlbum) {
+            return;
+        }
+        var label = state.album || 'Current track';
+        var href = albumPageHref();
+        popupAlbum.textContent = '';
+        if (!href) {
+            popupAlbum.textContent = label;
+            return;
+        }
+        var link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        link.className = 'audio-player-popup-album-link';
+        link.setAttribute('aria-label', 'Open the ' + label + ' album page');
+        link.addEventListener('click', function () {
+            closePopup(false);
+        });
+        popupAlbum.appendChild(link);
+    }
+
     function updateLabels() {
         player.setAttribute('data-title', state.title);
         player.setAttribute('data-album', state.album || '');
@@ -299,9 +332,7 @@
         toggle.setAttribute('aria-label', (audio.paused ? 'Play ' : 'Pause ') + state.title);
         seek.setAttribute('aria-label', 'Seek ' + state.title);
         durationEl.textContent = currentDuration() ? formatTime(currentDuration()) : (state.duration || '--:--');
-        if (popupAlbum) {
-            popupAlbum.textContent = state.album || 'Current track';
-        }
+        renderPopupAlbum();
     }
 
     function setSeekVisual(ratio) {
@@ -524,14 +555,27 @@
         if (!popup) {
             return;
         }
-        popupAlbum.textContent = state.album || 'Current track';
+        renderPopupAlbum();
         popupContext.textContent = state.track ? 'Track ' + state.track + (state.total ? ' of ' + state.total : '') : 'Now playing';
         updatePositionLine();
 
         var next = getNext();
-        var upNext = next && next.track ? next.track.title : (next ? 'Next track' : '');
-        if (upNext) {
-            popupUpNext.textContent = 'Up next: ' + upNext + (autoplay ? ' · Autoplay on' : '');
+        popupUpNext.textContent = '';
+        if (next && next.track) {
+            popupUpNext.appendChild(document.createTextNode('Up next: '));
+            var nextLink = document.createElement('a');
+            nextLink.href = trackPage(next.track);
+            nextLink.textContent = next.track.title || 'Next track';
+            nextLink.className = 'audio-player-popup-upnext-link';
+            nextLink.setAttribute('data-audio-play', '');
+            nextLink.setAttribute('aria-label', 'Play and open ' + (next.track.title || 'next track'));
+            nextLink.addEventListener('click', function () {
+                closePopup(false);
+            });
+            popupUpNext.appendChild(nextLink);
+            if (autoplay) {
+                popupUpNext.appendChild(document.createTextNode(' · Autoplay on'));
+            }
         } else {
             popupUpNext.textContent = state.playlist ? 'End of album' : 'Up next: —';
         }
@@ -567,6 +611,7 @@
             var length = document.createElement('span');
 
             link.href = trackPage(track);
+            link.className = 'audio-player-popup-track';
             link.setAttribute('data-audio-track', String(index));
             link.setAttribute('data-audio-play', '');
             number.className = 'audio-player-popup-number';
@@ -586,6 +631,20 @@
             link.appendChild(label);
             link.appendChild(length);
             item.appendChild(link);
+
+            if (index === state.currentIndex) {
+                var openLink = document.createElement('a');
+                openLink.className = 'audio-player-popup-open';
+                openLink.href = trackPage(track);
+                openLink.textContent = 'Page';
+                openLink.setAttribute('data-audio-open-page', '');
+                openLink.setAttribute('aria-label', 'Open the ' + (track.title || 'current track') + ' page');
+                openLink.addEventListener('click', function () {
+                    closePopup(false);
+                });
+                item.appendChild(openLink);
+            }
+
             popupList.appendChild(item);
         });
     }
@@ -712,12 +771,7 @@
             return;
         }
         closePopup(false);
-        var page = trackPage(track);
-        if (window.SiteRouter && typeof window.SiteRouter.navigate === 'function') {
-            window.SiteRouter.navigate(page, { play: true, source: 'tracklist' });
-        } else {
-            window.location.assign(page);
-        }
+        updatePlayerForTrack(trackFromPlaylist(track, trackPage(track)), { play: true });
     });
 
     document.addEventListener('keydown', function (event) {
