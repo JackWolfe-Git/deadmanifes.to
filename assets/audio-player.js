@@ -304,7 +304,6 @@
     backButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
         '<path d="M4.5 11a7.5 7.5 0 1 1 2.2 5.3"></path>' +
         '<path d="M4.5 5.5v5.5H10"></path>' +
-        '<text x="12.4" y="15.5" text-anchor="middle" font-size="7.4" fill="currentColor" stroke="none" font-family="inherit">10</text>' +
         '</svg>';
 
     var forwardButton = document.createElement('button');
@@ -316,14 +315,13 @@
     forwardButton.innerHTML = '<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">' +
         '<path d="M19.5 11a7.5 7.5 0 1 0-2.2 5.3"></path>' +
         '<path d="M19.5 5.5v5.5H14"></path>' +
-        '<text x="11.6" y="15.5" text-anchor="middle" font-size="7.4" fill="currentColor" stroke="none" font-family="inherit">10</text>' +
         '</svg>';
 
-    toggle.insertAdjacentElement('beforebegin', autoplayToggle);
     toggle.insertAdjacentElement('beforebegin', previousButton);
-    toggle.insertAdjacentElement('afterend', nextButton);
-    nextButton.insertAdjacentElement('afterend', backButton);
-    backButton.insertAdjacentElement('afterend', forwardButton);
+    toggle.insertAdjacentElement('beforebegin', backButton);
+    toggle.insertAdjacentElement('afterend', forwardButton);
+    forwardButton.insertAdjacentElement('afterend', nextButton);
+    nextButton.insertAdjacentElement('afterend', autoplayToggle);
 
     var tracklistToggle = document.createElement('button');
     tracklistToggle.type = 'button';
@@ -390,6 +388,24 @@
     player.appendChild(feedback);
     var feedbackTimer = 0;
 
+    var seekPopup = document.createElement('form');
+    seekPopup.className = 'audio-player-seek-popup';
+    seekPopup.hidden = true;
+    seekPopup.setAttribute('role', 'dialog');
+    seekPopup.setAttribute('aria-label', 'Seek to a specific time');
+    seekPopup.innerHTML = '<label class="audio-player-seek-label" for="audio-player-seek-input">Seek to time</label>' +
+        '<div class="audio-player-seek-row">' +
+        '<input class="audio-player-seek-input" id="audio-player-seek-input" data-audio-seek-input type="text" autocomplete="off" spellcheck="false" placeholder="1:23 or 83" aria-describedby="audio-player-seek-error">' +
+        '<button class="audio-player-seek-submit" type="submit">Go</button>' +
+        '<button class="audio-player-seek-cancel" type="button" data-audio-seek-cancel aria-label="Cancel seek">Cancel</button>' +
+        '</div>' +
+        '<p class="audio-player-seek-error" id="audio-player-seek-error" data-audio-seek-error hidden></p>';
+    player.appendChild(seekPopup);
+    var seekInput = seekPopup.querySelector('[data-audio-seek-input]');
+    var seekError = seekPopup.querySelector('[data-audio-seek-error]');
+    var seekCancel = seekPopup.querySelector('[data-audio-seek-cancel]');
+    var seekPopupOpen = false;
+
     var popupAlbum = popup.querySelector('[data-audio-popup-album]');
     var popupContext = popup.querySelector('[data-audio-popup-context]');
     var popupPosition = popup.querySelector('[data-audio-popup-position]');
@@ -413,6 +429,61 @@
         feedbackTimer = window.setTimeout(function () {
             feedback.classList.remove('is-visible');
         }, 1500);
+    }
+
+    function openSeekPopup() {
+        var duration = currentDuration();
+        if (!duration) {
+            announce('Audio not ready yet.');
+            return;
+        }
+        if (popupOpen) {
+            closePopup(false);
+        }
+        seekPopupOpen = true;
+        seekPopup.hidden = false;
+        seekError.hidden = true;
+        seekError.textContent = '';
+        seekInput.removeAttribute('aria-invalid');
+        feedback.classList.remove('is-visible');
+        var current = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
+        seekInput.value = formatTimeDisplay(current);
+        window.requestAnimationFrame(function () {
+            seekInput.focus();
+            seekInput.select();
+        });
+    }
+
+    function closeSeekPopup(restoreFocus) {
+        if (!seekPopupOpen) {
+            return;
+        }
+        seekPopupOpen = false;
+        seekPopup.hidden = true;
+        if (restoreFocus) {
+            currentEl.focus();
+        }
+    }
+
+    function submitSeek() {
+        var duration = currentDuration();
+        if (!duration) {
+            announce('Audio not ready yet.');
+            closeSeekPopup(false);
+            return;
+        }
+        var target = parseSeekInput(seekInput.value);
+        if (target === null || target > duration) {
+            seekError.textContent = target === null ? 'Enter a time like 1:23 or 83.' : 'Enter a time within the track length.';
+            seekError.hidden = false;
+            seekInput.setAttribute('aria-invalid', 'true');
+            seekInput.focus();
+            seekInput.select();
+            return;
+        }
+        audio.currentTime = target;
+        updateTime();
+        closeSeekPopup(true);
     }
 
     function setMuteButtonState() {
@@ -880,6 +951,7 @@
         if (popupOpen) {
             return;
         }
+        closeSeekPopup(false);
         popupOpen = true;
         popup.hidden = false;
         popupBackdrop.hidden = false;
@@ -1025,7 +1097,14 @@
     });
 
     document.addEventListener('keydown', function (event) {
-        if (event.key === 'Escape' && popupOpen) {
+        if (event.key !== 'Escape') {
+            return;
+        }
+        if (seekPopupOpen) {
+            closeSeekPopup(true);
+            return;
+        }
+        if (popupOpen) {
             closePopup(true);
         }
     });
@@ -1040,8 +1119,19 @@
         closePopup(false);
     });
 
+    document.addEventListener('click', function (event) {
+        if (!seekPopupOpen) {
+            return;
+        }
+        if (seekPopup.contains(event.target) || currentEl.contains(event.target)) {
+            return;
+        }
+        closeSeekPopup(false);
+    });
+
     document.addEventListener('site:pagechange', function () {
         closePopup(false);
+        closeSeekPopup(false);
     });
 
     toggle.addEventListener('click', function () {
@@ -1100,23 +1190,26 @@
     });
 
     currentEl.addEventListener('click', function () {
-        var duration = currentDuration();
-        if (!duration) {
-            announce('Audio not ready yet.');
-            return;
+        if (seekPopupOpen) {
+            closeSeekPopup(true);
+        } else {
+            openSeekPopup();
         }
-        var current = isFinite(audio.currentTime) && audio.currentTime > 0 ? audio.currentTime : 0;
-        var answer = window.prompt('Seek to a specific time (for example 1:23 or 83):', formatTime(current));
-        if (answer === null) {
-            return;
-        }
-        var target = parseSeekInput(answer);
-        if (target === null) {
-            announce('Enter a time like 1:23 or 83.');
-            return;
-        }
-        audio.currentTime = Math.max(0, Math.min(duration, target));
-        updateTime();
+    });
+
+    seekPopup.addEventListener('submit', function (event) {
+        event.preventDefault();
+        submitSeek();
+    });
+
+    seekCancel.addEventListener('click', function () {
+        closeSeekPopup(true);
+    });
+
+    seekInput.addEventListener('input', function () {
+        seekError.hidden = true;
+        seekError.textContent = '';
+        seekInput.removeAttribute('aria-invalid');
     });
 
     durationEl.addEventListener('click', function () {

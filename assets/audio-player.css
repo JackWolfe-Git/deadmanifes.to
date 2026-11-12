@@ -60,7 +60,7 @@ body[data-mode="orange"] .audio-player {
 .audio-player-inner {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto minmax(84px, auto) minmax(64px, 1fr) auto auto;
-    grid-template-areas: "autoplay previous toggle next back10 forward10 time seek volume tracklist";
+    grid-template-areas: "previous back10 toggle forward10 next autoplay time seek volume tracklist";
     align-items: center;
     gap: 0.5rem;
     padding: 0.55rem 0.65rem;
@@ -524,6 +524,105 @@ body[data-mode="orange"] .audio-player {
     transform: translateX(-50%) translateY(0);
 }
 
+.audio-player-seek-popup {
+    position: absolute;
+    bottom: calc(100% + 0.6rem);
+    left: 50%;
+    z-index: 9999;
+    width: min(20rem, calc(100vw - 1.6rem));
+    margin: 0;
+    padding: 0.7rem;
+    border: 1px solid var(--ap-line);
+    background: var(--ap-bg);
+    color: var(--ap-fg);
+    box-shadow: 0 4px 22px var(--ap-shadow);
+    transform: translateX(-50%);
+}
+
+.audio-player-seek-popup[hidden] {
+    display: none;
+}
+
+.audio-player-seek-label {
+    display: block;
+    margin: 0 0 0.35rem;
+    color: var(--ap-muted);
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.audio-player-seek-row {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.audio-player-seek-input {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--ap-line);
+    border-radius: 0;
+    background: var(--ap-bg);
+    color: var(--ap-fg);
+    font: inherit;
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.audio-player-seek-input:focus-visible {
+    border-color: var(--ap-accent);
+    outline: 2px solid var(--ap-focus);
+    outline-offset: 1px;
+}
+
+.audio-player .audio-player-seek-submit,
+.audio-player .audio-player-seek-cancel {
+    flex: 0 0 auto;
+    margin: 0;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--ap-line);
+    border-radius: 0;
+    background: transparent;
+    color: var(--ap-fg);
+    font-family: inherit;
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.audio-player .audio-player-seek-submit {
+    border-color: var(--ap-accent);
+    color: var(--ap-accent);
+}
+
+.audio-player .audio-player-seek-submit:hover,
+.audio-player .audio-player-seek-cancel:hover {
+    border-color: var(--ap-accent);
+    color: var(--ap-accent);
+}
+
+.audio-player .audio-player-seek-submit:focus-visible,
+.audio-player .audio-player-seek-cancel:focus-visible {
+    outline: 2px solid var(--ap-focus);
+    outline-offset: 2px;
+}
+
+.audio-player-seek-error {
+    margin: 0.45rem 0 0;
+    color: var(--ap-accent);
+    font-size: 0.68rem;
+    line-height: 1.35;
+}
+
+.audio-player-seek-error[hidden] {
+    display: none;
+}
+
 .audio-player-popup-backdrop {
     position: fixed;
     inset: 0;
@@ -738,17 +837,28 @@ body.has-audio-player {
 @media (max-width: 700px) {
     .audio-player {
         bottom: calc(0.6rem + env(safe-area-inset-bottom, 0px));
-        width: calc(100vw - 1.5rem);
+        left: 0;
+        width: 100vw;
+        transform: none;
+        border-left: 0;
+        border-right: 0;
     }
 
     .audio-player-inner {
-        grid-template-columns: 32px 40px 32px 32px 32px;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
         grid-template-areas:
-            "autoplay previous toggle next tracklist"
-            "back10 time time time forward10"
-            "seek seek seek volume volume";
+            "seek seek seek seek seek seek"
+            "previous back10 toggle forward10 next autoplay"
+            "time time time volume volume tracklist";
         gap: 0.35rem 0.45rem;
         padding: 0.45rem 0.55rem;
+    }
+
+    .audio-player .audio-player-autoplay,
+    .audio-player .audio-player-tracklist-toggle,
+    .audio-player .audio-player-control,
+    .audio-player .audio-player-toggle {
+        justify-self: center;
     }
 
     .audio-player .audio-player-toggle {
@@ -804,6 +914,7 @@ body.has-audio-player {
 
     .audio-player-seek-wrap {
         height: 20px;
+        margin: 0 -0.55rem;
     }
 
     body.has-audio-player {

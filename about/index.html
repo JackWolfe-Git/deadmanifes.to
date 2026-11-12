@@ -83,8 +83,8 @@
     </section>
     </section>
 
-    
-    
+
+
     <section id="changelog">
         <h2>Changelog</h2>
         <h3>Full changelist</h3>
@@ -92,6 +92,19 @@
         <details open>
             <summary>November 2026</summary>
             <details open>
+                <summary>12</summary>
+                <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
+                <ul>
+                    <li>0.2.20 - remove the orphaned Unreal duplicates and legacy track templates, clear public TBC fields, remove streaming URL placeholders, compress the Club Foot and Obsolescence covers, and cross-link Java to both albums</li>
+                    <li>0.2.19 - add Club Foot as a 27-track Flips remix collection spanning 2019-2021</li>
+                    <li>0.2.18 - reset Unreal to the 2017 five-track tape and remove Damaged Goods</li>
+                    <li>0.2.17 - add Denial as the 2016 four-track EP with its SoundCloud artwork</li>
+                    <li>0.2.16 - add mainframe as the 2016 oxox tape with four tracks</li>
+                    <li>0.2.15 - add oxox as the 2015 six-track tape</li>
+                    <li>0.2.14 - finish the player pass: remove the scrub-button numerals, make the mobile seek bar edge-to-edge above the controls, and keep the exact action popups</li>
+                </ul>
+            </details>
+            <details>
                 <summary>10</summary>
                 <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
                 <ul>
@@ -246,7 +259,8 @@
     </section>
     <section id="planning">
         <h3>Planning phase</h3>
-        <p class="muted">Planning notes will be added here.</p>
+        <p>The current pass is the 0.2 catalogue and interaction layer: rebuild Listen around the tapes and flips, add full track pages, and finish the player. Release and track pages stay <code>noindex</code> until their lyrics, credits and streaming links are complete.</p>
+        <p>The next pass is audio wiring, remaining lyrics, the public sitemap page and the final tape decisions. New audio will only be added when the files or stable hosted URLs are ready.</p>
     </section>
 
     <section id="robots">
@@ -261,8 +275,8 @@
         <ul>
             <li><code>index.html</code> — Splash</li>
             <li><code>music/index.html</code> — Discography, Spotify profile link and cover slots</li>
-            <li><code>music/albums/*/index.html</code> — 6 public release templates, linked from Listen and <code>noindex</code> until credits and remaining metadata arrive</li>
-            <li><code>music/albums/flips/*/index.html</code> — 27 Flips track templates, linked from the Flips page and <code>noindex</code> until lyrics and credits arrive</li>
+            <li><code>music/albums/*/index.html</code> ? 9 release pages, linked from Listen and <code>noindex</code> until credits, lyrics and streaming links are complete</li>
+            <li><code>music/albums/*/*/index.html</code> ? 99 track pages, linked from their releases and <code>noindex</code> until lyrics and credits arrive</li>
             <li><code>ginger-deadman/index.html</code> — Artist profile</li>
             <li><code>ginger-deadman/about/index.html</code> — About and identity</li>
             <li><code>ginger-deadman/about/bio/index.html</code> — Artist biography</li>
@@ -279,7 +293,7 @@
         </ul>
         <p>Held back and unlinked from the main menu: services, editorial slots and gallery. Lyric and track pages are linked from their albums but remain <code>noindex</code> while lyrics, credits and remaining metadata are completed.</p>
         <p>Six further release and collaboration templates are also held back and unlinked. They are marked <code>noindex</code> and kept for future plans.</p>
-        <p>Career carries the four verified game covers and credits plus the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the public release titles, track pages for Flips, Obliviability and Obsolescence, and a Spotify profile link; release metadata, remaining tracklists and streaming links are author-supplied. Release templates without complete metadata are excluded from search, RSS and the sitemap.</p>
+        <p>Career carries the four verified game covers and credits plus the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the Tapes and Flips releases, their track pages and a Spotify profile link: oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2. Catbox streams are live on Flips and Obsolescence; the newer tapes currently link to SoundCloud. Release and track pages remain excluded from search, RSS and the sitemap until their metadata is complete.</p>
     </section>
 
     <section>
@@ -301,7 +315,7 @@
             <li><code>assets/site-ui.js</code> — header search control, dynamic age and print button</li>
             <li><code>assets/search.js</code> — local search results renderer</li>
             <li><code>assets/fonts/</code> — self-hosted Fragment Mono and its OFL licence</li>
-            <li><code>assets/images/</code> — local SVG icons, image slots, game covers, the 404 WIP image and the favicon; local album covers and portraits to follow</li>
+            <li><code>assets/images/</code> — local SVG icons, image slots, game covers, the 404 WIP image and the favicon; local album covers; artist portrait to follow</li>
             <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
             <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
         </ul>

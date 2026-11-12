@@ -5,7 +5,56 @@
     <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
     <description>Shipped changes to deadmanifesto, the artist archive and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 10 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>0.2.20 - public cleanup</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.20</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Removes the orphaned Unreal duplicates and legacy track templates, clears public TBC fields, removes streaming URL placeholders, compresses the Club Foot and Obsolescence covers, and cross-links Java to both albums.</description>
+    </item>
+    <item>
+      <title>0.2.19 - Club Foot</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.19</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds Club Foot as a 27-track Flips remix collection spanning 2019-2021.</description>
+    </item>
+    <item>
+      <title>0.2.18 - Unreal 2017</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.18</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Resets Unreal to the 2017 five-track tape and removes Damaged Goods.</description>
+    </item>
+    <item>
+      <title>0.2.17 - Denial EP</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.17</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds Denial as the 2016 four-track EP with its SoundCloud artwork.</description>
+    </item>
+    <item>
+      <title>0.2.16 - mainframe tape</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.16</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds mainframe as the 2016 oxox tape with four tracks.</description>
+    </item>
+    <item>
+      <title>0.2.15 - oxox tape</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.15</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds oxox as the 2015 six-track tape.</description>
+    </item>
+    <item>
+      <title>0.2.14 - player polish</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.14</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Finishes the player pass: removes the scrub-button numerals, makes the mobile seek bar edge-to-edge above the controls, and keeps the exact action popups.</description>
+    </item>
     <item>
       <title>0.2.13 — player controls</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
