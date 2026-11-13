@@ -171,13 +171,6 @@ def build_sitemap_page(pages: dict[str, dict]) -> str:
         link_item(pages["about/privacy/index.html"], "../", "Privacy"),
     ]
 
-    legacy_rows = [
-        link_item(pages["disclaimer/index.html"], "../", "Disclaimer"),
-        link_item(pages["disclaimer/changelog/index.html"], "../", "Changelog"),
-        link_item(pages["disclaimer/privacy/index.html"], "../", "Privacy"),
-        link_item(pages["disclaimer/robots/index.html"], "../", "Robots"),
-    ]
-
     tree = (
         '<ul class="sitemap-tree">'
         f'<li><span class="sitemap-folder">/</span><ul>{"".join(root_rows)}</ul></li>'
@@ -188,7 +181,6 @@ def build_sitemap_page(pages: dict[str, dict]) -> str:
         f'{group_folder("about", about_rows)}'
         f'{group_folder("search", [link_item(pages["search/index.html"], "../", "Search")])}'
         f'{group_folder("sitemap", [link_item(pages["sitemap/index.html"], "../", "Sitemap")])}'
-        f'{group_folder("legacy", legacy_rows)}'
         "</ul>"
     )
     all_count = tree.count("<a href=")
@@ -196,7 +188,7 @@ def build_sitemap_page(pages: dict[str, dict]) -> str:
 
     return page_shell(
         title="Sitemap",
-        description="A generated terminal tree of every current deadmanifesto route, with held-back project templates omitted.",
+        description="A generated terminal tree of the current live deadmanifesto routes, with held-back project templates and legacy routes omitted.",
         canonical=f"{SITE}/sitemap/",
         prefix="../",
         up="../about/index.html",
@@ -205,10 +197,10 @@ def build_sitemap_page(pages: dict[str, dict]) -> str:
 <main class="sitemap-page">
     <p><a href="../about/index.html">&larr; Back to About</a></p>
     <h1>Sitemap</h1>
-    <p class="sitemap-intro">A generated terminal tree of the {all_count} current routes. Held-back project templates are omitted. This page is <code>noindex</code>; crawlers should use <a href="../sitemap.xml">sitemap.xml</a>.</p>
+    <p class="sitemap-intro">A generated terminal tree of the {all_count} current live routes. Held-back project templates and legacy routes are omitted. This page is <code>noindex</code>; crawlers should use <a href="../sitemap.xml">sitemap.xml</a>.</p>
     <p class="sitemap-legend"><span class="sitemap-tag public">public</span> indexable <span class="sitemap-tag noindex">noindex</span> linked but hidden from search</p>
-    <div class="sitemap-term" role="region" aria-label="Full route tree">
-        <div class="sitemap-term-bar"><span><span class="sitemap-dots" aria-hidden="true">&#9679; &#9679; &#9679;</span> deadmanifesto:/sitemap$</span><span>tree --all</span><span>{all_count} routes &middot; {noindex_count} noindex <span class="sitemap-cursor" aria-hidden="true">_</span></span></div>
+    <div class="sitemap-term" role="region" aria-label="Current route tree">
+        <div class="sitemap-term-bar"><span><span class="sitemap-dots" aria-hidden="true">&#9679; &#9679; &#9679;</span> deadmanifesto:/sitemap$</span><span>tree --current</span><span>{all_count} routes &middot; {noindex_count} noindex <span class="sitemap-cursor" aria-hidden="true">_</span></span></div>
         {tree}
     </div>
     <div class="sitemap-actions">

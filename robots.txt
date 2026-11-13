@@ -8,15 +8,9 @@ Disallow: /PLAN.md
 # Raw search data
 Disallow: /search-index.json
 
-# Held-back surfaces (also noindex on the page)
-Disallow: /deadmanifesto/services/
-Disallow: /deadmanifesto/adhd-guide/
-Disallow: /deadmanifesto/ai/
-Disallow: /deadmanifesto/games-blog/
-Disallow: /deadmanifesto/home-studio-101/
-Disallow: /deadmanifesto/music-reviews/
-Disallow: /deadmanifesto/recipes/
-Disallow: /ginger-deadman/about/gallery/
+# Held-back routes are noindex and unlinked; paths are not listed here.
+
+# Legacy track templates
 Disallow: /music/albums/*/track-
 
 Sitemap: https://jackwolfe-git.github.io/deadmanifes.to/sitemap.xml

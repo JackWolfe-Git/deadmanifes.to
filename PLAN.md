@@ -2,8 +2,8 @@
 
 Updated: 13 November 2026
 Preview: `http://127.0.0.1:8765/`
-Working tree: P0/P1 complete; full-route sitemap implemented and committed locally; `main` is 16 commits ahead of `origin/main`; live site is still at `fef2013`; push is on hold.
-Last link check: 3,665 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`.
+Working tree: P0/P1 complete; sitemap trimmed and held-back names redacted; local commit ready; `main` is 17 commits ahead of `origin/main`; live site is still at `fef2013`; push approved; Pages verification pending.
+Last link check: 3,661 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
 
@@ -11,7 +11,7 @@ Last link check: 3,665 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - [x] Add changelog and feed entries for 0.2.14?0.2.20: player polish, oxox, mainframe, Denial, Unreal 2017, Club Foot and the public cleanup.
 - [x] Update `content.md` to the current catalog. Stale Unreal 2018 / `x Tracks` / Club Foot pending / Flips 2 pending notes are gone.
 - [x] Fix Unreal meta copy: description, OG and Twitter now say five track pages.
-- [x] Commit locally. Push and GitHub Pages verification remain intentionally on hold.
+- [x] Commit locally. Push is approved; GitHub Pages verification is pending.
 
 ## P1 ? public cleanup
 
@@ -34,14 +34,14 @@ Last link check: 3,665 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - [ ] Confirm Denial?s release credits and streaming URL.
 - [ ] Add the contact email/domain and the second YouTube and SoundCloud URLs.
 - [ ] Add gallery images and keep Tools current as the toolchain changes.
-- [x] Add the full-route sitemap: a generated terminal-style `/sitemap/` tree of the current HTML routes, with release groups open by default and held-back project templates omitted. `make_sitemap.py` rebuilds it from the HTML tree, and About's useful links point to it. `sitemap.xml` remains the crawler index.
+- [x] Add the current-route sitemap: a generated terminal-style `/sitemap/` tree of 123 live routes, with release groups open by default and held-back project templates and legacy routes omitted. `make_sitemap.py` rebuilds it from the HTML tree, and About's useful links point to it. `sitemap.xml` remains the crawler index.
 - [ ] Wire audio for the new tapes. Blocked on Catbox; decide between SoundCloud embeds and waiting for files.
 
 ## P3 ? later
 
 - [ ] Decide whether strict chronological ordering across Tapes/Flips matters, or whether separate sections are the intended order.
-- [ ] Decide the remaining tapes: Sketchbook, 2018, 2019?2020, 2021, 2022 and Unreal (flips 1hr mix).
-- [ ] Restore or rename the held-back Orange, Obstinancy, Obliquity, Metro House, Cultus Ex Cultura and Unapology templates when confirmed.
+- [ ] Decide the remaining tape candidates and the unreleased Unreal mix.
+- [ ] Restore or rename the six held-back release and collaboration templates when confirmed.
 
 ## Done this pass
 
@@ -55,7 +55,8 @@ Last link check: 3,665 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - Removed orphan Unreal duplicates and five legacy `track-01.html` templates.
 - Compressed the two oversized covers and cross-linked Java to both albums.
 - Changelog and RSS now cover 0.2.14?0.2.21 at 13 November 2026.
-- Added `/sitemap/` as a generated full-route terminal tree. It is `noindex`, expands release groups by default, omits held-back templates and is linked from About.
+- Added `/sitemap/` as a generated current-route terminal tree. It is `noindex`, expands release groups by default, omits held-back and legacy routes and is linked from About.
+- Redacted held-back project names from `content.md`, `PLAN.md` and the historical About changelog.
 
 
 ---
@@ -97,7 +98,7 @@ Updated: 10 November 2026
 
 ### P3 — held-back release art
 
-- Orange, Obstinancy, Obliquity, Metro House, Cultus Ex Cultura and Unapology covers.
+- Covers for the six held-back releases.
 - These can wait until the releases are restored and their metadata is confirmed.
 
 ### Housekeeping
@@ -154,7 +155,7 @@ Updated: 10 November 2026
 
 ## Not in 0.2
 
-- Editorial copy for services, ADHD guide, recipes, reviews, home studio, games blog and AI.
+- Editorial copy for the held-back editorial, service and studio templates.
 - Merch.
 - Remaining lyrics.
 - Domain migration.

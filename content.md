@@ -19,7 +19,7 @@ Home → Listen → Ginger Deadman → deadmanifesto → Career → Contact → 
 
 Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. The global footer links Contact, Disclaimer and Privacy, followed by the no-cookies line.
 
-There are 13 indexable pages: Home, Listen, Ginger Deadman, Ginger Deadman About, Bio, deadmanifesto hub, Manifesto, Career, Contact, About, Tools, Privacy and Search. Release and track pages are linked from Listen but remain `noindex` until their metadata is complete. The generated `/sitemap/` full route tree is a `noindex` utility linked from About; `sitemap.xml` remains the crawler index.
+There are 13 indexable pages: Home, Listen, Ginger Deadman, Ginger Deadman About, Bio, deadmanifesto hub, Manifesto, Career, Contact, About, Tools, Privacy and Search. Release and track pages are linked from Listen but remain `noindex` until their metadata is complete. The generated `/sitemap/` current-route tree is a `noindex` utility linked from About; held-back and legacy routes are omitted. `sitemap.xml` remains the crawler index.
 
 ## Page inventory
 
@@ -50,9 +50,9 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 | Release: Flips | `music/albums/flips/index.html` | PARTIAL | 2021 (2022 Remaster), 27 tracks, `noindex` |
 | Release: Flips 2 | `music/albums/flips-2/index.html` | PARTIAL | 2023 placeholder; tracklist coming soon |
 | 404 | `404.html` | LIVE | WIP image and copy |
-| Sitemap | `sitemap/index.html` | UTILITY | Generated full route tree; release groups open by default; held-back templates omitted; linked from About |
+| Sitemap | `sitemap/index.html` | UTILITY | Generated current-route tree; release groups open by default; held-back and legacy routes omitted; linked from About |
 
-There are 149 HTML pages in total: 13 indexable and 136 `noindex`. The legacy `track-01.html` templates and the duplicate `unreal/hollywood` and `unreal/snowstorm` pages were removed in 0.2.20. The sitemap utility was added in 0.2.21.
+There are 149 HTML pages in total: 13 indexable and 136 `noindex`. The sitemap tree shows 123 current routes: 13 public and 110 `noindex`; 22 held-back and 4 legacy routes are omitted. The legacy `track-01.html` templates and the duplicate `unreal/hollywood` and `unreal/snowstorm` pages were removed in 0.2.20. The sitemap utility was added in 0.2.21.
 
 ## Track pages and lyrics
 
@@ -126,20 +126,11 @@ Official full titles are used in public copy. "HD2" is a shorthand; "theAngler" 
 
 Unfinished sections are unlinked, marked `noindex`, and show a coming-soon panel. Files are kept so nothing is lost. The public surface and human sitemap never link to them.
 
-Services, editorial slots and gallery pages remain hidden. The remaining SoundCloud items — Parenthesis, Kudos, Amnesiac II, Gremloe Stinger and Unreal (flips 1hr mix) — are not published yet.
+Held-back editorial, service and gallery templates remain hidden. The remaining unreleased SoundCloud items are not published yet.
 
 ## Future plans
 
-Held back from Listen and the public catalog. Their `noindex` templates remain in the repo, unlinked and excluded from search, RSS, `sitemap.xml` and the human sitemap until they are restored.
-
-| Release | Type | Template |
-|---|---|---|
-| Orange | Album | `music/albums/orange/index.html` |
-| Obstinancy | Album | `music/albums/obstinancy/index.html` |
-| Obliquity | Album | `music/albums/obliquity/index.html` |
-| Metro House | Collaboration | `music/albums/metro-house/index.html` |
-| Cultus Ex Cultura | Collaboration | `music/albums/cultus-ex-cultura/index.html` |
-| Unapology | Collaboration | `music/albums/unapology/index.html` |
+Held back from Listen and the public catalog. Their names and paths are redacted here. The six `noindex` templates remain in the repo, unlinked and excluded from search, RSS, `sitemap.xml` and the human sitemap until they are restored.
 
 ## Asset ledger
 
@@ -181,7 +172,7 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - **Search:** local static index only; no external search service and no query logging by us. Hidden pages, drafts, 404 and unfilled album pages are excluded.
 - **RSS:** static changelog feed; no tracking pixels or unique identifiers.
 - **Player:** skip back, scrub back, play, scrub forward, skip forward and autoplay. Typed seek accepts `0:00` and `0s`. Duration click toggles clock/total seconds. Popups are exactly `Skipped!`, `Rewind!`, `One track back.`, `Shut up!` and `Unmuted...`; play/pause, tracklist, volume, scrub, forward 10s and duration toggles do not show a popup.
-- **Sitemap:** `/sitemap/` is a generated terminal-style tree of the current HTML routes, with release groups open by default and held-back project templates omitted. It is `noindex` and linked from About. `sitemap.xml` remains the search-engine index.
+- **Sitemap:** `/sitemap/` is a generated terminal-style tree of the 123 current live routes, with release groups open by default and held-back project templates and legacy routes omitted. It is `noindex` and linked from About. `sitemap.xml` remains the search-engine index.
 
 ## Backlog
 
@@ -191,7 +182,7 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - Confirm Denial's release credits and remaining streaming URLs.
 - Add the contact email/domain and the second YouTube and SoundCloud URLs.
 - Fill Tools entries as the toolchain changes.
-- Decide the remaining tapes: Sketchbook, 2018, 2019-2020, 2021, 2022 and Unreal (flips 1hr mix).
+- Decide the remaining tape candidates and the unreleased Unreal mix.
 - Decide whether strict chronological ordering across Tapes/Flips matters, or whether separate sections are the intended order.
-- Restore or rename the held-back Orange, Obstinancy, Obliquity, Metro House, Cultus Ex Cultura and Unapology templates when confirmed.
+- Restore or rename the six held-back release and collaboration templates when confirmed.
 - Final QA, accessibility and performance pass, then push and verify GitHub Pages.
