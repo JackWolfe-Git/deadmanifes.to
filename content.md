@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 13 November 2026 - changelog 0.2.21
+Last updated: 13 November 2026 - changelog 0.2.22
 
 ## How to use this file
 
@@ -28,17 +28,17 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 | Page | Path | State | Notes |
 |---|---|---|---|
 | Splash | `index.html` | LIVE | Short bio and lede; splash image (8:3) when supplied |
-| Listen | `music/index.html` | LIVE | Tapes and Flips cards; Spotify profile link |
+| Listen | `music/index.html` | LIVE | Tapes and Flips cards; Spotify follow link at the bottom |
 | Ginger Deadman | `ginger-deadman/index.html` | LIVE | Artist profile; portrait pending |
 | Ginger Deadman About | `ginger-deadman/about/index.html` | LIVE | Identity and routes into the site |
 | Bio | `ginger-deadman/about/bio/index.html` | LIVE | Biography and identity; portrait pending |
 | deadmanifesto hub | `deadmanifesto/index.html` | LIVE | Entry point to the manifesto and career |
 | Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Core tenets, AI-use statement and model list |
-| Career | `deadmanifesto/career/index.html` | LIVE | Game covers and credits plus professional history |
+| Career | `deadmanifesto/career/index.html` | LIVE | Game covers and credits, six redacted placeholders, professional history and LinkedIn |
 | Contact | `contact/index.html` | LIVE | Social, platform and contact links |
 | About | `about/index.html` | LIVE | Disclaimer, changelog, planning notes and site structure |
 | Privacy | `about/privacy/index.html` | LIVE | Storage and hosting disclosure |
-| Tools | `about/tools/index.html` | LIVE | LLMs and traditional tools listed |
+| Tools | `about/tools/index.html` | LIVE | Linked LLMs, workspaces, AI-assisted, hardware placeholder and traditional tools |
 | Search | `search/index.html` | LIVE | Local static search index |
 | Release: oxox | `music/albums/oxox/index.html` | PARTIAL | 2015 tape, oxox, 6 tracks, `noindex` |
 | Release: mainframe | `music/albums/mainframe/index.html` | PARTIAL | 2016 tape, oxox, 4 tracks, `noindex` |
@@ -157,14 +157,17 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 
 - **Voice:** first person for editorial pages; third person for biography copy. Direct, dry wit. No corporate register.
 - **Contact email:** "Coming soon" until the domain and mailbox exist.
-- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. LinkedIn is live. Steam, Xbox, PlayStation and EA sit in the same icon-and-link list. RSS is linked. The second YouTube channel and SoundCloud are visible placeholders until URLs exist.
+- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. LinkedIn is live. Steam, Xbox, PlayStation and EA sit in the same icon-and-link list. RSS is linked. The second YouTube and SoundCloud placeholders were removed in 0.2.22.
 - **Shop:** retired. Historical changelog entries stay.
 - **Gallery:** dark until images exist. No empty frames on the public site.
 - **Lyrics:** track pages are live for confirmed lyric files. Java and Rigatoni Nosebleed (Flips), seven Obliviability tracks, four Obsolescence tracks and two Unreal tracks are published. The remaining lyrics stay in the vault workbench.
 - **Streaming:** show only real links. The "URL coming soon" cards were removed in 0.2.20; a streaming section appears only when at least one real link exists. Flips and Obsolescence stream from Catbox; the newer tapes link to SoundCloud.
 - **Music metadata:** oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2 are the current catalog. Obliviability is typed Album. Flips 2 is typed Flips (Remix Collection) with tracks coming soon. Release and track pages are `noindex` and excluded from search, RSS and `sitemap.xml`.
 - **Home:** the Listen card reads "tapes, flips and streaming links."
-- **Career:** the four verified game covers/credits, four [redacted] cover placeholders and the full professional history are public. Exact roles and dates stay author-supplied.
+- **Ginger Deadman profile:** the lede is "Experimental stuff is cool."; the poem ends "Art can be free."
+- **Listen:** the lede is "the deadmanifesto catalogue so far"; the Spotify follow button sits at the bottom, above the footer.
+- **Tools:** every listed tool opens its official product page or Wikipedia in a new tab. Workspaces follows LLMs; Hardware is a placeholder until the list is supplied.
+- **Career:** the four verified game covers/credits, six [redacted] cover placeholders and the full professional history are public. LinkedIn is the only professional link; the MobyGames link and the Steam/platform note were removed in 0.2.22. Listen, Bio and Contact buttons close the page. Exact roles and dates stay author-supplied.
 - **Game titles:** use the official full titles in public copy: Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: theAngler.
 - **Images:** slots are labelled by ratio, not by missing-content warnings. Game covers are used on Career.
 - **Manifesto:** the trimmed version is canonical. Version `1.0 — 8 November 2026` and the exact AI model list are live.
@@ -180,8 +183,8 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - Finish the remaining lyrics.
 - Add the splash image, artist portrait, EPK press photo/credit, OG share card and Apple touch icon.
 - Confirm Denial's release credits and remaining streaming URLs.
-- Add the contact email/domain and the second YouTube and SoundCloud URLs.
-- Fill Tools entries as the toolchain changes.
+- Add the contact email/domain.
+- Add hardware to Tools and keep the tool links current.
 - Decide the remaining tape candidates and the unreleased Unreal mix.
 - Decide whether strict chronological ordering across Tapes/Flips matters, or whether separate sections are the intended order.
 - Restore or rename the six held-back release and collaboration templates when confirmed.

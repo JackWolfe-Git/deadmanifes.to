@@ -2,8 +2,8 @@
 
 Updated: 13 November 2026
 Preview: `http://127.0.0.1:8765/`
-Working tree: P0/P1 complete; sitemap trimmed and held-back names redacted; local commit ready; `main` is 17 commits ahead of `origin/main`; live site is still at `fef2013`; push approved; Pages verification pending.
-Last link check: 3,661 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
+Working tree: 0.2.22 QA changes applied, local checks passed and push approved; live verification is pending.
+Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
 
@@ -18,7 +18,7 @@ Last link check: 3,661 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - [x] Remove the orphaned `unreal/hollywood` and `unreal/snowstorm` directories.
 - [x] Remove the five orphaned `track-01.html` templates.
 - [x] Resolve Flips 2: keep the empty 2023 placeholder, type it Flips (Remix Collection), and set tracks to Coming soon.
-- [x] Resolve public TBC fields: Obliviability is Album, Flips 2 has type/tracks, Tools is filled, pronunciation/Greek are removed, and the Bio portrait caption is gone. The only public `TBC` text left is the historical 0.1.12 changelog line.
+- [x] Resolve public TBC fields: Obliviability is Album, Flips 2 has type/tracks, Tools sections are filled with hardware still pending, pronunciation/Greek are removed, and the Bio portrait caption is gone. The only public `TBC` text left is the historical 0.1.12 changelog line.
 - [x] Replace the About planning notes placeholder with current phase and next-pass copy.
 - [x] Update the stale Flips meta description.
 - [x] Change the home Start Here Listen copy to ?tapes, flips?.
@@ -32,8 +32,8 @@ Last link check: 3,661 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - [ ] Lyrics backlog: Flips 25, Obliviability 7, Obsolescence 8, Unreal 3, plus the 41 pending new pages.
 - [ ] Add the splash image, artist portrait, EPK press photo/credit, OG share card and Apple touch icon.
 - [ ] Confirm Denial?s release credits and streaming URL.
-- [ ] Add the contact email/domain and the second YouTube and SoundCloud URLs.
-- [ ] Add gallery images and keep Tools current as the toolchain changes.
+- [ ] Add the contact email/domain.
+- [ ] Add gallery images, add hardware to Tools and keep the tool links current.
 - [x] Add the current-route sitemap: a generated terminal-style `/sitemap/` tree of 123 live routes, with release groups open by default and held-back project templates and legacy routes omitted. `make_sitemap.py` rebuilds it from the HTML tree, and About's useful links point to it. `sitemap.xml` remains the crawler index.
 - [ ] Wire audio for the new tapes. Blocked on Catbox; decide between SoundCloud embeds and waiting for files.
 
@@ -54,9 +54,11 @@ Last link check: 3,661 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 - Removed placeholder streaming cards across 99 pages; no streaming ?URL coming soon? cards remain.
 - Removed orphan Unreal duplicates and five legacy `track-01.html` templates.
 - Compressed the two oversized covers and cross-linked Java to both albums.
-- Changelog and RSS now cover 0.2.14?0.2.21 at 13 November 2026.
+- Changelog and RSS now cover 0.2.14?0.2.22 at 13 November 2026.
 - Added `/sitemap/` as a generated current-route terminal tree. It is `noindex`, expands release groups by default, omits held-back and legacy routes and is linked from About.
 - Redacted held-back project names from `content.md`, `PLAN.md` and the historical About changelog.
+- Applied 0.2.22 QA: six Career redacted placeholders, LinkedIn-only professional block, Listen/Bio/Contact buttons, linked Tools with Workspaces/AI-assisted/Hardware/Traditional sections, revised Ginger Deadman lede and poem, Listen catalogue copy and bottom Spotify follow, and Contact placeholder removals.
+- Updated changelog, RSS, search index, privacy note and content map for 0.2.22; link check clean.
 
 
 ---
@@ -141,7 +143,7 @@ Updated: 10 November 2026
 - Pronunciation and Greek transliteration.
 - Contact email and domain.
 - Exact game-credit roles and career CV details.
-- Remaining streaming links, second YouTube and SoundCloud URLs, and platform profiles.
+- Remaining streaming links and platform profiles.
 
 ## Decisions
 

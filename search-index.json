@@ -13,13 +13,12 @@
   {
     "title": "Listen — deadmanifesto",
     "url": "../music/",
-    "description": "The deadmanifesto catalog: tapes and flips from Ginger Deadman, plus a Spotify profile link.",
+    "description": "The deadmanifesto catalogue so far: tapes and flips from Ginger Deadman, plus a Spotify follow link.",
     "headings": [
-      "Spotify",
       "Tapes",
       "Flips"
     ],
-    "text": "oxox (2015, Tape, 6 tracks), mainframe (2016, Tape, 4 tracks), Denial (2016, EP, 4 tracks), Unreal (2017, Experimental, 5 tracks), Obliviability (2020, Album, 14 tracks), Obsolescence (2022, 12 tracks), Club Foot (2019-2021, 27 tracks), Flips (2021, 27 tracks), Flips 2 (2023, coming soon). Ginger Deadman and deadmanifesto."
+    "text": "the deadmanifesto catalogue so far. oxox (2015, Tape, 6 tracks), mainframe (2016, Tape, 4 tracks), Denial (2016, EP, 4 tracks), Unreal (2017, Experimental, 5 tracks), Obliviability (2020, Album, 14 tracks), Obsolescence (2022, 12 tracks), Club Foot (2019-2021, 27 tracks), Flips (2021, 27 tracks), Flips 2 (2023, coming soon). Ginger Deadman and deadmanifesto. Follow on Spotify."
   },
   {
     "title": "Ginger Deadman — artist profile",
@@ -31,7 +30,7 @@
       "Listen",
       "Career"
     ],
-    "text": "Experimental hip-hop and electronic music, visual work and games from the artist behind deadmanifesto. Bio, discography and career links."
+    "text": "Experimental stuff is cool. Bio, discography and career links."
   },
   {
     "title": "About Ginger Deadman",
@@ -81,10 +80,9 @@
     "description": "Career credits, game cover art and professional background for Ginger Deadman across game QA, production and creative work.",
     "headings": [
       "Game Credits",
-      "Professional History",
-      "Professional Links"
+      "Professional History"
     ],
-    "text": "Helldivers 2, LEGO Horizon Adventures, Ravenbound, Call of the Wild: theAngler, plus redacted placeholders. Sony Interactive Entertainment, Universally Speaking, Avalanche Studios, LinkedIn and MobyGames. Full professional history. Steam and platform links are on Contact."
+    "text": "Helldivers 2, LEGO Horizon Adventures, Ravenbound, Call of the Wild: theAngler, plus six redacted placeholders. Sony Interactive Entertainment, Universally Speaking, Avalanche Studios and LinkedIn. Full professional history."
   },
   {
     "title": "Contact — deadmanifesto",
@@ -93,7 +91,7 @@
     "headings": [
       "Contact"
     ],
-    "text": "Instagram, YouTube, TikTok, RateYourMusic, LinkedIn, Steam, Xbox, PlayStation, EA, RSS feed, second YouTube channel and SoundCloud placeholders, then email, which is coming soon."
+    "text": "Instagram, YouTube, TikTok, RateYourMusic, LinkedIn, Steam, Xbox, PlayStation, EA, RSS feed, then email, which is coming soon."
   },
   {
     "title": "About — deadmanifesto",
@@ -127,12 +125,14 @@
   {
     "title": "Tools — deadmanifesto",
     "url": "../about/tools/",
-    "description": "The language models, AI-assisted tools and traditional digital tools used to make deadmanifesto.",
+    "description": "Here's all the tools used to make deadmanifesto.",
     "headings": [
       "LLMs",
+      "Workspaces",
       "AI-assisted",
+      "Hardware",
       "Traditional"
     ],
-    "text": "The language models, AI-assisted tools and traditional digital tools used to make deadmanifesto. Entries are being added."
+    "text": "Big Pickle, Gemini, Deepseek, Gemma, Beam, GPT, opencode, Gemini, Kilo, Ollama, Google Photos, BandLab Mastering, Python, PowerShell, Git, GitHub Pages, HTML, CSS, JavaScript, Miro, Jira, Obsidian, Anytype, Ableton Live, Logic Pro, Cubase, FL Studio and Audacity. Links open official product pages or Wikipedia."
   }
 ]
