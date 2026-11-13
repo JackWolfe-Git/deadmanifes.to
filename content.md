@@ -2,13 +2,14 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 12 November 2026 - changelog 0.2.20
+Last updated: 13 November 2026 - changelog 0.2.21
 
 ## How to use this file
 
 - Change copy in the HTML page that renders it.
 - Use this file to decide what to change and to track images and held-back work.
 - Every structural change updates this map and the changelog and site-structure sections on `/about/`.
+- After adding, removing or moving HTML files, run `make_sitemap.py` to rebuild `/sitemap/`.
 
 ## Public surface
 
@@ -18,11 +19,11 @@ Home → Listen → Ginger Deadman → deadmanifesto → Career → Contact → 
 
 Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. The global footer links Contact, Disclaimer and Privacy, followed by the no-cookies line.
 
-There are 13 indexable pages: Home, Listen, Ginger Deadman, Ginger Deadman About, Bio, deadmanifesto hub, Manifesto, Career, Contact, About, Tools, Privacy and Search. Release and track pages are linked from Listen but remain `noindex` until their metadata is complete.
+There are 13 indexable pages: Home, Listen, Ginger Deadman, Ginger Deadman About, Bio, deadmanifesto hub, Manifesto, Career, Contact, About, Tools, Privacy and Search. Release and track pages are linked from Listen but remain `noindex` until their metadata is complete. The generated `/sitemap/` full route tree is a `noindex` utility linked from About; `sitemap.xml` remains the crawler index.
 
 ## Page inventory
 
-States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noindex`, some copy or lyrics pending) → **HIDDEN** (noindex, unlinked, coming-soon) → **GONE**.
+States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noindex`, some copy or lyrics pending) → **UTILITY** (noindex support page, linked from About) → **HIDDEN** (noindex, unlinked, coming-soon) → **GONE**.
 
 | Page | Path | State | Notes |
 |---|---|---|---|
@@ -49,8 +50,9 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 | Release: Flips | `music/albums/flips/index.html` | PARTIAL | 2021 (2022 Remaster), 27 tracks, `noindex` |
 | Release: Flips 2 | `music/albums/flips-2/index.html` | PARTIAL | 2023 placeholder; tracklist coming soon |
 | 404 | `404.html` | LIVE | WIP image and copy |
+| Sitemap | `sitemap/index.html` | UTILITY | Generated full route tree; release groups open by default; held-back templates omitted; linked from About |
 
-There are 148 HTML pages in total: 13 indexable and 135 `noindex`. The legacy `track-01.html` templates and the duplicate `unreal/hollywood` and `unreal/snowstorm` pages were removed in 0.2.20.
+There are 149 HTML pages in total: 13 indexable and 136 `noindex`. The legacy `track-01.html` templates and the duplicate `unreal/hollywood` and `unreal/snowstorm` pages were removed in 0.2.20. The sitemap utility was added in 0.2.21.
 
 ## Track pages and lyrics
 
@@ -122,13 +124,13 @@ Official full titles are used in public copy. "HD2" is a shorthand; "theAngler" 
 
 ## Held back
 
-Unfinished sections are unlinked, marked `noindex`, and show a coming-soon panel. Files are kept so nothing is lost. The public surface never links to them.
+Unfinished sections are unlinked, marked `noindex`, and show a coming-soon panel. Files are kept so nothing is lost. The public surface and human sitemap never link to them.
 
 Services, editorial slots and gallery pages remain hidden. The remaining SoundCloud items — Parenthesis, Kudos, Amnesiac II, Gremloe Stinger and Unreal (flips 1hr mix) — are not published yet.
 
 ## Future plans
 
-Held back from Listen and the public catalog. Their `noindex` templates remain in the repo, unlinked and excluded from search, RSS and the sitemap until they are restored.
+Held back from Listen and the public catalog. Their `noindex` templates remain in the repo, unlinked and excluded from search, RSS, `sitemap.xml` and the human sitemap until they are restored.
 
 | Release | Type | Template |
 |---|---|---|
@@ -169,7 +171,7 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - **Gallery:** dark until images exist. No empty frames on the public site.
 - **Lyrics:** track pages are live for confirmed lyric files. Java and Rigatoni Nosebleed (Flips), seven Obliviability tracks, four Obsolescence tracks and two Unreal tracks are published. The remaining lyrics stay in the vault workbench.
 - **Streaming:** show only real links. The "URL coming soon" cards were removed in 0.2.20; a streaming section appears only when at least one real link exists. Flips and Obsolescence stream from Catbox; the newer tapes link to SoundCloud.
-- **Music metadata:** oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2 are the current catalog. Obliviability is typed Album. Flips 2 is typed Flips (Remix Collection) with tracks coming soon. Release and track pages are `noindex` and excluded from search, RSS and the sitemap.
+- **Music metadata:** oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2 are the current catalog. Obliviability is typed Album. Flips 2 is typed Flips (Remix Collection) with tracks coming soon. Release and track pages are `noindex` and excluded from search, RSS and `sitemap.xml`.
 - **Home:** the Listen card reads "tapes, flips and streaming links."
 - **Career:** the four verified game covers/credits, four [redacted] cover placeholders and the full professional history are public. Exact roles and dates stay author-supplied.
 - **Game titles:** use the official full titles in public copy: Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: theAngler.
@@ -179,11 +181,10 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - **Search:** local static index only; no external search service and no query logging by us. Hidden pages, drafts, 404 and unfilled album pages are excluded.
 - **RSS:** static changelog feed; no tracking pixels or unique identifiers.
 - **Player:** skip back, scrub back, play, scrub forward, skip forward and autoplay. Typed seek accepts `0:00` and `0s`. Duration click toggles clock/total seconds. Popups are exactly `Skipped!`, `Rewind!`, `One track back.`, `Shut up!` and `Unmuted...`; play/pause, tracklist, volume, scrub, forward 10s and duration toggles do not show a popup.
-- **Sitemap:** a human-readable sitemap page is planned but not built yet. Keep `sitemap.xml` as the search-engine index.
+- **Sitemap:** `/sitemap/` is a generated terminal-style tree of the current HTML routes, with release groups open by default and held-back project templates omitted. It is `noindex` and linked from About. `sitemap.xml` remains the search-engine index.
 
 ## Backlog
 
-- Add the human-readable sitemap page: public 13-page view plus an optional `noindex` full-archive view, generated from the HTML tree.
 - Wire audio for the new tapes when files or stable hosted URLs arrive. Catbox uploads currently fail from this environment.
 - Finish the remaining lyrics.
 - Add the splash image, artist portrait, EPK press photo/credit, OG share card and Apple touch icon.

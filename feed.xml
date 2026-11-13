@@ -5,7 +5,14 @@
     <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
     <description>Shipped changes to deadmanifesto, the artist archive and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 12 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>0.2.21 - full route sitemap</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.21</guid>
+      <pubDate>Thu, 12 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds a generated full-route sitemap at /sitemap/ with release groups open by default and held-back project templates omitted. It is linked from About; sitemap.xml remains the crawler index.</description>
+    </item>
     <item>
       <title>0.2.20 - public cleanup</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>

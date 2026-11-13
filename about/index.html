@@ -46,6 +46,7 @@
             <li><a href="../contact/index.html">Contact</a></li>
             <li><a href="tools/index.html">Tools</a></li>
             <li><a href="privacy/index.html">Privacy</a></li>
+            <li><a href="../sitemap/">Sitemap</a></li>
             <li><a href="#changelog">Changelog</a></li>
             <li><a href="#robots">Robots</a></li>
             <li><a href="../deadmanifesto/manifesto/index.html">deadmanifesto</a></li>
@@ -95,6 +96,7 @@
                 <summary>12</summary>
                 <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
                 <ul>
+                    <li>0.2.21 - add <code>/sitemap/</code> as a generated full-route terminal tree with release groups open by default and held-back project templates omitted, linked from About</li>
                     <li>0.2.20 - remove the orphaned Unreal duplicates and legacy track templates, clear public TBC fields, remove streaming URL placeholders, compress the Club Foot and Obsolescence covers, and cross-link Java to both albums</li>
                     <li>0.2.19 - add Club Foot as a 27-track Flips remix collection spanning 2019-2021</li>
                     <li>0.2.18 - reset Unreal to the 2017 five-track tape and remove Damaged Goods</li>
@@ -259,8 +261,8 @@
     </section>
     <section id="planning">
         <h3>Planning phase</h3>
-        <p>The current pass is the 0.2 catalogue and interaction layer: rebuild Listen around the tapes and flips, add full track pages, and finish the player. Release and track pages stay <code>noindex</code> until their lyrics, credits and streaming links are complete.</p>
-        <p>The next pass is audio wiring, remaining lyrics, the public sitemap page and the final tape decisions. New audio will only be added when the files or stable hosted URLs are ready.</p>
+        <p>The current pass is the 0.2 catalogue and interaction layer: rebuild Listen around the tapes and flips, add full track pages, finish the player and add the human-readable sitemap. Release and track pages stay <code>noindex</code> until their lyrics, credits and streaming links are complete.</p>
+        <p>The next pass is audio wiring, remaining lyrics and the final tape decisions. New audio will only be added when the files or stable hosted URLs are ready.</p>
     </section>
 
     <section id="robots">
@@ -291,9 +293,9 @@
             <li><code>about/index.html#robots</code> — This page</li>
             <li><code>search/index.html</code> — Local search results page</li>
         </ul>
-        <p>Held back and unlinked from the main menu: services, editorial slots and gallery. Lyric and track pages are linked from their albums but remain <code>noindex</code> while lyrics, credits and remaining metadata are completed.</p>
-        <p>Six further release and collaboration templates are also held back and unlinked. They are marked <code>noindex</code> and kept for future plans.</p>
-        <p>Career carries the four verified game covers and credits plus the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the Tapes and Flips releases, their track pages and a Spotify profile link: oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2. Catbox streams are live on Flips and Obsolescence; the newer tapes currently link to SoundCloud. Release and track pages remain excluded from search, RSS and the sitemap until their metadata is complete.</p>
+        <p>Held back and unlinked from the main menu: services, editorial slots and gallery. Lyric and track pages are linked from their albums but remain <code>noindex</code> while lyrics, credits and remaining metadata are completed. Held-back project templates are omitted from the human sitemap.</p>
+        <p>Six further release and collaboration templates are also held back and unlinked. They are marked <code>noindex</code>, kept for future plans and omitted from the human sitemap.</p>
+        <p>Career carries the four verified game covers and credits plus the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the Tapes and Flips releases, their track pages and a Spotify profile link: oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2. Catbox streams are live on Flips and Obsolescence; the newer tapes currently link to SoundCloud. Release and track pages remain excluded from search, RSS and <code>sitemap.xml</code> until their metadata is complete.</p>
     </section>
 
     <section>
@@ -302,6 +304,7 @@
             <li><code>404.html</code> — Not-found page</li>
             <li><code>robots.txt</code> — Crawl policy and sitemap pointer</li>
             <li><code>sitemap.xml</code> — Public URL index</li>
+            <li><code>sitemap/</code> — Generated full route tree</li>
             <li><code>feed.xml</code> — Changelog RSS feed</li>
             <li><code>search-index.json</code> — Static local search index</li>
         </ul>
