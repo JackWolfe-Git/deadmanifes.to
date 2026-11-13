@@ -2,7 +2,7 @@
 
 Updated: 13 November 2026
 Preview: `http://127.0.0.1:8765/`
-Working tree: 0.2.22 QA changes applied, local checks passed and push approved; live verification is pending.
+Working tree clean; 0.2.22 committed as `2782813` and pushed to `origin/main`; live Pages verification passed for all six changed routes.
 Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
