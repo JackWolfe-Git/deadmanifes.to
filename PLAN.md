@@ -2,7 +2,7 @@
 
 Updated: 14 November 2026
 Preview: `http://127.0.0.1:8765/` (running)
-Pending local release: 0.2.23 GDM mark, 0.2.24 deadmanifesto hub and 0.2.25 oxox credits. Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
+0.2.23-0.2.25 shipped as `dc8d060` and pushed to `origin/main`; live Pages verification passed on Ginger Deadman, deadmanifesto, Listen and Obliviability. Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
 
