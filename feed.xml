@@ -5,7 +5,28 @@
     <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
     <description>Shipped changes to deadmanifesto, the artist archive and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
-    <lastBuildDate>Fri, 13 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>0.2.25 - oxox credits</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.25</guid>
+      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Credits Denial and Unreal to oxox and marks Obliviability as the first Ginger Deadman album.</description>
+    </item>
+    <item>
+      <title>0.2.24 - deadmanifesto hub</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.24</guid>
+      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Splits the deadmanifesto hub into Artists and Explore, lists Ginger Deadman and links the manifesto plus About sub-sections.</description>
+    </item>
+    <item>
+      <title>0.2.23 - GDM mark</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.23</guid>
+      <pubDate>Sat, 14 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds the GDM mark to the Ginger Deadman page below Start here and above the poem.</description>
+    </item>
     <item>
       <title>0.2.22 - copy and tools pass</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>

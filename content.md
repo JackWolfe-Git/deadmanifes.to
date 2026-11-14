@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 13 November 2026 - changelog 0.2.22
+Last updated: 14 November 2026 - changelog 0.2.25
 
 ## How to use this file
 
@@ -29,10 +29,10 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 |---|---|---|---|
 | Splash | `index.html` | LIVE | Short bio and lede; splash image (8:3) when supplied |
 | Listen | `music/index.html` | LIVE | Tapes and Flips cards; Spotify follow link at the bottom |
-| Ginger Deadman | `ginger-deadman/index.html` | LIVE | Artist profile; portrait pending |
+| Ginger Deadman | `ginger-deadman/index.html` | LIVE | Artist profile; GDM mark below Start here; portrait pending |
 | Ginger Deadman About | `ginger-deadman/about/index.html` | LIVE | Identity and routes into the site |
 | Bio | `ginger-deadman/about/bio/index.html` | LIVE | Biography and identity; portrait pending |
-| deadmanifesto hub | `deadmanifesto/index.html` | LIVE | Entry point to the manifesto and career |
+| deadmanifesto hub | `deadmanifesto/index.html` | LIVE | Artists listing (Ginger Deadman only) and Explore links to the manifesto and About sub-sections |
 | Manifesto | `deadmanifesto/manifesto/index.html` | LIVE | Core tenets, AI-use statement and model list |
 | Career | `deadmanifesto/career/index.html` | LIVE | Game covers and credits, six redacted placeholders, professional history and LinkedIn |
 | Contact | `contact/index.html` | LIVE | Social, platform and contact links |
@@ -42,9 +42,9 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 | Search | `search/index.html` | LIVE | Local static search index |
 | Release: oxox | `music/albums/oxox/index.html` | PARTIAL | 2015 tape, oxox, 6 tracks, `noindex` |
 | Release: mainframe | `music/albums/mainframe/index.html` | PARTIAL | 2016 tape, oxox, 4 tracks, `noindex` |
-| Release: Denial | `music/albums/denial/index.html` | PARTIAL | 2016 EP, Ginger Deadman, 4 tracks, `noindex` |
-| Release: Unreal | `music/albums/unreal/index.html` | PARTIAL | 2017 tape, Ginger Deadman, 5 tracks, `noindex` |
-| Release: Obliviability | `music/albums/obliviability/index.html` | PARTIAL | 2020 album, 14 tracks, `noindex` |
+| Release: Denial | `music/albums/denial/index.html` | PARTIAL | 2016 EP, oxox, 4 tracks, `noindex` |
+| Release: Unreal | `music/albums/unreal/index.html` | PARTIAL | 2017 tape, oxox, 5 tracks, `noindex` |
+| Release: Obliviability | `music/albums/obliviability/index.html` | PARTIAL | 2020 album, the first Ginger Deadman album, 14 tracks, `noindex` |
 | Release: Obsolescence | `music/albums/obsolescence/index.html` | PARTIAL | 2022 experimental album, 12 tracks, `noindex` |
 | Release: Club Foot | `music/albums/club-foot/index.html` | PARTIAL | 2019-2021 Flips remix collection, 27 tracks, `noindex` |
 | Release: Flips | `music/albums/flips/index.html` | PARTIAL | 2021 (2022 Remaster), 27 tracks, `noindex` |
@@ -80,15 +80,15 @@ These fields stay off the public pages until they are supplied. If a field is bl
 |---|---|---|---|---|---:|---|
 | oxox | oxox | Tape | 2015 | 6 | 14m 51s | SoundCloud links live |
 | mainframe | oxox | Tape | 2016 | 4 | 7m 57s | SoundCloud links live |
-| Denial | Ginger Deadman | EP | 2016 | 4 | 16m 7s | SoundCloud links live |
-| Unreal | Ginger Deadman | Experimental | 2017 | 5 | 14m 55s | SoundCloud collection live |
+| Denial | oxox | EP | 2016 | 4 | 16m 7s | SoundCloud links live |
+| Unreal | oxox | Experimental | 2017 | 5 | 14m 55s | SoundCloud collection live |
 | Obliviability | Ginger Deadman | Album | 2020 | 14 | 50m 46s | Catbox audio on track pages |
 | Obsolescence | Ginger Deadman | Experimental | 2022 | 12 | 40m | Catbox audio on track pages |
 | Club Foot | deadmanifesto | Flips (Remix Collection) | 2019-2021 | 27 | 1h 29m 31s | SoundCloud links live |
 | Flips | deadmanifesto | Flips (Remix Collection) | 2021 (2022 Remaster) | 27 | 1h 1m 11s | Catbox audio on track pages |
 | Flips 2 | deadmanifesto | Flips (Remix Collection) | 2023 | Coming soon | - | Coming soon |
 
-Unreal excludes Damaged Goods. The unsorted Oxox tracks — Trap Queen, Damaged Goods, This Is What Giving Head and Tutorial — stay off the site. chedlox stays off the site; collaborations are deferred. Flips 2 remains an empty placeholder for now.
+Denial and Unreal are oxox releases; Obliviability is the first Ginger Deadman album. Unreal excludes Damaged Goods. The unsorted Oxox tracks — Trap Queen, Damaged Goods, This Is What Giving Head and Tutorial — stay off the site. chedlox stays off the site; collaborations are deferred. Flips 2 remains an empty placeholder for now.
 
 ### Identity
 
@@ -138,6 +138,7 @@ Held back from Listen and the public catalog. Their names and paths are redacted
 |---|---|---|---|---|
 | Favicon | all pages | 32×32 + 180×180 | `assets/images/favicon.svg` | Apple touch icon pending |
 | Social share card | all pages | 1200×630 | `assets/images/og-deadmanifesto.jpg` | Pending |
+| GDM mark | Ginger Deadman | 2000 x 713 | `assets/images/gdm-mark.png` | 101 KB; white background; added 0.2.23 |
 | Splash banner | `index.html` | 8:3, 1600×600 | `assets/images/splash-banner.jpg` | Pending |
 | Artist portrait | Ginger Deadman, Bio | 3:4, 1200×1600 | `assets/images/ginger-deadman-portrait.jpg` | Pending |
 | Album: oxox | Listen, album, tracks | 1:1, 500×500 | `assets/images/album-covers/oxox.jpg` | 55 KB |

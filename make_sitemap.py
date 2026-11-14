@@ -242,7 +242,7 @@ def page_shell(
 <link rel="icon" type="image/svg+xml" href="{prefix}assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>{escape(title)} - deadmanifesto</title>
-<link rel="stylesheet" href="{prefix}style.css?v=14">
+<link rel="stylesheet" href="{prefix}style.css?v=15">
 <link rel="stylesheet" href="{prefix}assets/sitemap.css?v=2">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="{SITE}/feed.xml">
 </head>

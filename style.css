@@ -824,6 +824,17 @@ body[data-mode="orange"] .home-links .card p {
     color: #000000;
 }
 
+.gdm-mark {
+    width: 100%;
+    max-width: 720px;
+    margin: 2rem auto 0;
+}
+
+.gdm-mark img {
+    width: 100%;
+    height: auto;
+}
+
 /* --- Content pages, image slots and release grid --- */
 
 .lede {

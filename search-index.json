@@ -13,12 +13,12 @@
   {
     "title": "Listen — deadmanifesto",
     "url": "../music/",
-    "description": "The deadmanifesto catalogue so far: tapes and flips from Ginger Deadman, plus a Spotify follow link.",
+    "description": "The deadmanifesto catalogue so far: tapes and flips from oxox and Ginger Deadman, plus a Spotify follow link.",
     "headings": [
       "Tapes",
       "Flips"
     ],
-    "text": "the deadmanifesto catalogue so far. oxox (2015, Tape, 6 tracks), mainframe (2016, Tape, 4 tracks), Denial (2016, EP, 4 tracks), Unreal (2017, Experimental, 5 tracks), Obliviability (2020, Album, 14 tracks), Obsolescence (2022, 12 tracks), Club Foot (2019-2021, 27 tracks), Flips (2021, 27 tracks), Flips 2 (2023, coming soon). Ginger Deadman and deadmanifesto. Follow on Spotify."
+    "text": "the deadmanifesto catalogue so far. oxox (2015, Tape, 6 tracks), mainframe (2016, Tape, 4 tracks), Denial (2016, EP, 4 tracks), Unreal (2017, Experimental, 5 tracks), Obliviability (2020, Album, 14 tracks), Obsolescence (2022, 12 tracks), Club Foot (2019-2021, 27 tracks), Flips (2021, 27 tracks), Flips 2 (2023, coming soon). Denial and Unreal are oxox releases; Obliviability is the first Ginger Deadman album. Follow on Spotify."
   },
   {
     "title": "Ginger Deadman — artist profile",
@@ -54,15 +54,17 @@
     "text": "Ginger Deadman is an alias of Jack Wolfe, the artist behind deadmanifesto. They are a multimodal artist, working across experimental hip-hop, electronic music, visual work and games. The deadmanifesto catalog includes an archive of lyrics and mechanical productions from Ginger Deadman, functioning as an open distribution and streaming platform built on freeware with as much transparency as possible. Jack Wolfe works professionally as a QA Tester; all professional inquiries must relate to the Ginger Deadman / deadmanifesto projects."
   },
   {
-    "title": "deadmanifesto — brand, manifesto and work",
+    "title": "deadmanifesto — artists, manifesto and about",
     "url": "../deadmanifesto/",
-    "description": "The deadmanifesto brand: manifesto, career, game credits and the wider body of work.",
+    "description": "Ginger Deadman, the deadmanifesto, and links into About, Tools, Privacy and the sitemap.",
     "headings": [
+      "Artists",
+      "Ginger Deadman",
       "Explore",
       "The deadmanifesto",
-      "Career"
+      "About"
     ],
-    "text": "The manifesto, career and professional work behind the name. Philosophy, mission statement, game credits, cover art and professional history."
+    "text": "Artists, the manifesto and the wider deadmanifesto. Ginger Deadman is the only artist listed for now. Explore the deadmanifesto, then About: disclaimer, changelog, tools, privacy, sitemap and robots."
   },
   {
     "title": "The deadmanifesto — philosophy",

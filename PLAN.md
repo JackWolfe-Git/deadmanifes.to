@@ -1,9 +1,8 @@
 # deadmanifesto ? running triage
 
-Updated: 13 November 2026
-Preview: `http://127.0.0.1:8765/`
-Working tree clean; 0.2.22 committed as `2782813` and pushed to `origin/main`; live Pages verification passed for all six changed routes.
-Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
+Updated: 14 November 2026
+Preview: `http://127.0.0.1:8765/` (running)
+Pending local release: 0.2.23 GDM mark, 0.2.24 deadmanifesto hub and 0.2.25 oxox credits. Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
 
@@ -45,6 +44,10 @@ Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noin
 
 ## Done this pass
 
+- Added the GDM mark to the Ginger Deadman page below Start here and above the poem; style.css is now v15.
+- Split the deadmanifesto hub into Artists (Ginger Deadman only) and Explore (manifesto plus About sub-sections).
+- Credited Denial and Unreal to oxox and marked Obliviability as the first Ginger Deadman album across Listen, release pages and track pages.
+- Regenerated the current-route sitemap, updated changelog/feed/search content, and kept the link check clean.
 - Preview booted; Home, Listen, Club Foot, Java player and Bio render; link check clean.
 - oxox, mainframe, Denial, Unreal 2017 and Club Foot pages are live locally; 99 track pages across nine releases.
 - Club Foot has 27 tracks, dated 2019-2021, typed Flips (Remix Collection).
