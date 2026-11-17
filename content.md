@@ -2,7 +2,7 @@
 
 The site is the source of truth for its own text. This file is the map: what exists, what is public, what is held back, what is missing, and what happens next. It does not duplicate live copy.
 
-Last updated: 14 November 2026 - changelog 0.2.25
+Last updated: 16 November 2026 - changelog 0.2.27
 
 ## How to use this file
 
@@ -17,7 +17,7 @@ Target nav (seven items, shop retired):
 
 Home → Listen → Ginger Deadman → deadmanifesto → Career → Contact → About
 
-Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. The global footer links Contact, Disclaimer and Privacy, followed by the no-cookies line.
+Search is a header icon and `/search/` results page, not an eighth menu item. About contains Disclaimer, Changelog and Robots. The global footer links Contact, Disclaimer and Privacy, followed by the "No cookies or tracking by default" line.
 
 There are 13 indexable pages: Home, Listen, Ginger Deadman, Ginger Deadman About, Bio, deadmanifesto hub, Manifesto, Career, Contact, About, Tools, Privacy and Search. Release and track pages are linked from Listen but remain `noindex` until their metadata is complete. The generated `/sitemap/` current-route tree is a `noindex` utility linked from About; held-back and legacy routes are omitted. `sitemap.xml` remains the crawler index.
 
@@ -27,7 +27,7 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 
 | Page | Path | State | Notes |
 |---|---|---|---|
-| Splash | `index.html` | LIVE | Short bio and lede; splash image (8:3) when supplied |
+| Splash | `index.html` | LIVE | Short bio and lede; Player settings opt in to Catbox and SoundCloud hosts; splash image (8:3) when supplied |
 | Listen | `music/index.html` | LIVE | Tapes and Flips cards; Spotify follow link at the bottom |
 | Ginger Deadman | `ginger-deadman/index.html` | LIVE | Artist profile; GDM mark below Start here; portrait pending |
 | Ginger Deadman About | `ginger-deadman/about/index.html` | LIVE | Identity and routes into the site |
@@ -37,7 +37,7 @@ States: **LIVE** (public, no visible WIP markers) → **PARTIAL** (public, `noin
 | Career | `deadmanifesto/career/index.html` | LIVE | Game covers and credits, six redacted placeholders, professional history and LinkedIn |
 | Contact | `contact/index.html` | LIVE | Social, platform and contact links |
 | About | `about/index.html` | LIVE | Disclaimer, changelog, planning notes and site structure |
-| Privacy | `about/privacy/index.html` | LIVE | Storage and hosting disclosure |
+| Privacy | `about/privacy/index.html` | LIVE | Storage, player-host opt-in and hosting disclosure |
 | Tools | `about/tools/index.html` | LIVE | Linked LLMs, workspaces, AI-assisted, hardware placeholder and traditional tools |
 | Search | `search/index.html` | LIVE | Local static search index |
 | Release: oxox | `music/albums/oxox/index.html` | PARTIAL | 2015 tape, oxox, 6 tracks, `noindex` |
@@ -78,14 +78,14 @@ These fields stay off the public pages until they are supplied. If a field is bl
 
 | Release | Artist | Type | Year | Tracks | Runtime | Streaming |
 |---|---|---|---|---|---:|---|
-| oxox | oxox | Tape | 2015 | 6 | 14m 51s | SoundCloud links live |
-| mainframe | oxox | Tape | 2016 | 4 | 7m 57s | SoundCloud links live |
-| Denial | oxox | EP | 2016 | 4 | 16m 7s | SoundCloud links live |
-| Unreal | oxox | Experimental | 2017 | 5 | 14m 55s | SoundCloud collection live |
-| Obliviability | Ginger Deadman | Album | 2020 | 14 | 50m 46s | Catbox audio on track pages |
-| Obsolescence | Ginger Deadman | Experimental | 2022 | 12 | 40m | Catbox audio on track pages |
-| Club Foot | deadmanifesto | Flips (Remix Collection) | 2019-2021 | 27 | 1h 29m 31s | SoundCloud links live |
-| Flips | deadmanifesto | Flips (Remix Collection) | 2021 (2022 Remaster) | 27 | 1h 1m 11s | Catbox audio on track pages |
+| oxox | oxox | Tape | 2015 | 6 | 14m 51s | SoundCloud links live; click-to-load player |
+| mainframe | oxox | Tape | 2016 | 4 | 7m 57s | SoundCloud links live; click-to-load player |
+| Denial | oxox | EP | 2016 | 4 | 16m 7s | SoundCloud links live; click-to-load player |
+| Unreal | oxox | Experimental | 2017 | 5 | 14m 55s | SoundCloud collection live; click-to-load player |
+| Obliviability | Ginger Deadman | Album | 2020 | 14 | 50m 46s | Catbox audio; click-to-load SoundCloud on selected tracks |
+| Obsolescence | Ginger Deadman | Experimental | 2022 | 12 | 40m | Catbox audio; click-to-load SoundCloud on selected tracks |
+| Club Foot | deadmanifesto | Flips (Remix Collection) | 2019-2021 | 27 | 1h 29m 31s | SoundCloud links live; click-to-load player |
+| Flips | deadmanifesto | Flips (Remix Collection) | 2021 (2022 Remaster) | 27 | 1h 1m 11s | Catbox audio; click-to-load SoundCloud on selected tracks |
 | Flips 2 | deadmanifesto | Flips (Remix Collection) | 2023 | Coming soon | - | Coming soon |
 
 Denial and Unreal are oxox releases; Obliviability is the first Ginger Deadman album. Unreal excludes Damaged Goods. The unsorted Oxox tracks — Trap Queen, Damaged Goods, This Is What Giving Head and Tutorial — stay off the site. chedlox stays off the site; collaborations are deferred. Flips 2 remains an empty placeholder for now.
@@ -138,7 +138,9 @@ Held back from Listen and the public catalog. Their names and paths are redacted
 |---|---|---|---|---|
 | Favicon | all pages | 32×32 + 180×180 | `assets/images/favicon.svg` | Apple touch icon pending |
 | Social share card | all pages | 1200×630 | `assets/images/og-deadmanifesto.jpg` | Pending |
-| GDM mark | Ginger Deadman | 2000 x 713 | `assets/images/gdm-mark.png` | 101 KB; white background; added 0.2.23 |
+| GDM mark | Ginger Deadman | 1861 x 534 | `assets/images/gdm-mark-transparent.png` | 108 KB; transparent; tuned for dark/light/orange; added 0.2.23, replaced 0.2.26 |
+| SoundCloud player | track pages | 166px iframe | `assets/soundcloud-player.js` | Shows only when SoundCloud is enabled; click-to-load; no request until play; added 0.2.26 |
+| Player preferences | Home + track pages | `localStorage` | `assets/player-prefs.js` | Per-host opt-in; both off by default; added 0.2.27 |
 | Splash banner | `index.html` | 8:3, 1600×600 | `assets/images/splash-banner.jpg` | Pending |
 | Artist portrait | Ginger Deadman, Bio | 3:4, 1200×1600 | `assets/images/ginger-deadman-portrait.jpg` | Pending |
 | Album: oxox | Listen, album, tracks | 1:1, 500×500 | `assets/images/album-covers/oxox.jpg` | 55 KB |
@@ -158,11 +160,11 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 
 - **Voice:** first person for editorial pages; third person for biography copy. Direct, dry wit. No corporate register.
 - **Contact email:** "Coming soon" until the domain and mailbox exist.
-- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. LinkedIn is live. Steam, Xbox, PlayStation and EA sit in the same icon-and-link list. RSS is linked. The second YouTube and SoundCloud placeholders were removed in 0.2.22.
+- **Contact socials:** keep the main Instagram (`ofwolfe`), YouTube, TikTok and RateYourMusic. LinkedIn is live. SoundCloud profiles for Ginger Deadman (`ginger-deadman`) and oxox (`oxox`) are linked. Steam, Xbox, PlayStation and EA sit in the same icon-and-link list. RSS is linked. The second YouTube placeholder was removed in 0.2.22.
 - **Shop:** retired. Historical changelog entries stay.
 - **Gallery:** dark until images exist. No empty frames on the public site.
 - **Lyrics:** track pages are live for confirmed lyric files. Java and Rigatoni Nosebleed (Flips), seven Obliviability tracks, four Obsolescence tracks and two Unreal tracks are published. The remaining lyrics stay in the vault workbench.
-- **Streaming:** show only real links. The "URL coming soon" cards were removed in 0.2.20; a streaming section appears only when at least one real link exists. Flips and Obsolescence stream from Catbox; the newer tapes link to SoundCloud.
+- **Streaming:** show only real links. The "URL coming soon" cards were removed in 0.2.20; a streaming section appears only when at least one real link exists. Flips, Obliviability and Obsolescence stream from Catbox; selected tracks also link to their SoundCloud pages. The older tapes link to SoundCloud. Catbox and SoundCloud players are off by default and are enabled per host in Player settings on the home page. SoundCloud playback remains click-to-load: no SoundCloud iframe is requested until the visitor presses "Play on SoundCloud."
 - **Music metadata:** oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2 are the current catalog. Obliviability is typed Album. Flips 2 is typed Flips (Remix Collection) with tracks coming soon. Release and track pages are `noindex` and excluded from search, RSS and `sitemap.xml`.
 - **Home:** the Listen card reads "tapes, flips and streaming links."
 - **Ginger Deadman profile:** the lede is "Experimental stuff is cool."; the poem ends "Art can be free."
@@ -172,10 +174,10 @@ All release covers are clean 1:1 slots. The album and track covers are local. Fr
 - **Game titles:** use the official full titles in public copy: Helldivers 2, LEGO Horizon Adventures, Ravenbound and Call of the Wild: theAngler.
 - **Images:** slots are labelled by ratio, not by missing-content warnings. Game covers are used on Career.
 - **Manifesto:** the trimmed version is canonical. Version `1.0 — 8 November 2026` and the exact AI model list are live.
-- **Privacy:** no analytics, cookies, ads, tracking pixels, third-party embeds, Google Fonts, SimpleIcons CDN or remote images. Browser storage is limited to `dm-mode`. GitHub Pages hosting logs are disclosed.
+- **Privacy:** no analytics, cookies, ads, tracking pixels or third-party embeds by default. No Google Fonts, SimpleIcons CDN or remote images. Catbox and SoundCloud are off until enabled in Player settings; SoundCloud players are click-to-load and may set SoundCloud cookies after the visitor presses play. Browser storage is limited to `dm-mode` and `dm-player-hosts`. GitHub Pages hosting logs are disclosed.
 - **Search:** local static index only; no external search service and no query logging by us. Hidden pages, drafts, 404 and unfilled album pages are excluded.
 - **RSS:** static changelog feed; no tracking pixels or unique identifiers.
-- **Player:** skip back, scrub back, play, scrub forward, skip forward and autoplay. Typed seek accepts `0:00` and `0s`. Duration click toggles clock/total seconds. Popups are exactly `Skipped!`, `Rewind!`, `One track back.`, `Shut up!` and `Unmuted...`; play/pause, tracklist, volume, scrub, forward 10s and duration toggles do not show a popup.
+- **Player:** skip back, scrub back, play, scrub forward, skip forward and autoplay. The Catbox player only appears when Catbox is enabled in Player settings; when it is off, track pages show a Player settings pointer instead. Typed seek accepts `0:00` and `0s`. Duration click toggles clock/total seconds. Popups are exactly `Skipped!`, `Rewind!`, `One track back.`, `Shut up!` and `Unmuted...`; play/pause, tracklist, volume, scrub, forward 10s and duration toggles do not show a popup.
 - **Sitemap:** `/sitemap/` is a generated terminal-style tree of the 123 current live routes, with release groups open by default and held-back project templates and legacy routes omitted. It is `noindex` and linked from About. `sitemap.xml` remains the search-engine index.
 
 ## Backlog

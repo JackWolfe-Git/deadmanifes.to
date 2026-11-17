@@ -29,6 +29,14 @@
     text-align: left;
 }
 
+html:not([data-player-catbox="true"]) .audio-player {
+    display: none !important;
+}
+
+html:not([data-player-catbox="true"]) body.has-audio-player {
+    padding-bottom: 0 !important;
+}
+
 body[data-mode="light"] .audio-player {
     --ap-bg: #FFFFFF;
     --ap-fg: #000000;

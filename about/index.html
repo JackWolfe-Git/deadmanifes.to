@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>About — deadmanifesto</title>
-<link rel="stylesheet" href="../style.css?v=15">
+<link rel="stylesheet" href="../style.css?v=19">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
 <body id="top">
@@ -93,6 +93,14 @@
         <details open>
             <summary>November 2026</summary>
             <details open>
+                <summary>16</summary>
+                <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
+                <ul>
+                    <li>0.2.27 - move Catbox and SoundCloud players behind a home-screen host opt-in; remember each host choice in the browser and load no player until it is enabled; add a track-page pointer when Catbox is off and correct stale album streaming copy</li>
+                    <li>0.2.26 - replace the GDM mark with a transparent version tuned for dark, light and orange modes; link SoundCloud profiles on Contact; add SoundCloud links and click-to-load players to tracks; and update the privacy copy for optional third-party players</li>
+                </ul>
+            </details>
+            <details>
                 <summary>14</summary>
                 <p class="changelog-model">Model: DeepSeek V4.1 Flash Free</p>
                 <ul>
@@ -311,7 +319,7 @@
         </ul>
         <p>Held back and unlinked from the main menu: editorial, service and gallery templates. Lyric and track pages are linked from their albums but remain <code>noindex</code> while lyrics, credits and remaining metadata are completed. Held-back project templates are omitted from the human sitemap.</p>
         <p>Six further release and collaboration templates are also held back and unlinked. They are marked <code>noindex</code>, kept for future plans and omitted from the human sitemap.</p>
-        <p>Career carries the four verified game covers and credits, six redacted placeholders and the full professional history. Contact carries the Steam profile link and Xbox, PlayStation and EA username cards. Music carries the Tapes and Flips releases, their track pages and a Spotify profile link: oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2. Catbox streams are live on Flips and Obsolescence; the newer tapes currently link to SoundCloud. Release and track pages remain excluded from search, RSS and <code>sitemap.xml</code> until their metadata is complete.</p>
+        <p>Career carries the four verified game covers and credits, six redacted placeholders and the full professional history. Contact carries the SoundCloud profiles, Steam profile link and Xbox, PlayStation and EA username cards. Music carries the Tapes and Flips releases, their track pages and a Spotify profile link: oxox, mainframe, Denial, Unreal, Obliviability, Obsolescence, Club Foot, Flips and Flips 2. Catbox streams are live on Flips, Obliviability and Obsolescence; Catbox and SoundCloud players are off until enabled in Player settings on the home page. Release and track pages remain excluded from search, RSS and <code>sitemap.xml</code> until their metadata is complete.</p>
     </section>
 
     <section>
@@ -338,7 +346,7 @@
             <li><code>content.md</code> — editorial map, asset ledger and hold list (not a copy source)</li>
             <li><code>PLAN.md</code> — launch-prep work queue and decisions</li>
         </ul>
-        <p>No analytics, cookies, tracking pixels or third-party embeds. Browser storage is limited to the theme preference. GitHub Pages hosting logs are disclosed on the <a href="privacy/index.html">privacy page</a>.</p>
+        <p>No analytics, cookies, tracking pixels or third-party embeds by default. Catbox and SoundCloud players are opt-in from the home page; SoundCloud still loads only after you press play. Browser storage is limited to the theme and audio-host preferences. GitHub Pages hosting logs are disclosed on the <a href="privacy/index.html">privacy page</a>.</p>
     </section>
 
     <section>
@@ -351,7 +359,7 @@
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-links"><a href="../contact/">Contact</a> <span aria-hidden="true">·</span> <a href="index.html#disclaimer">Disclaimer</a> <span aria-hidden="true">·</span> <a href="privacy/">Privacy</a></p>
-    <p class="footer-privacy">No cookies or tracking.</p>
+    <p class="footer-privacy">No cookies or tracking by default.</p>
 </footer>
 <script src="../assets/theme.js?v=4" defer></script>
 <script src="../assets/site-ui.js" defer></script>

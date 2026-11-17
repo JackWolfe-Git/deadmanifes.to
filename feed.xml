@@ -5,7 +5,21 @@
     <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
     <description>Shipped changes to deadmanifesto, the artist archive and portfolio of Ginger Deadman.</description>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 14 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Nov 2026 12:00:00 +0000</lastBuildDate>
+    <item>
+      <title>0.2.27 - player host opt-in</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.27</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Adds Player settings to the home page: Catbox and SoundCloud are off by default, each host can be enabled separately, and the choice is remembered in the browser. No player loads until its host is enabled. Catbox-off track pages now point to Player settings, and stale album streaming copy is corrected.</description>
+    </item>
+    <item>
+      <title>0.2.26 - SoundCloud players</title>
+      <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>
+      <guid isPermaLink="false">deadmanifesto-0.2.26</guid>
+      <pubDate>Mon, 16 Nov 2026 12:00:00 +0000</pubDate>
+      <description>Replaces the GDM mark with a transparent version, adds SoundCloud profile links on Contact, links SoundCloud tracks to their pages and adds click-to-load SoundCloud players that make no request until pressed.</description>
+    </item>
     <item>
       <title>0.2.25 - oxox credits</title>
       <link>https://jackwolfe-git.github.io/deadmanifes.to/about/#changelog</link>

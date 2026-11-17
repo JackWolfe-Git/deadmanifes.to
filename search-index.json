@@ -6,9 +6,10 @@
     "headings": [
       "deadmanifesto",
       "Start here",
+      "Player settings",
       "Biography"
     ],
-    "text": "I'm a poet; I just do my own thing. Experimental entertainment by Ginger Deadman. Listen, bio and contact routes."
+    "text": "I'm a poet; I just do my own thing. Experimental entertainment by Ginger Deadman. Listen, bio and contact routes. Player settings opt in to Catbox and SoundCloud audio hosts; both are off by default."
   },
   {
     "title": "Listen — deadmanifesto",
@@ -89,7 +90,7 @@
   {
     "title": "Contact — deadmanifesto",
     "url": "../contact/",
-    "description": "Contact Ginger Deadman and deadmanifesto. Social links, gaming platforms, RSS and email. Email is coming soon.",
+    "description": "Contact Ginger Deadman and deadmanifesto. Social links, SoundCloud, gaming platforms, RSS and email. Email is coming soon.",
     "headings": [
       "Contact"
     ],
@@ -114,6 +115,7 @@
     "description": "How deadmanifesto handles browser storage, hosting logs, search, RSS, external links and contact.",
     "headings": [
       "What this site stores",
+      "Optional audio players",
       "Hosting",
       "Search",
       "RSS",
@@ -122,7 +124,7 @@
       "Your choices",
       "Changes"
     ],
-    "text": "deadmanifesto stores only the dm-mode colour preference. It uses no analytics, cookies, tracking pixels or third-party embeds. GitHub Pages hosting logs, local search, the RSS feed and external links are explained."
+    "text": "deadmanifesto stores the dm-mode colour preference and dm-player-hosts audio-host choices. It uses no analytics, cookies, tracking pixels or third-party embeds by default; Catbox and SoundCloud are off until enabled in Player settings on the home page, and SoundCloud still loads only after a click. GitHub Pages hosting logs, local search, the RSS feed and external links are explained."
   },
   {
     "title": "Tools — deadmanifesto",

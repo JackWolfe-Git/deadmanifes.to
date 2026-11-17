@@ -242,7 +242,7 @@ def page_shell(
 <link rel="icon" type="image/svg+xml" href="{prefix}assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>{escape(title)} - deadmanifesto</title>
-<link rel="stylesheet" href="{prefix}style.css?v=15">
+<link rel="stylesheet" href="{prefix}style.css?v=19">
 <link rel="stylesheet" href="{prefix}assets/sitemap.css?v=2">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="{SITE}/feed.xml">
 </head>
@@ -267,7 +267,7 @@ def page_shell(
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-links"><a href="{prefix}contact/">Contact</a> <span aria-hidden="true">&middot;</span> <a href="{prefix}about/#disclaimer">Disclaimer</a> <span aria-hidden="true">&middot;</span> <a href="{prefix}about/privacy/">Privacy</a></p>
-    <p class="footer-privacy">No cookies or tracking.</p>
+    <p class="footer-privacy">No cookies or tracking by default.</p>
 </footer>
 <script src="{prefix}assets/theme.js?v=4" defer></script>
 <script src="{prefix}assets/site-ui.js" defer></script>

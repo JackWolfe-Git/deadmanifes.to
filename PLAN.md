@@ -1,12 +1,12 @@
 # deadmanifesto ? running triage
 
-Updated: 14 November 2026
+Updated: 16 November 2026
 Preview: `http://127.0.0.1:8765/` (running)
-0.2.23-0.2.25 shipped as `dc8d060` and pushed to `origin/main`; live Pages verification passed on Ginger Deadman, deadmanifesto, Listen and Obliviability. Last link check: 3,655 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
+0.2.23-0.2.25 shipped as `dc8d060` and pushed to `origin/main`; live Pages verification passed on Ginger Deadman, deadmanifesto, Listen and Obliviability. 0.2.26-0.2.27 are committed together; Pages verification is pending. Last link check: 3,878 links, 0 missing. 149 HTML pages: 13 indexable, 136 `noindex`; sitemap tree shows 123 live routes.
 
 ## P0 ? ship integrity
 
-- [x] Finish the player patch: removed `inputmode="decimal"`, verified the mobile seek-first layout, exact popup strings, both seek formats and the no-popup controls; bumped `audio-player.css?v=8` and `audio-player.js?v=13`.
+- [x] Finish the player patch: removed `inputmode="decimal"`, verified the mobile seek-first layout, exact popup strings, both seek formats and the no-popup controls; `audio-player.css` is now v9 and `audio-player.js` is now v14.
 - [x] Add changelog and feed entries for 0.2.14?0.2.20: player polish, oxox, mainframe, Denial, Unreal 2017, Club Foot and the public cleanup.
 - [x] Update `content.md` to the current catalog. Stale Unreal 2018 / `x Tracks` / Club Foot pending / Flips 2 pending notes are gone.
 - [x] Fix Unreal meta copy: description, OG and Twitter now say five track pages.
@@ -34,7 +34,9 @@ Preview: `http://127.0.0.1:8765/` (running)
 - [ ] Add the contact email/domain.
 - [ ] Add gallery images, add hardware to Tools and keep the tool links current.
 - [x] Add the current-route sitemap: a generated terminal-style `/sitemap/` tree of 123 live routes, with release groups open by default and held-back project templates and legacy routes omitted. `make_sitemap.py` rebuilds it from the HTML tree, and About's useful links point to it. `sitemap.xml` remains the crawler index.
-- [ ] Wire audio for the new tapes. Blocked on Catbox; decide between SoundCloud embeds and waiting for files.
+- [x] Add click-to-load SoundCloud players to every track page with a SoundCloud link; no SoundCloud request is made until the visitor presses play.
+- [x] Add Player settings on the home page; Catbox and SoundCloud are off by default, and the per-host choice is remembered in `dm-player-hosts`.
+- [ ] Wire stable audio for tracks without a SoundCloud page. Blocked on files or stable hosted URLs.
 
 ## P3 ? later
 
@@ -44,7 +46,7 @@ Preview: `http://127.0.0.1:8765/` (running)
 
 ## Done this pass
 
-- Added the GDM mark to the Ginger Deadman page below Start here and above the poem; style.css is now v15.
+- Added the GDM mark to the Ginger Deadman page below Start here and above the poem; replaced it with a transparent 1861x534 asset tuned for dark, light and orange modes. style.css is now v17.
 - Split the deadmanifesto hub into Artists (Ginger Deadman only) and Explore (manifesto plus About sub-sections).
 - Credited Denial and Unreal to oxox and marked Obliviability as the first Ginger Deadman album across Listen, release pages and track pages.
 - Regenerated the current-route sitemap, updated changelog/feed/search content, and kept the link check clean.
@@ -62,6 +64,14 @@ Preview: `http://127.0.0.1:8765/` (running)
 - Redacted held-back project names from `content.md`, `PLAN.md` and the historical About changelog.
 - Applied 0.2.22 QA: six Career redacted placeholders, LinkedIn-only professional block, Listen/Bio/Contact buttons, linked Tools with Workspaces/AI-assisted/Hardware/Traditional sections, revised Ginger Deadman lede and poem, Listen catalogue copy and bottom Spotify follow, and Contact placeholder removals.
 - Updated changelog, RSS, search index, privacy note and content map for 0.2.22; link check clean.
+- Added SoundCloud profile cards to Contact and matched all available SoundCloud track pages to the catalog; five Catbox tracks gained direct SoundCloud links.
+- Added click-to-load SoundCloud buttons to 51 track pages. The iframe is created only on click, so no SoundCloud request is made when a page opens.
+- Updated the privacy page and footer to "No cookies or tracking by default" and documented that SoundCloud may set cookies after the visitor presses play.
+- Added a home-screen Player settings panel with separate Catbox and SoundCloud opt-ins. Both default off; `dm-player-hosts` remembers the choice per browser.
+- Catbox is not initialised and its audio is not requested unless enabled. SoundCloud is hidden until enabled and remains click-to-load.
+- Added a Catbox-off pointer on 53 track pages so visitors can reach Player settings without showing a player. Corrected stale "audio sources are coming soon" copy on Denial, Club Foot, mainframe, oxox and Unreal.
+- Added `player-prefs.js?v=1`; bumped `style.css`, `audio-player.css?v=9`, `audio-player.js?v=14` and `soundcloud-player.js?v=3`.
+- 0.2.26-0.2.27 are committed together; Pages verification is pending.
 
 
 ---

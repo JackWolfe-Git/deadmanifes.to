@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>deadmanifesto — Ginger Deadman</title>
-<link rel="stylesheet" href="style.css?v=15">
+<link rel="stylesheet" href="style.css?v=19">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
 <body id="top">
@@ -69,6 +69,31 @@
         </div>
     </section>
 
+    <section class="player-settings" id="player-settings">
+        <h2>Player settings</h2>
+        <p class="muted">Choose which audio hosts can load on this site. Both are off by default, and your choice is saved in this browser.</p>
+        <div class="player-settings-grid">
+            <label class="player-setting">
+                <input type="checkbox" data-player-host="catbox">
+                <span class="player-setting-copy">
+                    <strong>Catbox</strong>
+                    <span>Show the Catbox player on track pages.</span>
+                </span>
+            </label>
+            <label class="player-setting">
+                <input type="checkbox" data-player-host="soundcloud">
+                <span class="player-setting-copy">
+                    <strong>SoundCloud</strong>
+                    <span>Show the click-to-load SoundCloud player on track pages.</span>
+                </span>
+            </label>
+        </div>
+        <p class="player-settings-status" data-player-settings-status role="status" aria-live="polite">Both hosts are off. No audio player will load.</p>
+        <div class="player-settings-actions">
+            <button class="bar-btn player-settings-reset" type="button" data-player-settings-reset disabled>Turn both off</button>
+        </div>
+    </section>
+
     <section>
         <h2>Biography</h2>
         <p>The bio covers the artist background and contact routes. Direct email is coming soon; the socials are live now.</p>
@@ -78,9 +103,10 @@
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-links"><a href="contact/">Contact</a> <span aria-hidden="true">·</span> <a href="about/#disclaimer">Disclaimer</a> <span aria-hidden="true">·</span> <a href="about/privacy/">Privacy</a></p>
-    <p class="footer-privacy">No cookies or tracking.</p>
+    <p class="footer-privacy">No cookies or tracking by default.</p>
 </footer>
 <script src="assets/theme.js?v=4" defer></script>
 <script src="assets/site-ui.js" defer></script>
+<script src="assets/player-prefs.js?v=1" defer></script>
 </body>
 </html>

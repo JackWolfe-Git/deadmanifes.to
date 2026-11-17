@@ -17,7 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="../../assets/images/favicon.svg">
 <meta name="theme-color" content="#000000">
 <title>Privacy — deadmanifesto</title>
-<link rel="stylesheet" href="../../style.css?v=15">
+<link rel="stylesheet" href="../../style.css?v=19">
 <link rel="alternate" type="application/rss+xml" title="deadmanifesto changelog" href="https://jackwolfe-git.github.io/deadmanifes.to/feed.xml">
 </head>
 <body id="top">
@@ -41,17 +41,25 @@
 <main>
     <p><a href="../index.html">← Back to About</a></p>
     <h1>Privacy</h1>
-    <p class="lede">The short version: no analytics, no advertising, no cookies and no third-party embeds. This page explains the small amount of data the site does use.</p>
-    <p class="muted">Last updated: 8 November 2026.</p>
+    <p class="lede">The short version: no analytics, no advertising and no cookies by default. Third-party players are off until you opt in. This page explains the small amount of data the site does use.</p>
+    <p class="muted">Last updated: 16 November 2026.</p>
 
     <section>
         <h2>What this site stores</h2>
-        <p>deadmanifesto stores one preference in your browser using <code>localStorage</code>:</p>
+        <p>deadmanifesto stores a small number of preferences in your browser using <code>localStorage</code>:</p>
         <ul>
             <li><code>dm-mode</code> — your chosen colour mode (dark, light or orange).</li>
+            <li><code>dm-player-hosts</code> — the audio hosts you have enabled (Catbox and/or SoundCloud). Both are off by default.</li>
         </ul>
-        <p>This value stays in your browser. It is not sent to me or to anyone else. You can remove it at any time by clearing site data in your browser settings.</p>
-        <p>There is no cookie consent banner because the site does not use non-essential cookies or trackers.</p>
+        <p>These values stay in your browser. They are not sent to me or to anyone else. You can remove them at any time by clearing site data in your browser settings.</p>
+        <p>There is no cookie consent banner because the site does not use non-essential cookies or trackers on page load.</p>
+    </section>
+
+    <section>
+        <h2>Optional audio players</h2>
+        <p>Catbox and SoundCloud players are off by default. You can opt in to each host in the Player settings section on the <a href="../../index.html#player-settings">home page</a>. Your choice is saved in <code>dm-player-hosts</code>.</p>
+        <p>If you enable SoundCloud, track pages show a "Play on SoundCloud" button. The SoundCloud player is not loaded until you press that button. Pressing it loads an embedded player from soundcloud.com and may allow SoundCloud to set cookies or collect usage data under <a href="https://soundcloud.com/pages/privacy" target="_blank" rel="noopener">SoundCloud's privacy policy</a>.</p>
+        <p>If you enable Catbox, the Catbox player appears on Catbox track pages. Catbox streams audio directly from files.catbox.moe. If you do not enable a host, no player from that host is loaded.</p>
     </section>
 
     <section>
@@ -71,7 +79,7 @@
 
     <section>
         <h2>External links</h2>
-        <p>Links to Spotify, Steam, YouTube, TikTok, Instagram, RateYourMusic, LinkedIn, Xbox and other sites open only when you click them. Those sites have their own privacy policies and may collect data once you arrive. This site does not load their players, fonts, icons or widgets.</p>
+        <p>Links to Spotify, Steam, YouTube, TikTok, Instagram, RateYourMusic, LinkedIn, Xbox and other sites open only when you click them. Those sites have their own privacy policies and may collect data once you arrive. Apart from the optional SoundCloud player described above, this site does not load their players, fonts, icons or widgets.</p>
     </section>
 
     <section>
@@ -82,7 +90,8 @@
     <section>
         <h2>Your choices</h2>
         <ul>
-            <li>Clear <code>dm-mode</code> through your browser's site-data controls.</li>
+            <li>Clear <code>dm-mode</code> or <code>dm-player-hosts</code> through your browser's site-data controls.</li>
+            <li>Turn both hosts off in the <a href="../../index.html#player-settings">Player settings</a> section on the home page.</li>
             <li>Use the site without JavaScript; the pages remain readable, but search will not run. The privacy link remains in the footer.</li>
             <li>Contact me through the public routes on the <a href="../../contact/index.html">contact page</a> if you have a question about this notice.</li>
         </ul>
@@ -96,7 +105,7 @@
 <footer>
     <p>All Rights Reserved. &copy; deadmanifesto. MMXXVI</p>
     <p class="footer-links"><a href="../../contact/">Contact</a> <span aria-hidden="true">·</span> <a href="../#disclaimer">Disclaimer</a> <span aria-hidden="true">·</span> <a href="index.html">Privacy</a></p>
-    <p class="footer-privacy">No cookies or tracking.</p>
+    <p class="footer-privacy">No cookies or tracking by default.</p>
 </footer>
 <script src="../../assets/theme.js?v=4" defer></script>
 <script src="../../assets/site-ui.js" defer></script>

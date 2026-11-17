@@ -14,12 +14,30 @@
         siteRoot = new URL('/', window.location.href).href;
     }
 
+    var prefs = window.SitePlayerPrefs;
+    var catboxEnabled = !!(prefs && typeof prefs.has === 'function' && prefs.has('catbox'));
     var player = document.querySelector('[data-audio-player]');
+
+    if (!catboxEnabled) {
+        if (player) {
+            player.setAttribute('data-idle', 'true');
+        }
+        document.body.classList.remove('has-audio-player');
+        window.SiteAudio = {
+            hasPlayer: false,
+            isPlaying: function () { return false; },
+            syncFromDocument: function () { return false; },
+            pause: function () {}
+        };
+        return;
+    }
+
     if (!player) {
         window.SiteAudio = {
             hasPlayer: false,
             isPlaying: function () { return false; },
-            syncFromDocument: function () { return false; }
+            syncFromDocument: function () { return false; },
+            pause: function () {}
         };
         return;
     }
